@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Version 1.3.1.0 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta charset="utf-8">
+	<title>鹿客音乐</title>
+	<style>
+	*{
+		margin: 0;padding: 0;
+		box-sizing: border-box;
+		font-family: "Droid Sans Fallback";
+		font-weight: 300;color: #000;
+	}
+	html,body{
+		background: rgb(244,244,244);margin: 0;padding: 0;
+	}
+	#topbar{
+		background: rgb(39,39,39);
+		position: fixed;text-align: center;top: 0;left: 0;
+		width: 100vw;padding: 9px 0;
+		color: #eee;height: 50px;
+		font-weight: 200;z-index: 8;
+	}
+	.show-bar{
+		width: 90vw;height: 40vw;margin: 15px auto;
+		border: 1px solid #000;border-radius: 8px;
+	}
+	#page{
+		position: relative;
+	}
+	.content{
+		display: inline-block;
+		width: 45%;margin: 6px 0 6px 3.3%;height: 30vw;
+		background: #fff;padding: 12px;
+		border: 1px solid #eee;border-radius: 8px;
+		position: relative;background-size: 100%;
+		z-index: 0;
+	}
+	.content .init{
+		position: absolute;width: 100%;height: 100%;top: 0;left: 0;
+		padding: 12px;background: rgb(255,255,255,0.5);
+		overflow: hidden;transition: 0.6s;
+	}
+	#music{
+		position: fixed;bottom: 0;width: 100vw;padding: 3px 20px;
+		background: #fff;display: flex;justify-content: space-around;
+		border-top: 1px solid #eee;
+		z-index: 9;
+	}
+	#music *{
+		color: #fff;display: inline-block;font-size: 10px;font-weight: 200;
+	}
+	
+	#tools{
+		width: 100vw;display: flex;
+		background: #fff;border-bottom: 1px solid #eee;
+		position: fixed;top: 50px;height: 30px;
+		overflow-x: auto;padding: 1px 5px;
+		z-index: 8;
+	}
+	#tools li{
+		display: inline-block;margin: 1px 15px;white-space: no-warp;
+		flex: 0 0 auto;font-size: 14px;font-weight: 300;
+	}
+	.text244{
+		color: rgb(122,122,122);
+	}
+	.c-text{
+		text-align: center;
+	}
+	#player{
+		width: 100vw;height: 100vh;
+		position: fixed; top: 160vh;left: 0;
+		background-color: rgb(255,255,255,0.7);
+		background-size: cover;background-repeat: no-repeat;
+		transition: 1s;display: block;background-position: center;
+		z-index: 8;
+	}
+		#boardMusicTitle{
+			display: block;width: 100vw;text-align: center;
+			margin: 10vh auto 8px; font-size: 28px;max-height: 19vh;
+			padding: 30px;background: rgb(255,255,255,0.5);z-index: 9px;
+			transition: 0.7s;
+			/* For opacity */
+		}
+	#playerBG{
+		background-repeat: no-repeat;background-size: 100%;
+		transition: 0.7s;
+		/* Also */
+	}
+	audio::-webkit-media-controls-time-remaining-display{
+		color: #9cf;/*后数*/
+	}
+	audio::-webkit-media-controls-current-time-display{
+		color: #08f;/*前数*/
+	}
+	audio::-webkit-media-controls-play-button{
+		color: #08f;
+	}
+	.back{
+		display: block;position: absolute;
+		background: none;font-weight: 200;transition: 0.3s;border-radius: 50%;
+		width: 50px;height: 50px;font-size: 14px;text-align: center;border: none;padding: 15px;
+		outline: none;background: rgb(255,255,255,0.3);
+	}
+	.back:hover{
+		background: rgb(255,255,255,0.85);
+	}
+	.float-around{
+		position: fixed;background-color: #fff;
+		border-radius: 50%;border: none;
+		width: 50px;height: 50px;font-size: 13px;text-align: center;padding: 16px;
+		outline: none;	z-index: 10;	color: #08f;
+		right: 18px;bottom: 60px;font-size: 15px;
+		visibility: hidden;transition: 0.5s;
+	}
+	.float-around:hover{background: #9cf;}
+	.common-button,full-button:hover{
+		background: #fff;border: 1px solid #08f;border-radius: 30px;
+		outline: none;padding: 10px 18px;height: 48px;color: #08f;text-align: center;
+		transition: 0.4s;margin: 8px;max-width:150px; max-height: 90px;
+	}
+		.full-button,.common-button:hover{
+			background: #08f;border: 1px solid #eee;border-radius:  30px;
+			outline: none;padding: 10px 18px;height: 48px;color: #fff;text-align: center;
+			transition: 0.4s;margin: 8px;
+		}
+	.space{
+		display: flex;justify-content: space-around;width: 100%;
+	}
+	.space>*{
+		display: block;
+	}
+	.little-float-model-box{
+		background: #fff;border: 1px solid #eee;border-radius: 8px;
+		padding: 16px;position: fixed;display: block;
+		top: 0;bottom: 0;left: 0;right: 0;margin: auto;
+		width: 38vw; height: 38vw;overflow: auto;
+		max-width: 300px;max-height: 300px;
+		font-size: 15px;
+		z-index: 29;
+	}
+	#playerSection{
+		width: 100%;top: 3vh;height: 65vh;
+		display: block;
+		position: relative;
+	}
+	#playerInner{
+		padding: 16px;text-align: center;position: absolute;max-width: 80vw;z-index: 9;
+		background-color: rgb(234,234,234,0.35);left: 0;right: 0;margin: auto;border-radius: 6px;
+		color: rgb(255, 255, 255);transition: 0.5s;
+	}
+	#playerInner:hover,#musicUserSelect>*:hover{background-color: rgb(255,255,255,0.6);color: #08f;}
+	#musicUserSelect{
+		display: flex;justify-content: space-around;
+		position: relative;
+		bottom: 110px;width: 100%;
+	}
+	#musicUserSelect>*{
+		font-size: 16px;color:rgb(255, 255, 255);padding: 16px;border-radius: 50%;width: 49px;height: 49px;text-align: center;
+	}
+    #ifr{
+        position: fixed;top: 0;left: 0;
+        width: 100%;height: 100%;
+        border: none;display: none;
+        z-index: 9;
+    }
+    .load-more-music{
+        background: rgb(222,222,222);color: #414141;padding: 16px;text-align: center;width: 100%;
+    }
+    .fa-heart-o{
+        color: #fff !important;
+        transition: 0.6s;
+    }
+    .fa-heart{
+        color: red !important;
+        transition: 0.6s;
+    }
+	</style>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">		
+</head>	
+<body onload="checkCookie()">
+	<div id="topbar">Lucel Music House <span style="font-size: 8px;color: #eee;">(大多版权来自网易云音乐)</span></div><div style="height: 50px"></div>
+		<ul id="tools">
+		<li>推荐</li>
+		<li>精选</li>
+		<li>高级</li>
+		<li>流行BGM</li>
+		<li>经典</li>
+		<li>伤感</li>
+		<li>超燃</li>
+		<li>搞笑</li>
+		<li>电音</li>
+		<li>游戏</li>
+		<li>动漫</li>	
+		<li>原创</li>
+	</ul>
+	
+	<div style="height: 30px"></div>
+	
+	<div id="page" ></div>
+	
+    <!--For iframe back:-->
+    <button class="back" id="returnIfr" style="z-index: 19;display: none;top: 1.2vh;right: 2vw;position: fixed;" onclick="back('ifr')">╳</button>
+
+	<section id="player">
+		<div id="boardMusicTitle">曲目</div>
+		<button class="back" style="top: 1.2vh;right: 5vw;" onclick="back('playerScreen')">╳</button>
+		<div id="playerBG">
+			<section id="playerSection">
+				<div id="playerInner"></div>
+			</section>
+		</div>
+		<section id="musicUserSelect">
+			<span id="ilike" class="fa fa-heart-o" onclick="addCookie('music',MUSICID)"></span>
+			<span id="clearTexts" class="fa fa-minus" onclick="clearScreenTexts()"></span>
+			<span id="playSet" class="fa fa-sort-amount-asc" onclick="loopPlay()"></span>
+			
+		</section>
+	</section>
+	
+	<button id="listen" class="float-around fa fa-headphones"></button>
+	<audio id="music" controls><source src="" type="audio/mp3"></source></audio>
+	<iframe id ="ifr" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+	<br><br><br>
+    
+	<script src="https://lucel.pages.dev/music/data.js"></script>
+	<script>
+        //小接口：
+			var locateId;//当前正在播放的音乐ID
+			var thisId;//当前点开页面的Id
+			var MUSICID;//This id;
+			var loopPlayValue=0;//@loop under
+			var CLEAR=0;
+            var contentNum=16;//已经出现的容器数量
+
+			var user={
+			}
+		//end
+
+	var $=(ele)=>{
+		if(document.querySelectorAll(ele).length===1)return document.querySelectorAll(ele)[0];
+		return document.querySelectorAll(ele);
+	}
+	//容器构造器
+	for(let i=0;i<data.length;++i){
+		//var type=data[i].type.split(";");var len=type.length;console.log(len)
+		    data[i].d=i;//LUCEL下的ID
+            if(data[i].img==''){data[i].img="https://lucel.pages.dev/background.jpg";}//content background link
+			var bg="<div class='content' onclick='play("+i+")' style='background-image:url("+data[i].img+")'><div class='init'>";
+			var title="<h3>"+data[i].title+"</h3>";
+			var text="<div class='text244'>"+data[i].text+"</div></div>";
+			$("#page").innerHTML+=bg+title+text;
+            var n=contentNum-1;
+            if(i==n){
+                $("#page").innerHTML+="<div class='load-more-music' onclick='loadAll()'>加载更多</div>";
+                n='';//delete
+                break;
+            }
+	}
+    var loadAll=()=>{
+        $(".load-more-music").style.display="none";
+        for(let i=contentNum;i<data.length;++i){
+            data[i].d=i;
+        if(data[i].img==''){data[i].img="https://lucel.pages.dev/background.jpg";}
+            var bg="<div class='content' onclick='play("+i+")' style='background-image:url("+data[i].img+")'><div class='init'>";
+            var title="<h3>"+data[i].title+"</h3>";
+            var text="<div class='text244'>"+data[i].text+"</div></div>";
+            $("#page").innerHTML+=bg+title+text;
+        }
+        contentNum=data.length;
+        return true;
+    }
+
+		//初始化；
+			//data:
+			var listen;
+		//end
+
+	//Cookie方法函数 return{...}
+	var setCookie=(cname,cvalue,exdays)=>{
+		//@prag: cname: 对象; cvalue: 值,exdays: 天；
+		var d = new Date();
+		d.setTime(d.getTime()+(exdays*365*24*60*60*1000));
+		var expires = "expires="+d.toGMTString();
+		document.cookie = cname+"="+cvalue+"; "+expires;
+	}
+	var getCookie=(cname)=>{
+		var name = cname + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+	}
+	return "";
+	}
+	var checkCookie=()=>{
+		var _main=getCookie("_main");
+		if (_main!=""){
+			return true;
+		}
+		else {
+			setCookie("_main","1",5);
+			setCookie("music",'',5);
+			setCookie("loopModel",'',5);
+            return false;
+		}
+	}
+	//@Cookie: 函数方法 end
+	var addCookie=(type,value)=>{
+		var d = new Date();
+		d.setTime(d.getTime()+(3*365*24*60*60*1000));
+		var expires = "expires="+d.toGMTString();
+		if(type=="music"){
+			var obj=getCookie("music");
+			if(obj==''){
+				var v=value+"&";
+				setCookie("music",v,5)
+			}else{
+				var n=obj.split("&");
+				var len=n.length;
+				console.log('music.cookie.length:',len,"they are",document.cookie);
+				for(let i=0;i<len;++i){
+					if(n[i]==value){
+						//n[...]每个由"&"分割的对象
+						newMessage("已取消");
+						$("#ilike").className="fa fa-heart-o";//更改图标
+						var text=value+"&";
+						//@para:Example:: when value=2=>text=2& ->replace 2&-->''to delete 
+						setCookie("music",getCookie("music").replace(text,''),5);
+						//Overwrite muisc data to new
+						return;//end while and:结束
+					}
+					//检测是否已经被添加
+				}
+				//开始添加至"ilike"
+				var newData = getCookie("music")+value+"&";
+				setCookie("music",newData,5);
+				$("#ilike").className="fa fa-heart";
+				return  getCookie("music");
+			}
+		}
+		return "$LUCEL: Cannot Find in:addCookie. Error Function Data: addCookie()";
+	}
+
+	var loopPlay=()=>{
+		if(loopPlayValue==0||loopPlayValue=='0'){
+			$("#music").loop=true;
+			loopPlayValue=1;
+			$("#playSet").className="fa fa-refresh";
+			setCookie("loopModel",'1',5);
+			return true;
+		}else{
+			$("#music").loop=false;
+			loopPlayValue=0;
+			$("#playSet").className="fa fa-sort-amount-asc";
+			setCookie("loopModel",'0',5);
+			return false;
+		}
+	}
+	
+    if(!getCookie("loopModel")==''){loopPlayValue=getCookie("loopModel");loopPlay();loopPlay();};
+
+	var play=(n)=>{
+			if(($("#music").src)!=("https://music.163.com/song/media/outer/url?id="+data[n].id))
+			{
+				listen();
+				if(data[n].id){
+					$("#music").src="https://music.163.com/song/media/outer/url?id="+data[n].id;
+				}else if(data[n].mid){
+					$("#music").src=data[n].mid;
+				}else{
+                    $("#ifr").style.display="block";
+                    $("#ifr").src=data[n].source;
+                    $("#music").pause();
+                    playerDisplay(n);
+			        $("#listen").style.visibility="hidden";
+                    $("#returnIfr").style.display="block";
+                    return;
+                }
+			}
+			$("#music").play();
+			playerDisplay(n);
+			$("#listen").style.visibility="hidden";//隐藏音乐浮动图标
+			//Version 1.3.x: cannot found num and it has a bug so delete it .replace to "num->contentNum"
+            for(let i=0;i<contentNum;++i){
+				document.getElementsByClassName("init")[i].style="rgb(255,255,255,0.5);top: 0;";
+			}
+            document.getElementsByClassName("init")[n].style="background: rgb(255,255,255,0.7);top: 70%;";
+			
+            return locateId=n;
+		}
+
+		var listen=()=>{
+			var t,f;
+			$("#music").onloadstart=()=>{
+				f=1;
+			}
+			$("#music").onprogress=loading(0);
+			$("#music").oncanplay=()=>f=0;removeLoading(0);
+			var t=setTimeout(()=>{
+				if(f==1)loading(1);f=0;removeLoading(0);
+			},20000)
+		}
+
+		var playerDisplay=(i)=>{
+			//@  i: data序列
+			$("#player").style.backgroundImage="url("+data[i].img+")";
+			$("#player").style.top=0;
+			$("#boardMusicTitle").innerHTML=data[i].title;
+			$("#playerInner").innerHTML="描述："+data[i].text;
+
+			var n=getCookie("music").split("&");
+				var len=n.length;
+				console.log('music.cookie.length:',len)
+				for(let v=0;v<len;++v){
+					if(n[v]==data[i].d){
+						$("#ilike").className="fa fa-heart";
+						$("#playerBG").style.opacity="1";
+						$("#boardMusicTitle").style.opacity="1";
+						break;
+					}
+				}
+			thisId=i;
+			MUSICID=data[i].d;
+			return true;
+		}
+        
+        //欣赏图片的背景
+		var clearScreenTexts=()=>{
+			if(CLEAR==0){
+				$("#playerBG").style.opacity="0";
+				$("#boardMusicTitle").style.opacity="0";
+				$("clearTexts").className="fa fa-circle-thin";
+
+                $("#ilike").style.opacity="0";
+                $("#playSet").style.opacity="0";
+				CLEAR=1;
+				return true;
+			}else{
+				$("#playerBG").style.opacity="1";
+				$("#boardMusicTitle").style.opacity="1";
+				$("clearTexts").className="fa fa-minus";
+
+                $("#ilike").style.opacity="1";
+                $("#playSet").style.opacity="1";
+
+				CLEAR=0;
+				return false;
+			}
+		};
+
+		//返回按钮 => 关荧幕
+		var back=(obj)=>{
+			if(obj=="playerScreen"){
+				$("#player").style.top="160vh";
+				$("#listen").style.visibility="visible";
+
+				$("#ilike").className="fa fa-heart-o";
+				return true;
+			}else if(obj=="ifr"){
+                $("#returnIfr").style.display="none";
+                $("#ifr").style.display="none";
+                return back("playerScreen");
+            }
+		}
+
+		$("#listen").onclick=()=>{
+			$("#listen").style.visibility="hidden";
+			playerDisplay(locateId);
+		}
+	
+	//独立区间	{
+	var loadingBox=document.createElement("div");
+		loadingBox.className="little-float-model-box";
+		loadingBox.innerHTML="<h4 class='c-text'>加载中...</h4><div class='space'><button class='common-button' onclick='cancelLocateMusic()'>取消</button></div>";
+	var cannotLoadMusic=document.createElement("div");
+		cannotLoadMusic.className="little-float-model-box";
+		cannotLoadMusic.innerHTML="<h4>加载失败：超时</h4><div>但我们会试图继续努力加载</div><button onclick='removeLoading(1)' class='full-button'>确认</button>"
+		
+	var element=document.body; 
+	var loading=(i)=>{
+		if(i==0)element.appendChild(loadingBox);
+		if(i==1)element.appendChild(cannotLoadMusic);
+	}
+	
+	var removeLoading=(i)=>{
+		if(i==0){element.removeChild(loadingBox);}
+		else if(i==1){element.removeChild(cannotLoadMusic)};
+
+	}
+		var messageBox=document.createElement("div");
+			messageBox.className="little-float-model-box";
+			messageBox.innerHTML="";
+	var newMessage=(msg)=>{
+		messageBox.innerHTML=msg;
+		element.appendChild(messageBox);
+		setTimeout(()=>{
+			element.removeChild(messageBox);
+			messageBox.innerHTML="";
+		},3000)
+	}
+	
+	//end	}
+	var cancelLocateMusic=()=>{
+		$("#music").src="";
+		removeLoading(0);
+	}
+
+	const num=document.getElementsByClassName("init").length;//@play using;
+	//Devlopper Useing Function
+		var clearCookie=()=>{
+			var d = new Date();
+			d.setTime(d.getTime()+(1*-365*24*60*60*1000));
+			var expires = "expires="+d.toGMTString();
+			document.cookie = expires;
+		}
+
+	//Pack Func 执行区域：
+	checkCookie();
+	setTimeout(()=>{
+		if(getCookie("_main")){newMessage("Cookie已保存至本地")}
+	},2000);
+	</script>
+</body>
+</html>
