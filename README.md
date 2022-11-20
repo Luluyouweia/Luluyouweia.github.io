@@ -1,11 +1,13 @@
 # Luluyouweia.github.io
 
-* my blog
+* My blog
+  我的个人博客
 
-- Powered By Github
+- Powered By GitHub
+  由GitHub托管
 
 ## [Visit It](https://luluyouweia.github.io)
 
- Language: zh-CN
+ *注:Language: zh-CN中文
 
-中文
+ [访问](https://luluyouweia.github.io)
