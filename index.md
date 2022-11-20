@@ -1,3 +1,5 @@
 ---
-layout: home.html
+layout: default
 ---
+
+{% include home.html %}
