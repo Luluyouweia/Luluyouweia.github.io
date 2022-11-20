@@ -1,5 +1,5 @@
 # Luluyouweia.github.io
 
-*my blog
+* my blog
 
--Powered By Github
+- Powered By Github
