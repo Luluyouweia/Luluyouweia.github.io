@@ -2,6 +2,9 @@
 <html lang="zh-cn">
 
 <head>
+        <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>鹿碌有为 Version 1.0<title>
 	<style>
 	*{
 		margin: 0;padding: 0;box-sizing: border-box;
@@ -147,7 +150,7 @@
 <body>
 	<div class="overflow-screen" style="display: none;"></div>
 	<section class="head-tittle"><span class="too-bar-btn" onclick="tooBarBtn(0)">@</span>鹿碌有为</section>
-	<section style="height: 14vh;"></section>
+	<section style="height: 90px;"></section>
 	<section class="main-content">
 		{{ content }}	
 	</section>
@@ -179,7 +182,6 @@
 	</section>
 	
 	<script>
-	//window.open("https://luluyouweia.github.io/")
 		var tooBarBtn=(e)=>{
 			if(e==0){
 				document.getElementsByClassName("too-bar")[0].style.left="0%";
