@@ -7,7 +7,12 @@
 	{% for post in site.posts %}
 		<div class="content-list">
 			<div class="content-list-image">
-				<img src="{{ post.img }}"></img>
+				{% if post.img %}
+				        <img src="{{ post.img }}"></img>
+			        {% else %}
+			                <img src="./images/bg1.jpg"></img>
+                                {% endif %}
+
 				<p>{{ post.title }}</p>
 			</div>
 			
