@@ -9,7 +9,7 @@
 ### 关于
 1. 本网页不用于商业用途
 2. 本网页仅用于演示
-3. 网站由[Cloudflare](https://www.cloudflare.com)托管
+3. 网站由[GitHub Pages](https://github.com)托管
 
  **格言** 
 > 追求美好，碌碌有为。
