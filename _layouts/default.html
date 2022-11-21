@@ -4,7 +4,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta charset="utf-8"/>
-	<title>{{ config.title }}</title>
+	<title>鹿碌有为</title>
 	<style>
 	*{
 		margin: 0;padding: 0;box-sizing: border-box;
@@ -161,7 +161,12 @@
 		<div class="blog-host-name">鹿碌有为</div>
 		
 		<section class="blog-data-list">
-			<a href="#">文章<div>{{ site.posts.length }}</div></a>
+			<a href="#">文章
+			<div>{% for post in posts %}
+			{{post}}
+			{% endfor %}
+			</div>
+			</a>
 			<a href="#">公告<div>0</div></a>
 			<a href="#">产品<div>2</div></a>
 		</section>
