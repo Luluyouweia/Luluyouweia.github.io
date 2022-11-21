@@ -7,13 +7,15 @@
 	{% for post in site.posts %}
 		<div class="content-list">
 			<div class="content-list-image">
-				<img src="{{ site.data.bg1 }}"></img>
+				<img src="{{ post.img }}"></img>
 				<p>{{ post.title }}</p>
 			</div>
 			
-			<a class="content-list-text" href="{{ post.url }}">{{ post.excerpt }}</a>
-			<!-- Tag -->
+			<a class="content-list-text" href="{{ post.url }}">
+			{{ post.excerpt }}
 			<div class="theme"><ul><li>tag</li></ul></div>
+			</a>
+			<!-- Tag -->
 			
 		</div>
 	{% endfor %}
