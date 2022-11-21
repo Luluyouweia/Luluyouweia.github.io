@@ -163,8 +163,9 @@
 		<section class="blog-data-list">
 			<a href="#">文章
 			<div>{% for post in site.posts %}
-			{{post}}
+			{% increment num %}
 			{% endfor %}
+			{{ num }}
 			</div>
 			</a>
 			<a href="#">公告<div>0</div></a>
