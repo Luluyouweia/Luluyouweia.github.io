@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+        <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>鹿碌有为 Version 1.0</title>
+	<style>
+	*{
+		margin: 0;padding: 0;box-sizing: border-box;
+	}
+	a{
+		-webkit-tap-highlight-color: rgba(0,0,0,0);text-decoration: none;
+	}
+	.head-tittle{
+		width: 100vw;padding: 15px 16px;position: fixed;top: 0;left: 0;border-bottom: 2px solid #dadada;
+		background: rgb(255,255,255,0.85);
+		z-index: 8;font-size: 120%;font-weight: 100;
+	}
+	body{
+		position: relative;height: 100vh;background: #fff;
+	}
+	.main-content{
+		width: 100vw;min-height: 80vh;padding: 16px;background: #fff;
+	}
+	.content-list{
+		position: relative;width: 92%;margin: 18px auto;border-radius: 10px;padding-bottom: 8px;
+		overflow: hidden;border: 1px solid #dadada;box-shadow: 5px 5px 5px 5px #dadada;
+		transition: 0.3s;
+	}
+	
+	.content-list:hover{
+		box-shadow: 8px 8px 8px 8px #dadada;width: 94%;padding-bottom: 10px;
+	}
+	.content-list-image{
+		border-radius: 10px 10px 0 0;position: relative;
+		margin: auto;width: 100%;overflow: hidden;line-height: 0;
+		border: 1px solid #dadada;transition: 0.5s;max-height: 300px;
+	}
+	.content-list-image img:hover{
+		width: 110%;height: 100%;
+	}
+	.content-list-image img{
+		width: 100%;height: 100%;transition: 0.5s;
+	}
+	/*.content-list-image:after{
+		content: '';background: #000;position: absolute;
+		bottom: 0;width: 100%;height: 50%;
+	}*/
+	.content-list-image p{
+		position: absolute;bottom: 10%;color: #fff;font-size: 200%;font-weight: 600;
+		margin: 15px;
+	}
+	.content-list-text{
+		color: #214368;width: 80%;text-align: center;margin: 8px auto;
+		font-size: 90%;padding: 5px;padding-bottom: 1px;display: block;
+	}
+	.theme{
+		padding: 20px;
+	}
+	.theme ul{
+		list-style-type: none;padding: 8px 18px;border-radius: 25px;background: #08f;color: #fff;display: inline-block;
+		font-size: 70%;
+	}
+	.theme ul:active{
+		background: #9cf;
+	}
+	ul,li{
+		list-style-type: none;
+	}
+	.too-bar{
+		position: fixed;left: -300px;top: 0;padding: 15px;width: 280px;height: 100vw;background: #fff;border-right: 1px solid #eee;
+		z-index: 10;height: 100vh;transition: 0.6s;overflow: auto;
+	}
+	.blog-host-name{
+		text-align: center;font-size: 150%;font-weight: 300;color: #414141;
+		background-image: linear-gradient(to bottom right, #fb698f, #97cdff);background-clip:text;-webkit-background-clip:text;color: transparent;
+	}
+	.overflow-screen{
+		position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;background: rgb(0,0,0,0.3);
+		z-index: 9;
+	}
+	.blog-host-image{
+		display: flex;justify-content: space-around;margin: 10px 0;
+	}
+	.blog-host-image>img{
+		width: 160px;height: 160px;border-radius: 50%;margin: auto;
+			transition: 0.4s;
+	}
+	.blog-host-image>img:hover{
+		width: 185px;height: 185px;
+	}
+	.blog-data-list{
+		display: flex;justify-content: space-between;border-top: 1px solid #eee;border-bottom: 1px solid #eee;
+		padding: 3px;margin: 12px 0;
+	}
+	.blog-data-list a{
+		display: block;text-decoration: none;padding: 16px;transition: 0.2s;
+		color: #000;outline: none;
+	}
+	.blog-data-list a:active{
+		background: #eee;border-radius: 10px;
+	}	
+	.blog-data-list div{
+		color: #616161;font-size: 120%;font-weight: 200;text-align: center;
+		padding: 3px;
+	}
+	.blog-data-list div:active{
+		color: #08f;
+	}
+	.blog-list li{
+		color: rgb(111,111,111);font-size: 115%;font-weight: 300;
+		text-align: center;padding: 16px;margin: 8px auto;transition: 0.35s;
+		border-radius: 12px;
+	}
+	.blog-list .true{
+		background-image: linear-gradient(to right,#fb698f,#fb692e);
+		color: #fff;
+		box-shadow: 4px 3px 3px 3px #fb698f;transition: 0.3s;
+	}
+	.blog-list .true:hover{
+		opacity: 0.75;background-image: linear-gradient(to right,#fb698f,#fb690e);
+	}
+	.blog-list li:hover{
+		background: #eee;
+	}
+	
+	.blog-findme-source>*{
+		display: inline-block;padding: 9px;
+	}
+	.blog-findme-source a{
+		display: block;width: 64px;height: 64px;border-radius: 50%;
+		margin: 1px;font-size: 150%;transition: 0.18s;
+		text-align: center;text-decoration: none;line-height: 0;
+		padding-top: 32px;
+	}
+	.blog-findme-source a:active{
+		background: #eee;opacity: 0.85;
+	}
+	.blog-findme-source li p{
+		display: block;text-align: center;font-size: 70%;font-weight: 300;color: #414141;
+	}
+	
+	.fa-pencil-square:active{
+		font-size: 118%;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="overflow-screen" style="display: none;"></div>
+	<section class="head-tittle"><span class="too-bar-btn" onclick="tooBarBtn(0)">@</span>鹿碌有为</section>
+	<section style="height: 90px;"></section>
+	
+	<section class="main-content">
+		{% include blog.html %}	
+	</section>
+	
+	<!-- 侧滑栏 -->
+	<section class="too-bar">
+		<div class="blog-host-image"><img src="./music/bg1.jpg"></img></div>
+		<div class="blog-host-name">鹿碌有为</div>
+		
+		<section class="blog-data-list">
+			<a href="#">文章<div>{{side.post.length}}</div></a>
+			<a href="#">公告<div>0</div></a>
+			<a href="#">产品<div>2</div></a>
+		</section>
+		
+		<ul class="blog-list">
+			<li class="true">博客首页</li>
+			<li>归档记录</li>
+			<li>宝藏项目</li>
+			<li>关于博客</li>
+			<li>精心推荐</li>
+		</ul>
+		<ul class="blog-findme-source">
+			<li><a class="fa fa-github" style="color: #414141;" href="https://github.com/Luluyouweia"></a><p>Github</p></li>
+			<li><a class="fa fa-twitter" style="color: #fff;background: #08f;" href="javascript:alert('@Lucel123')"></a><p>Twitter</p></li>
+			<li><a class="fa fa-qq" style="color: #08f;" href="javascript:alert('我的QQ：鹿碌有为')"></a><p>QQ</p></li>
+			<li><a style="background: #08f;color: #fff;font-weight: 100;">知</a><p>知乎</p></li>
+		</ul>
+	</section>
+	
+	<script>
+		var tooBarBtn=(e)=>{
+			if(e==0){
+				document.getElementsByClassName("too-bar")[0].style.left="0%";
+				document.getElementsByClassName("overflow-screen")[0].style.display="block";
+			}
+		}
+		
+		document.getElementsByClassName("overflow-screen")[0].onclick=()=>{
+			document.getElementsByClassName("overflow-screen")[0].style.display="none";
+			document.getElementsByClassName("too-bar")[0].style.left="-300px";
+		}
+	</script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</body>
+</html>
+    
