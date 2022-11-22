@@ -4,6 +4,8 @@
 <head>
 	{% include header.html %}
 	<title>{{ page.title }}-鹿鹿有为</title>
+	{% include blog.html %}
+</div>
 </head>
 
 <body>
@@ -12,7 +14,9 @@
 	<section style="height: 90px;"></section>
 	
 	<section class="main-content">
-		{% include blog.html %}	
+		<div class="content-index">
+	{{ content }}
+                </div>
 	</section>
 	{% include toobar.html %}
 	
