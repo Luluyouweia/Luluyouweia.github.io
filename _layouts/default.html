@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta charset="utf-8"/>
 	<title>鹿碌有为</title>
-	<link rel="stylesheet" href="https://Luluyouweia.github.io/_layouts/main.css">
+	<link rel="stylesheet" href="../public/indexstyle.css">
 </head>
 
 <body>
@@ -16,36 +16,7 @@
 		{{ content }}	
 	</section>
 	
-	
-	<!-- 侧滑栏 -->
-	<section class="too-bar">
-		<div class="blog-host-image"><img src="https://luluyouweia.github.io/images/bg1.jpg"></img></div>
-		<div class="blog-host-name">鹿碌有为</div>
-		
-		<section class="blog-data-list">
-			<a href="#">文章
-			<div>
-			{{ site.posts.length }}
-			</div>
-			</a>
-			<a href="#">公告<div>0</div></a>
-			<a href="#">产品<div>2</div></a>
-		</section>
-		
-		<ul class="blog-list">
-			<li class="true">博客首页</li>
-			<li>归档记录</li>
-			<li>宝藏项目</li>
-			<li>关于博客</li>
-			<li>精心推荐</li>
-		</ul>
-		<ul class="blog-findme-source">
-			<li><a class="fa fa-github" style="color: #414141;" href="https://github.com/Luluyouweia"></a><p>Github</p></li>
-			<li><a class="fa fa-twitter" style="color: #fff;background: #08f;" href="javascript:alert('@Lucel123')"></a><p>Twitter</p></li>
-			<li><a class="fa fa-qq" style="color: #08f;" href="javascript:alert('我的QQ：鹿碌有为')"></a><p>QQ</p></li>
-			<li><a style="background: #08f;color: #fff;font-weight: 100;">知</a><p>知乎</p></li>
-		</ul>
-	</section>
+	{% include toobar.html %}
 	
 	<section class="footer">
 		Built by Jekyll .<br>Power  by GitHub Pages.<br>鹿碌有为2022
