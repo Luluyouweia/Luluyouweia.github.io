@@ -27,3 +27,16 @@
 			<li><a style="background: #08f;color: #fff;font-weight: 100;">知</a><p>知乎</p></li>
 		</ul>
 	</section>
+<script>
+		var tooBarBtn=(e)=>{
+			if(e==0){
+				document.getElementsByClassName("too-bar")[0].style.left="0%";
+				document.getElementsByClassName("overflow-screen")[0].style.display="block";
+			}
+		}
+		
+		document.getElementsByClassName("overflow-screen")[0].onclick=()=>{
+			document.getElementsByClassName("overflow-screen")[0].style.display="none";
+			document.getElementsByClassName("too-bar")[0].style.left="-65%";
+		}
+	</script>
