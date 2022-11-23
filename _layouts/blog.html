@@ -9,16 +9,15 @@
 </head>
 
 <body>
-	<div class="overflow-screen" style="display: none;"></div>
-	<section class="head-tittle"><span class="too-bar-btn" onclick="tooBarBtn(0)">@</span>鹿碌有为</section>
 	<section style="height: 90px;"></section>
 	
 	<section class="main-content">
 		<div class="content-index">
-	{{ content }}
-                </div>
+        	{{ content }}
+        </div>
 	</section>
 	{% include toobar.html %}
+    {% include footer.html %}
 	
 	
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
