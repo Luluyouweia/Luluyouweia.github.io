@@ -37,7 +37,7 @@
 	}
 	.content-list-image p{
 		position: absolute;bottom: 0;color: #fff;font-size: 180%;font-weight: 600;width: 100%;
-		padding: 200px;display: block;background-image: linear-gradient(to bottom,rgb(0,0,0,0),rgb(0,0,0,0.4));
+		padding: 20px 16px;display: block;background-image: linear-gradient(to bottom,rgb(0,0,0,0),rgb(0,0,0,0.4));
 	}
    /* .content-list-image p::before{
         content: '';display: block;position: absolute;background-image: linear-gradient(to bottom,rgb(0,0,0,0),rgb(0,0,0,0.4));
