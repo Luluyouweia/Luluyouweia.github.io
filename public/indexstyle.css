@@ -36,9 +36,12 @@
 		width: 100%;height: 100%;transition: 0.25s;
 	}
 	.content-list-image p{
-		position: absolute;bottom: 0;color: #fff;font-size: 180%;font-weight: 600;width: 100%;
-		padding: 12px 6px !important;display: block;background-image: linear-gradient(to bottom,rgb(0,0,0,0.05),rgb(0,0,0,0.44));
+		position: absolute;bottom: 6px;color: #fff;font-size: 180%;font-weight: 600;width: 100%;
+		padding: 12px 6px ;display: block;
 	}
+    .content-list-image p::before{
+        content: '';display: block;background-image: linear-gradient(to bottom,rgb(0,0,0,0),rgb(0,0,0,0.4));padding: 12px;width: 100%;height: 40%;bottom: 0;
+    }
 	.content-list-text{
 		color: #414141;width: 100%;padding: 12px;padding-top: 3px ;
 		font-size: 90%;padding-bottom: 3px;display: block;
