@@ -132,6 +132,7 @@
 		font-size: 118%;
 	}
 	.footer{
-		background: #eee;color: rgb(100,100,100);width: 100vw;padding: 2px 8px;
+		background: #eee;color: rgb(100,100,100);width: 100vw;padding: 18px;line-height: 130%;
 		font-weight: 300;font-size: 75%;
 	}
+    .footer a{color: #08f;}
