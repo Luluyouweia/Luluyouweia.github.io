@@ -52,7 +52,7 @@
 	.theme ul:active{
 		background: #9cf;
 	}
-	ul,li{
+	.too-bar ul,li{
 		list-style-type: none;
 	}
 	.too-bar{
