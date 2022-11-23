@@ -8,7 +8,7 @@
 		<div class="content-list">
 			<div class="content-list-image">
 				{% if post.img %}
-				        <img src="{{ post.img }}"></img>
+				        <img src="{{ post.img }}" loading="lazy"></img>
 			        {% else %}
 			                <img src="./images/bg1.jpg"></img>
                                 {% endif %}
