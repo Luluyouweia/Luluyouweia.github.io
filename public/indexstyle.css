@@ -110,7 +110,7 @@
 		background-image: linear-gradient(to right,#fb698f,#fb692e,#fb699f) !important;
 		box-shadow: 4px 3px 3px 3px #fb698f;transition: 0.3s;
 	}
-    .blog-list .true a{color: #fff;}
+    .blog-list .true a{color: #fff !important;}
 	.blog-list .true:hover{
 		opacity: 0.75;
 	}
