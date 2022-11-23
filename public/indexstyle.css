@@ -106,7 +106,7 @@
         transition: 0.3s;
     }
     
-	.blog-list li .true{
+	.blog-list .true{
 		background-image: linear-gradient(to right,#fb698f,#fb692e,#fb699f) !important;
 		color: #fff !important;
 		box-shadow: 4px 3px 3px 3px #fb698f;transition: 0.3s;
