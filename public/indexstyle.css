@@ -98,13 +98,13 @@
 	}
 	.blog-list li a{
 		color: rgb(111,111,111);font-size: 95%;font-weight: 300;
-		text-align: center;padding: 12px;margin: 8px auto;transition: 0.35s;
+		text-align: center;padding: 12px;margin: 8px auto;transition: 0.3s;
 		border-radius: 12px;display: block;
-	}
-    .blog-list li a:active{color: #fff;}
+        }
+    
 	.blog-list .true{
 		background-image: linear-gradient(to right,#fb698f,#fb692e,#fb699f) !important;
-		color: #fff;
+		color: #fff !important;
 		box-shadow: 4px 3px 3px 3px #fb698f;transition: 0.3s;
 	}
 	.blog-list .true:hover{
