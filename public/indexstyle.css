@@ -36,8 +36,8 @@
 		width: 100%;height: 100%;transition: 0.25s;
 	}
 	.content-list-image p{
-		position: absolute;bottom: 10%;color: #fff;font-size: 200%;font-weight: 600;
-		margin: 15px;
+		position: absolute;bottom: 10px;color: #fff;font-size: 200%;font-weight: 600;
+		margin: 15px;display: block;
 	}
 	.content-list-text{
 		color: #414141;width: 100%;padding: 12px;padding-top: 3px ;
