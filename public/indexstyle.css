@@ -28,7 +28,7 @@
 	.content-list-image{
 		position: relative;border-radius: 8px;
 		margin: auto;width: 100%;overflow: hidden;line-height: 0;
-		transition: 0.5s;max-height: 300px;
+		transition: 0.5s;max-height: 400px;
 	}*/
 	.content-list-image img:hover{
 		width: 110%;height: 100%;
