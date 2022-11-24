@@ -42,7 +42,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 16px;
-            min-height: 150px;
+            min-height: 200px;
             background-color: #eee;
             padding-top: 20%;
         }
