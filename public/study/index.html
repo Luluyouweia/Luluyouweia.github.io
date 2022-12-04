@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	{% include header.html %}
+	<title>鹿客学术资源</title>
+    {% include blog.html %}
+</head>
+
+<body>
+	<section style="height: 90px;"></section>
+	
+	<section class="main-content">
+		<div class="content-index">
+        	{{ content }}
+        </div>
+	</section>
+	{% include toobar.html %}
+    {% include footer.html %}
+	
+	
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</body>
+</html>
