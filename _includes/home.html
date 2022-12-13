@@ -5,7 +5,9 @@
 </p>
 		
 	{% for post in site.posts %}
-        {% if post.class %}{% if post.class == "main" %}
+        {% if post.class %}
+        TRUE
+        {% if post.class == "main" %}
 		<div class="content-list">
 			<div class="content-list-image">
 				{% if post.img %}
@@ -24,5 +26,6 @@
 			<!-- Tag -->
 			
 		</div>
-        {% endif %}{% endif %}
+        {% endif %}
+        {% endif %}
 	{% endfor %}
