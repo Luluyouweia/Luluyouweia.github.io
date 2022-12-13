@@ -102,10 +102,12 @@
 	.float-around{
 		position: fixed;background-color: #fff;
 		border-radius: 50%;border: none;
-		width: 50px;height: 50px;font-size: 13px;text-align: center;padding: 16px;
-		outline: none;	z-index: 10;	color: #08f;
+		width: 50px;height: 50px;text-align: center;padding: 16px;
+		outline: none;	z-index: 10;
 		right: 18px;bottom: 60px;font-size: 15px;
-		visibility: hidden;transition: 0.5s;
+		visibility: hidden;
+        transition: 0.3s;background-image: linear-gradient(to bottom right, #fb698f, #08f);background-clip:text;-webkit-background-clip:text;color: transparent;
+        			
 	}
 	.float-around:hover{background: #9cf;}
 	.common-button,full-button:hover{
