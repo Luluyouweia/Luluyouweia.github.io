@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Version 1.3.1.6 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta charset="utf-8">
+	<title>鹿客音乐</title>
+	<link rel="stylesheet" href="/music/index.css">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">		
+</head>	
+<body onload="checkCookie()">
+	<div id="topbar">鹿客音乐</div><div style="height: 50px"></div>
+		<ul id="tools">
+		<li>推荐</li>
+		<li>精选</li>
+		<li>高级</li>
+		<li>流行BGM</li>
+		<li>经典</li>
+		<li>伤感</li>
+		<li>超燃</li>
+		<li>搞笑</li>
+		<li>电音</li>
+		<li>游戏</li>
+		<li>动漫</li>	
+		<li>原创</li>
+	</ul>
+	
+	<div style="height: 30px"></div>
+	
+	<div id="page" ></div>
+	
+    <!--For iframe back:-->
+    <button class="back" id="returnIfr" style="z-index: 19;display: none;top: 1.2vh;right: 2vw;position: fixed;" onclick="back('ifr')">╳</button>
+
+	<section id="player">
+		<div id="boardMusicTitle">曲目</div>
+		<button class="back" style="top: 1.2vh;right: 5vw;" onclick="back('playerScreen')">╳</button>
+		<div id="playerBG">
+			<section id="playerSection">
+				<div id="playerInner"></div>
+			</section>
+		</div>
+		<section id="musicUserSelect">
+			<span id="ilike" class="fa fa-heart-o" onclick="addCookie('music',MUSICID)"></span>
+			<span id="clearTexts" class="fa fa-minus" onclick="clearScreenTexts()"></span>
+			<span id="playSet" class="fa fa-sort-amount-asc" onclick="loopPlay()"></span>
+			
+		</section>
+	</section>
+	
+	<button id="listen" class="float-around fa fa-headphones"></button>
+	<audio id="music" controls><source src="" type="audio/mp3"></source></audio>
+	<iframe id ="ifr" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+	<br><br><br>
+    
+	<script src="/music/data.js"></script>
+	<script src="/music/render.js"></script>
+</body>
+</html>
+    
