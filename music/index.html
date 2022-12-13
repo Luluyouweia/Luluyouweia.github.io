@@ -225,7 +225,7 @@
 	<iframe id ="ifr" src="" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 	<br><br><br>
     
-	<script src="https://luluyouweia.github.io/music/data.js"></script>
+	<script src="/music/data.js"></script>
 	<script>
         //小接口：
 			var locateId;//当前正在播放的音乐ID
@@ -247,7 +247,7 @@
 	for(let i=0;i<data.length;++i){
 		//var type=data[i].type.split(";");var len=type.length;console.log(len)
 		    data[i].d=i;//LUCEL下的ID
-            if(data[i].img==''){data[i].img="https://lucel.pages.dev/background.jpg";}//content background link
+            if(data[i].img==''){data[i].img="/public/background.jpg";}//content background link
 			var bg="<div class='content' onclick='play("+i+")' style='background-image:url("+data[i].img+")'><div class='init'>";
 			var title="<h3>"+data[i].title+"</h3>";
 			var text="<div class='text244'>"+data[i].text+"</div></div>";
@@ -263,7 +263,7 @@
         $(".load-more-music").style.display="none";
         for(let i=contentNum;i<data.length;++i){
             data[i].d=i;
-        if(data[i].img==''){data[i].img="https://lucel.pages.dev/background.jpg";}
+        if(data[i].img==''){data[i].img="/public/background.jpg";}
             var bg="<div class='content' onclick='play("+i+")' style='background-image:url("+data[i].img+")'><div class='init'>";
             var title="<h3>"+data[i].title+"</h3>";
             var text="<div class='text244'>"+data[i].text+"</div></div>";
