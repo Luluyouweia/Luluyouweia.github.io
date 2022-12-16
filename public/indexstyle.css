@@ -6,7 +6,7 @@
 	}
     a:active{color: #000;}
 	.head-tittle{
-		width: 100vw;padding: 15px 16px;position: fixed;top: 0;left: 0;border-bottom: 2px solid #dadada;
+		width: 100vw;padding: 15px 16px;position: fixed;top: 0;left: 0;box-shadow: rgb(0,0,0,0.3) 3px 3px 3px;
 		background: rgb(255,255,255,0.85);
 		z-index: 8;font-size: 120%;font-weight: 100;
 	}
