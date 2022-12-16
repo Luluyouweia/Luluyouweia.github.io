@@ -6,7 +6,7 @@
 - Powered By GitHub
   由GitHub托管
 
-## [Visit It](https://luluyouweia.github.io)
+## [Visit It](https://luluyouwei.netlify.app)
 
  *注:Language: zh-CN中文
 
