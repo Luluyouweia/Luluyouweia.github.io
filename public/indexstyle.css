@@ -161,7 +161,7 @@
     
 	.blog-list .true{
 		background-image: linear-gradient(to right,#f7797d, #fbd786, #c6ffdd) !important;
-		border: 2px solid ;border-image: linear-grident(to right,#f7797d, #fbd786, #c6ffdd);transition: 0.3s;
+		border-radius: 8px;transition: 0.3s;
 	}
     .blog-list .true a{color: #fff !important;}
 	.blog-list .true:hover{
