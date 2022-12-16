@@ -156,7 +156,7 @@
 		background-color: rgb(234,234,234,0.35);left: 0;right: 0;margin: auto;border-radius: 6px;
 		color: rgb(255, 255, 255);transition: 0.5s;
 	}
-	#playerInner>*:active,#musicUserSelect>*:active{background-color: rgb(255,255,255,0.6);color: #08f;}
+	#playerInner:active,#musicUserSelect>*:active{background-color: rgb(255,255,255,0.6);color: #08f;}
 	#musicUserSelect{
 		display: flex;justify-content: space-around;
 		position: relative;
