@@ -6,8 +6,8 @@ layout: default
 
 <script>
     const l_url=location.href;
-        if(l_url.split("?").legth>0){
+        if(l_url.search("?")!=-1){
               let v=l_url.split("?")[1];
-              document.write("v:",v)
+              alert(v);
         }
 </script>
