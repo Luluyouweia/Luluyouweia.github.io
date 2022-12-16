@@ -111,7 +111,7 @@
 	}
 	.too-bar{
 		position: fixed;left: -252px;top: 0;padding: 15px;width: 250px;height: 100vh;background: #fff;border-right: 1px solid #eee;
-		z-index: 10;transition: 0.45s;overflow: auto;
+		z-index: 10;transition: 0.45s;overflow: auto;padding-bottom: 20px;
 	}
 	.blog-host-name{
 		text-align: center;font-size: 150%;font-weight: 300;color: #414141;
