@@ -160,7 +160,7 @@
     }
     
 	.blog-list .true{
-		background-image: linear-gradient(to right,#fb698f,#fb692e,#fb699f) !important;
+		background-image: linear-gradient(to right,#f7797d, #fbd786, #c6ffdd) !important;
 		box-shadow: 4px 3px 3px 3px #fb698f;transition: 0.3s;
 	}
     .blog-list .true a{color: #fff !important;}
