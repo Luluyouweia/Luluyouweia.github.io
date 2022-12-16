@@ -105,12 +105,12 @@
 	}
 	#listenContent{
 		position: fixed;right: 16px;bottom: 100px;background: #fff;
-        border-radius: 50%;border: none;width: 50px;height: 50px;z-index: 10;
+        border-radius: 50%;border: none;width: 40px;height: 50px;z-index: 10;
 	visibility: hidden; transition: 0.3s;
     }
 	.float-around{
-		text-align: center;padding: 16px;border: none;
-		outline: none;font-size: 20px;
+		text-align: center;padding: 15px;border: none;
+		outline: none;font-size: 25px;
         background-image: linear-gradient(to bottom right, #fb698f, #08f);background-clip:text;-webkit-background-clip:text;color: transparent;		
 	}
     /*
@@ -156,7 +156,7 @@
 		background-color: rgb(234,234,234,0.35);left: 0;right: 0;margin: auto;border-radius: 6px;
 		color: rgb(255, 255, 255);transition: 0.5s;
 	}
-	#playerInner:active,#musicUserSelect>*:active{background-color: rgb(255,255,255,0.6);color: #08f;}
+	#playerInner:hover,#musicUserSelect>*:active{background-color: rgb(255,255,255,0.6);color: #08f;}
 	#musicUserSelect{
 		display: flex;justify-content: space-around;
 		position: relative;
