@@ -109,8 +109,8 @@
 	visibility: hidden; transition: 0.3s;
     }
 	.float-around{
-		text-align: center;padding: 17px;border: none;
-		outline: none;font-size: 22px;font-weight: 600;
+		text-align: center;padding: 20px;border: none;
+		outline: none;font-size: 25px;font-weight: 600;
         background-image: linear-gradient(to bottom right, #fb698f, #08f);background-clip:text;-webkit-background-clip:text;color: transparent;		
 	}
     /*
