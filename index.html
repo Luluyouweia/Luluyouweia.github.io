@@ -3,3 +3,11 @@ layout: default
 ---
 
 {% include home.html %}
+
+<script>
+    const l_url=location.href;
+        if(l_url.split("?").legth>0){
+              let v=l_url.split("?")[1];
+              document.write("v:",v)
+        }
+</script>
