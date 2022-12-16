@@ -226,7 +226,7 @@
 		var back=(obj)=>{
 			if(obj=="playerScreen"){
 				$("#player").style.top="160vh";
-				$("#listen").style.visibility="visible";
+				$("#listenConrent").style.visibility="visible";
 
 				$("#ilike").className="fa fa-heart-o";
 				return true;
@@ -237,8 +237,8 @@
             }
 		}
 
-		$("#listen").onclick=()=>{
-			$("#listen").style.visibility="hidden";
+		$("#listenContent").onclick=()=>{
+			$("#listenContent").style.visibility="hidden";
 			playerDisplay(locateId);
 		}
 	
