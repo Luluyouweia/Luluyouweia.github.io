@@ -226,7 +226,7 @@
 		var back=(obj)=>{
 			if(obj=="playerScreen"){
 				$("#player").style.top="160vh";
-				$("#listenConrent").style.visibility="visible";
+				$("#listenContent").style.visibility="visible";
 
 				$("#ilike").className="fa fa-heart-o";
 				return true;
