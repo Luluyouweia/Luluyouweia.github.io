@@ -105,12 +105,12 @@
 	}
 	#listenContent{
 		position: fixed;right: 16px;bottom: 100px;background: #fff;
-        border-radius: 50%;border: none;width: 40px;height: 50px;z-index: 10;
+        border-radius: 50%;border: none;width: 55px;height: 55px;z-index: 10;
 	visibility: hidden; transition: 0.3s;
     }
 	.float-around{
-		text-align: center;padding: 15px;border: none;
-		outline: none;font-size: 25px;font-weight: 600;
+		text-align: center;padding: 17px;border: none;
+		outline: none;font-size: 22px;font-weight: 600;
         background-image: linear-gradient(to bottom right, #fb698f, #08f);background-clip:text;-webkit-background-clip:text;color: transparent;		
 	}
     /*
