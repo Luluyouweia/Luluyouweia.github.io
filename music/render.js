@@ -146,14 +146,14 @@
                     $("#ifr").src=data[n].source;
                     $("#music").pause();
                     playerDisplay(n);
-			        $("#listen").style.visibility="hidden";
+			        $("#listenContent").style.visibility="hidden";
                     $("#returnIfr").style.display="block";
                     return;
                 }
 			}
 			$("#music").play();
 			playerDisplay(n);
-			$("#listen").style.visibility="hidden";//隐藏音乐浮动图标
+			$("#listenContent").style.visibility="hidden";//隐藏音乐浮动图标
 			//Version 1.3.x: cannot found num and it has a bug so delete it .replace to "num->contentNum"
             for(let i=0;i<contentNum;++i){
 				document.getElementsByClassName("init")[i].style="rgb(255,255,255,0.5);top: 0;";
