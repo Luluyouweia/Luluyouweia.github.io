@@ -1,7 +1,11 @@
+@font-face{
+    font-family: "字体";
+    src: url('/public/font/HYWH-85W.ttf');
+}
 *{
 		margin: 0;padding: 0;
 		box-sizing: border-box;
-		font-family: "Droid Sans Fallback";
+		font-family: "字体";
 		font-weight: 300;color: #000;
 	}
 	html,body{
