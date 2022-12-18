@@ -162,7 +162,7 @@
 	#musicUserSelect{
 		display: flex;justify-content: space-around;
 		position: absolute;
-		bottom: 110px;width: 100%;padding: 25px;margin: 0 auto;
+		bottom: 110px;width: 100%;padding: 0 25px;margin: 0 auto;
 	}
 	#musicUserSelect>*{
 		font-size: 16px;color:rgb(255, 255, 255);padding: 16px;border-radius: 50%;width: 49px;height: 49px;text-align: center;
