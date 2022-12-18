@@ -78,8 +78,8 @@
         padding: 10px;width: 42vw;background-image: linear-gradient(to bottom right,rgb(0,0,0,0.5),rgb(111,111,111,0.45));
     }
 		#boardMusicTitle{
-			display: block;color: #fff;
-			margin: 5px 6px; font-size: 365%;max-height: 19vh;font-weight: 500;
+			display: block;color: #fff;font-family: "none";
+			margin: 5px 6px; font-size: 555%;max-height: 19vh;font-weight: 500;
 			padding: 3px;
 			transition: 0.7s;
 			/* For opacity */
@@ -151,7 +151,7 @@
 		z-index: 29;
 	}
 	#playerInner{
-		padding: 6px;max-width: 80vw;z-index: 9;color: #fff;
+		padding: 6px;max-width: 80vw;z-index: 9;color: #fff;font-family: "none";font-size: 300%;
 		background-color: rgb(234,234,234,0.35);
 		transition: 0.5s;
 	}
