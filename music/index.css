@@ -74,12 +74,13 @@
 		z-index: 8;
 	}
     #playerSection{
-        display: block;position: absolute;top: 0;left: 0;
+        display: block;
+        position: absolute;top: 0;left: 0;
         padding: 10px;width: 50vw;height: 100vh;overflow: hidden;transition: 0.3s;
         background-image: linear-gradient(to bottom right,rgb(0,0,0,0.55),rgb(0,0,0,0));
     }
     #playerSection:hover{
-        background-image: linear-gradient(to bottom right,rgb(0,0,0.4),rgb(0,0,0,0))
+        background-image: linear-gradient(to bottom right,rgb(0,0,0,0.4),rgb(0,0,0,0));
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
