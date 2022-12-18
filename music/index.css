@@ -155,7 +155,7 @@
 		z-index: 29;
 	}
 	#playerInner{
-		padding: 6px;max-width: 80vw;z-index: 9;color: #fff;font-size: 185%;font-weight: 300;font-family: "none";
+		padding: 6px;color: #fff;font-size: 185%;font-weight: 300;font-family: "none";
 		transition: 0.5s;
 	}
 	#playerInner:hover,#musicUserSelect>*:active{color: rgb(255,255,255,0.8);}
