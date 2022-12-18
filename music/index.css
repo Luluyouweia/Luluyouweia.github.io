@@ -73,10 +73,14 @@
 		transition: 1s;display: block;background-position: center;
 		z-index: 8;
 	}
+    #playerSection{
+        display: block;position: absolute;top: 2px;left: 2px;
+        padding: 10px;width: 42vw;background-image: linear-gradient(to bottom right,rgb(0,0,0,0.6),rgb(111,111,111,0.45));
+    }
 		#boardMusicTitle{
-			display: block;width: 100vw;text-align: center;
-			margin: 10vh auto 8px; font-size: 28px;max-height: 19vh;
-			padding: 30px;background: rgb(255,255,255,0.5);z-index: 9px;
+			display: block;
+			margin: 5px 6px; font-size: 180%;max-height: 19vh;font-weight: 500;
+			padding: 3px;z-index: 9px;
 			transition: 0.7s;
 			/* For opacity */
 		}
