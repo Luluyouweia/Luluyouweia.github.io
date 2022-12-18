@@ -21,17 +21,5 @@
 |---|---|
 |  Lucel音乐 | 其他  |
 
-
-### 音乐数据查看方法
-
-```
-    <script src="https://luspecial.vercel.app/music/data.js"></script>
-    //data[x]为音乐文件
-    //id是网易云音乐id
-    //mid是任意链接
-    //source是iframe框架链接
-    console.log(data[0]);//=>...
-```
-
-
+### luluyouwei.netlify.app
  
