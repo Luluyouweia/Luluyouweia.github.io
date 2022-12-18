@@ -207,6 +207,7 @@
 
                 $("#ilike").style.opacity="0";
                 $("#playSet").style.opacity="0";
+                $("#music").style.opacity="0";
 				CLEAR=1;
 				return true;
 			}else{
@@ -216,7 +217,7 @@
 
                 $("#ilike").style.opacity="1";
                 $("#playSet").style.opacity="1";
-
+                $("#music").style.opacity="1";
 				CLEAR=0;
 				return false;
 			}
