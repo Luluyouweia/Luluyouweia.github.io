@@ -79,7 +79,7 @@
         background-image: linear-gradient(to bottom right,rgb(0,0,0,0.55),rgb(0,0,0,0));
     }
     #playerSection:hover{
-        background-image: linear-gradient(to bottom right,rgb(0,0,0.65),rgb(0,0,0,0.05))
+        background-image: linear-gradient(to bottom right,rgb(0,0,0.4),rgb(0,0,0,0))
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
@@ -158,7 +158,7 @@
 		padding: 6px;color: #fff;font-size: 185%;font-weight: 300;
 	    transition: 0.5s;
 	}
-	#playerInner:hover,#musicUserSelect>*:active{color: rgb(255,255,255,0.8);}
+	#playerInner:hover,#musicUserSelect>*:active{color: rgb(255,255,255,0.68);}
 	#musicUserSelect{
 		display: flex;justify-content: space-around;
 		position: absolute;
