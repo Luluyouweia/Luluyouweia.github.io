@@ -75,12 +75,12 @@
 	}
     #playerSection{
         display: block;position: absolute;top: 0;left: 0;
-        padding: 10px;width: 50vw;height: 100vh;
+        padding: 10px;width: 50vw;height: 100vh;overflow: hidden;
         background-image: linear-gradient(to bottom right,rgb(0,0,0,0.5),rgb(0,0,0,0));
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
-			margin: 5px 6px; font-size: 555%;max-height: 19vh;font-weight: 500;
+			margin: 5px 6px; font-size: 555%;font-weight: 500;
 			padding: 3px;
 			transition: 0.7s;
 			/* For opacity */
@@ -143,8 +143,8 @@
 		display: block;
 	}
 	.little-float-model-box{
-		background: #fff;border: 1px solid #eee;border-radius: 8px;
-		padding: 16px;position: fixed;display: block;
+		display: block;background: #fff;border: 1px solid #eee;border-radius: 8px;
+		padding: 16px;position: fixed;
 		top: 0;bottom: 0;left: 0;right: 0;margin: auto;
 		width: 38vw; height: 38vw;overflow: auto;
 		max-width: 300px;max-height: 300px;
