@@ -180,7 +180,7 @@
 			$("#player").style.backgroundImage="url("+data[i].img+")";
 			$("#player").style.top=0;
 			$("#boardMusicTitle").innerHTML=data[i].title;
-			$("#playerInner").innerHTML="描述："+data[i].text;
+			$("#playerInner").innerHTML="&nbsp &nbsp &nbsp"+data[i].text;
 
 			var n=getCookie("music").split("&");
 				var len=n.length;
