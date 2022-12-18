@@ -108,7 +108,7 @@
 		background: rgb(255,255,255,0.85);
 	}
 	#listenContent{
-		position: fixed;right: 16px;bottom: 100px;background: #fff;
+		position: fixed;right: 16px;bottom: 65px;background: #fff;
         border-radius: 50%;border: none;width: 55px;height: 55px;z-index: 10;
 	visibility: hidden; transition: 0.3s;
     }
