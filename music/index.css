@@ -75,7 +75,8 @@
 	}
     #playerSection{
         display: block;position: absolute;top: 0;left: 0;
-        padding: 10px;width: 49vw;background-image: linear-gradient(to bottom right,rgb(0,0,0,0.5),rgb(0,0,0,0));
+        padding: 10px;width: 50vw;height: 100vh;
+        background-image: linear-gradient(to bottom right,rgb(0,0,0,0.5),rgb(0,0,0,0));
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
