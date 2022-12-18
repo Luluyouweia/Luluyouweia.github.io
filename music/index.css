@@ -82,7 +82,7 @@
         background-image: linear-gradient(to bottom right,rgb(0,0,0.65),rgb(0,0,0,0.05))
     }
 		#boardMusicTitle{
-			display: block;color: #fff;font-family: "none";
+			display: block;color: #fff;
 			margin: 5px 6px; font-size: 543%;font-weight: 300;
 			padding: 3px;
 			transition: 0.7s;
