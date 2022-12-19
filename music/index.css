@@ -82,6 +82,9 @@
     #playerSection:hover{
         background-image: linear-gradient(to bottom right,rgb(0,0,0,0.4),rgb(0,0,0,0));
     }
+    @media screen and (max-width:500px) {
+        width: 100vw;
+    }
 		#boardMusicTitle{
 			display: block;color: #fff;
 			font-size: 9vw;font-weight: 300;
@@ -157,7 +160,7 @@
 	}
 	#playerInner{
 		padding: 6px;color: #fff;font-size: 4.5vw;font-weight: 300;
-	    transition: 0.5s;
+	    transition: 0.3s;
 	}
 	#playerInner:hover,#musicUserSelect>*:active{color: rgb(255,255,255,0.68);}
 	#musicUserSelect{
