@@ -84,7 +84,7 @@
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
-			margin: 5px 6px; font-size: 10vw;font-weight: 300;
+			margin: 5px 8px; font-size: 11vw;font-weight: 300;
 			padding: 3px;
 			transition: 0.7s;
 			/* For opacity */
@@ -156,7 +156,7 @@
 		z-index: 29;
 	}
 	#playerInner{
-		padding: 6px;color: #fff;font-size: 185%;font-weight: 300;
+		padding: 6px;color: #fff;font-size: 8vw;font-weight: 300;
 	    transition: 0.5s;
 	}
 	#playerInner:hover,#musicUserSelect>*:active{color: rgb(255,255,255,0.68);}
