@@ -119,3 +119,6 @@
         data[32]={
             title:"只因你太美",text:"小黑子露出只因脚了吧",id:1340439829,img:""
         }
+        data[33]={
+            title:"岩壑之崩",text:"Hoyomix 陈致逸",id:1861578703,img:"/images/m/img-rtlw.jpg"
+        }
