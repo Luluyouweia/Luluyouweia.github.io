@@ -21,5 +21,5 @@
 |---|---|
 |  Lucel音乐 | 其他  |
 
-### luluyouwei.netlify.app
+### luluyouwei.netlify.app/music/
  
