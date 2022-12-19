@@ -84,7 +84,7 @@
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
-			margin: 5px 6px; font-size: 500%;font-weight: 300;
+			margin: 5px 6px; font-size: 10vw;font-weight: 300;
 			padding: 3px;
 			transition: 0.7s;
 			/* For opacity */
