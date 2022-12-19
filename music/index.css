@@ -74,7 +74,7 @@
 		z-index: 8;
 	}
     #playerSection{
-        display: block;min-width: 210px;
+        display: block;min-width: 250px;
         position: absolute;top: 0;left: 0;
         padding: 10px;width: 50vw;height: 100vh;overflow: hidden;transition: 0.3s;
         background-image: linear-gradient(to bottom right,rgb(0,0,0,0.55),rgb(0,0,0,0));
