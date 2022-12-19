@@ -74,7 +74,7 @@
 		z-index: 8;
 	}
     #playerSection{
-        display: block;min-width: 180px;
+        display: block;min-width: 210px;
         position: absolute;top: 0;left: 0;
         padding: 10px;width: 50vw;height: 100vh;overflow: hidden;transition: 0.3s;
         background-image: linear-gradient(to bottom right,rgb(0,0,0,0.55),rgb(0,0,0,0));
@@ -84,7 +84,7 @@
     }
 		#boardMusicTitle{
 			display: block;color: #fff;
-			margin: 5px 6px; font-size: 543%;font-weight: 300;
+			margin: 5px 6px; font-size: 500%;font-weight: 300;
 			padding: 3px;
 			transition: 0.7s;
 			/* For opacity */
