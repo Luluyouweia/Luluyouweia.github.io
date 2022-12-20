@@ -224,7 +224,7 @@
 		};
 
 		//返回按钮 => 关荧幕
-		var back=(obj)=>{
+		let back=(obj)=>{
 			if(obj=="playerScreen"){
 				$("#player").style.top="160vh";
 				$("#listenContent").style.visibility="visible";
@@ -237,7 +237,12 @@
                 return back("playerScreen");
             }
 		}
-
+        let audioDisplayFunc=()=>{
+            let ele=$("#music").style.opacity;
+            if(ele=="1")ele="0";
+            if(ele=="0")ele="1";
+            return true;
+        }
 		$("#listenContent").onclick=()=>{
 			$("#listenContent").style.visibility="hidden";
 			playerDisplay(locateId);
