@@ -239,9 +239,10 @@
                 return back("playerScreen");
             }
 		}
+        let ISMUSICHIDE=0;
         let audioDisplayFunc=()=>{
-            alert("Debug")
-            $("#music").style.opacity="0";
+            if(ISMUSICHIDE==0){$("#music").style.opacity="0";return true;}
+            $("#music").style.opacity="1";
             return true;
         }
 		$("#listenContent").onclick=()=>{
@@ -249,7 +250,7 @@
 			playerDisplay(locateId);
 		}
 	
-	//独立区间	{
+	//独立区间	(づ ●─● )づ(●—●)（｡ò ∀ ó｡）{
 	var loadingBox=document.createElement("div");
 		loadingBox.className="little-float-model-box";
 		loadingBox.innerHTML="<h4 class='c-text'>加载中...</h4><div class='space'><button class='common-button' onclick='cancelLocateMusic()'>取消</button></div>";
@@ -295,7 +296,7 @@
 			document.cookie = expires;
 		}
 
-	//Pack Func 执行区域：
+	//Pack Func 运行区域：
 	checkCookie();
 	setTimeout(()=>{
 		if(getCookie("_main")){newMessage("Cookie已保存至本地")}
