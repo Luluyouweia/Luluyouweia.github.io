@@ -243,6 +243,7 @@
         let audioDisplayFunc=()=>{
             if(ISMUSICHIDE==0){$("#music").style.opacity="0";ISMUSICHIDE=1;return true;}
             $("#music").style.opacity="1";
+            ISMUSICHIDE=0;
             return true;
         }
 		$("#listenContent").onclick=()=>{
