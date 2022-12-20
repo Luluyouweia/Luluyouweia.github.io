@@ -42,7 +42,7 @@
 		position: fixed;bottom: 0;width: 100vw;padding: 3px 20px;
 		background: #fff;display: flex;justify-content: space-around;
 		border-top: 1px solid #eee;
-		z-index: 9;
+		z-index: 9;transition: 0.35s;
 	}
 	#music *{
 		color: #fff;display: inline-block;font-size: 10px;font-weight: 200;
