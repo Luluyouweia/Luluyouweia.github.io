@@ -241,7 +241,7 @@
 		}
         let ISMUSICHIDE=0;
         let audioDisplayFunc=()=>{
-            if(ISMUSICHIDE==0){$("#music").style.opacity="0";return true;}
+            if(ISMUSICHIDE==0){$("#music").style.opacity="0";ISMUSICHIDE=1;return true;}
             $("#music").style.opacity="1";
             return true;
         }
