@@ -240,9 +240,10 @@
             }
 		}
         let audioDisplayFunc=()=>{
-            let ele=$("#music").style.opacity;
+            /*let ele=$("#music").style.opacity;
             if(ele=="1"){ele="0";return false};
-            ele="1";
+            ele="1";*/
+            ele="0";
             return true;
         }
 		$("#listenContent").onclick=()=>{
