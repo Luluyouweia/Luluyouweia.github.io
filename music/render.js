@@ -208,6 +208,7 @@
                 $("#ilike").style.opacity="0";
                 $("#playSet").style.opacity="0";
                 $("#music").style.opacity="0";
+                $("#audioDisplay").style.opacity="0";
 				CLEAR=1;
 				return true;
 			}else{
@@ -218,6 +219,7 @@
                 $("#ilike").style.opacity="1";
                 $("#playSet").style.opacity="1";
                 $("#music").style.opacity="1";
+                $("#audioDisplay").style.opacity="1";
 				CLEAR=0;
 				return false;
 			}
@@ -239,8 +241,8 @@
 		}
         let audioDisplayFunc=()=>{
             let ele=$("#music").style.opacity;
-            if(ele=="1")ele="0";
-            if(ele=="0")ele="1";
+            if(ele=="1"){ele="0";return false};
+            ele="1";
             return true;
         }
 		$("#listenContent").onclick=()=>{
