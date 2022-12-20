@@ -241,10 +241,7 @@
 		}
         let audioDisplayFunc=()=>{
             alert("Debug")
-            let ele=$("#music").style.opacity;
-            /*if(ele=="1"){ele="0";return false};
-            ele="1";*/
-            ele="0";
+            $("#music").style.opacity="0";
             return true;
         }
 		$("#listenContent").onclick=()=>{
