@@ -166,7 +166,7 @@
 	#musicUserSelect{
 		display: flex;justify-content: space-around;
 		position: absolute;
-		top: 75vh;width: 100%;padding: 0 75px;margin: 0 auto;
+		bottom: 25vh;width: 100%;padding: 0 75px;margin: 0 auto;
 	}
 	#musicUserSelect>*{
 		font-size: 21px;color:rgb(255, 255, 255);padding: 28px;border-radius: 50%;width: 49px;height: 49px;text-align: center;
