@@ -1,8 +1,11 @@
-#Home 首页
+#Home 首页  
+
+#title: Topbar text 顶栏文本
+#background: Background image 背景图片
 title: 鹿鹿有为
 background: none
 
-#侧滑栏
+#Nearbar 侧滑栏
 lists:
   - title: 我的主页
     url: /index.html
@@ -11,5 +14,6 @@ lists:
   - title: 哈哈
     url: /d
 
+#Footer Text 页尾附加文本
 footer:
     text: 鹿鹿有为©2022-2022 
