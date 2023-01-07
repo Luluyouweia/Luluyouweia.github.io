@@ -32,6 +32,7 @@
 			<li><a style="background: #08f;color: #fff;font-weight: 100;">知</a><p>知乎</p></li>
 		</ul>
 	</section>
+    <section id="background">{{site.data.config.background}}</section>
 <script>
 		var tooBarBtn=(e)=>{
 			if(e==0){
@@ -44,4 +45,5 @@
 			document.getElementsByClassName("overflow-screen")[0].style.display="none";
 			document.getElementsByClassName("too-bar")[0].style.left="-252px";
 		}
+        document.body.style.background=document.getElementById("background").innerText;
 	</script>
