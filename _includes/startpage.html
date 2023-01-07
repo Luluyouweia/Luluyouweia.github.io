@@ -7,8 +7,8 @@
     alert("好耶，找到bug啦哈哈");
     let stpText=document.querySelectorAll("#startpage>section")[0].innerHTML;
         const text=stpText;
-    alert(stpText+text)
         stpText="";
+    alert(document.querySelectorAll("#startpage>section")[0].innerHTML);
         let a=setInterval(()=>{
             if(stpText==""){
                 stpText="|";
