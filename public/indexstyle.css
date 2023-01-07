@@ -14,7 +14,7 @@
 		position: relative;height: 100vh;background: #fff;
 	}
 	.main-content{
-		width: 100vw;min-height: 80vh;background: #fff;
+		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);
 	}
 	.content-list{
 		position: relative;width: 94%;margin: 25px auto;padding-bottom: 8px;
