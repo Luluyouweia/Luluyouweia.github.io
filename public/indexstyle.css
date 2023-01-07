@@ -14,7 +14,7 @@
 		position: relative;height: 100vh;background: #fff;background-attachment: fixed;background-position: center;background-size: 100%;background-repeat: no-repeat;
 	}
 	.main-content{
-		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);padding: 80px;
+		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);padding: 30px 16px;
 	}
 	.content-list{
 		position: relative;width: 92%;margin: 36px auto;padding-bottom: 18px;background-color: #fff;
