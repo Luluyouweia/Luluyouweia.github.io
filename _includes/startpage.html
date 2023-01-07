@@ -14,7 +14,7 @@
             }
         },600)
         let displayAll=(i)=>{
-            if(i=text.length)return true;
+            if(i==text.length)return true;
             document.querySelectorAll("#startpage>section")[0].innerHTML+=text[i];
             alert(document.querySelectorAll("#startpage>section")[0].innerHTML+"现+：",text[i])
             ++i;
