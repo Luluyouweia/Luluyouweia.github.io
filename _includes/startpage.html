@@ -1,10 +1,11 @@
+<br><br><br>
 <section id="startpage">
     <div>鹿碌有为</div>
     <section>嘿嘿，2023新年快乐!</section>
 </section>
 <script>
-    let stpText=document.getElementById("startpage").getElementsByTagName("SECTION")[0].innerText;
-    {
+    let stpText=document.getElementById("startpage").getElementsByTagName("SECTION")[0].innerHTML;
+    !function(){
         const text=stpText;
         stpText="";
         let a=setInterval(()=>{
@@ -19,7 +20,7 @@
             stpText+=text[i];
             ++i;
             setTimeout(displayAll(i),350)
-        }
+        }()
         setTimeout(()=>{
             clearInterval(a);
             displayAll(0);
