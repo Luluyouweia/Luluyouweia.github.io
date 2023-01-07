@@ -11,7 +11,7 @@
 		z-index: 8;font-size: 120%;font-weight: 100;
 	}
 	body{
-		position: relative;height: 100vh;background: #fff;
+		position: relative;height: 100vh;background: #fff;background-attachment: fixed;background-position: center;background-size: 100% auto;background-repeat: none;
 	}
 	.main-content{
 		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);
