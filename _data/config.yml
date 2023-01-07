@@ -5,7 +5,7 @@
 #title: Topbar text 顶栏文本
 #background: Background image 背景图片
 title: 鹿鹿有为
-background: images/background.jpg
+background: /images/background.jpg
 
 #Nearbar 侧滑栏
 lists:
