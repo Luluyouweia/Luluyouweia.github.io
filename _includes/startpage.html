@@ -14,10 +14,10 @@
             }
         },600)
         let displayAll=(i)=>{
-            if(i>text.length)return true;
+            if(i=text.length)return true;
             document.querySelectorAll("#startpage>section")[0].innerHTML+=text[i];
             ++i;
-            setTimeout(displayAll(i),1000)
+            setTimeout(()=>displayAll(i),1000)
         }
         setTimeout(()=>{
             document.querySelectorAll("#startpage>section")[0].innerHTML="";
