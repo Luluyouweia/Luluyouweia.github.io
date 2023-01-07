@@ -18,11 +18,11 @@
             let t=document.querySelectorAll("#startpage>section")[0].innerHTML.split("|")[0]+text[i];
             document.querySelectorAll("#startpage>section")[0].innerHTML=t+"|";
             ++i;
-            setTimeout(()=>displayAll(i),1000)
+            setTimeout(()=>displayAll(i),350)
         }
         setTimeout(()=>{
             document.querySelectorAll("#startpage>section")[0].innerHTML="";
             clearInterval(a);
             displayAll(0);
-        },4000)
+        },5000)
 </script>
