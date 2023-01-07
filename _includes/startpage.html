@@ -7,10 +7,10 @@
     alert("好耶，找到bug啦哈哈");
     const text=document.querySelectorAll("#startpage>section")[0].innerHTML;
         let a=setInterval(()=>{
-            if(document.querySelectorAll("#startpage>section")[0].innerHTML==""){
+            if(document.querySelectorAll("#startpage>section")[0].innerHTML==" "){
                 document.querySelectorAll("#startpage>section")[0].innerHTML="|";
             }else{
-                document.querySelectorAll("#startpage>section")[0].innerHTML="";
+                document.querySelectorAll("#startpage>section")[0].innerHTML=" ";
             }
         },600)
         let displayAll=(i)=>{
@@ -21,7 +21,7 @@
             setTimeout(()=>displayAll(i),350)
         }
         setTimeout(()=>{
-            document.querySelectorAll("#startpage>section")[0].innerHTML="";
+            document.querySelectorAll("#startpage>section")[0].innerHTML=" ";
             clearInterval(a);
             displayAll(0);
         },5000)
