@@ -5,7 +5,24 @@
 <script>
     let stpText=document.getElementById("startpage").getElementsByTagName("SECTION").innerText;
     {
-        stpText="|";
-        let i;
+        const text=stpText;
+        stpText="";
+        let a=setInterval(()=>{
+            if(stpText==""){
+                stpText="|";
+            }else{
+                stpText="";
+            }
+        },600)
+        let displayAll=(i)=>{
+            if(i>text.length)return true;
+            stpText+=text[i];
+            ++i;
+            setTimeout(displayAll(i),350)
+        }
+        setTimeout(()=>{
+            clearInterval(a);
+            displayAll(0);
+        },2600)
     }
 </script>
