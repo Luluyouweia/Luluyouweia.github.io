@@ -14,14 +14,14 @@
 		position: relative;height: 100vh;background: #fff;background-attachment: fixed;background-position: center;background-size: 100%;background-repeat: no-repeat;
 	}
     #startpage{
-        position: relative;padding: 16px 3px;color:#fff;width: 100vw;
+        position: relative;padding: 16px 3px;color:#fff;width: 100vw;height: 100vh;
     }
     #startpage>div{
 	    position: absolute;top: 20%;width: 100%;text-align: center;
 	    font-size: 270%;
     }
     #startpage>section{
-     position: absolute;top: 60%;text-align: center;width: 100%;
+     position: absolute;top: 70%;text-align: center;width: 100%;
 }
 	.main-content{
 		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);padding: 30px 16px;
