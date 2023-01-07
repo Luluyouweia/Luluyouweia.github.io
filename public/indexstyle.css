@@ -14,8 +14,15 @@
 		position: relative;height: 100vh;background: #fff;background-attachment: fixed;background-position: center;background-size: 100%;background-repeat: no-repeat;
 	}
     #startpage{
-        padding: 16px 3px;
+        position: relative;padding: 16px 3px;color:#fff;width: 100vw;
     }
+    #startpage>div{
+	    position: absolute;top: 20%;width: 100%;text-align: center;
+	    font-size: 270%;
+    }
+    #startpage>section{
+     position: absolute:top: 50%;text-align: center;
+}
 	.main-content{
 		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);padding: 30px 16px;
 	}
