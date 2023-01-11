@@ -7,6 +7,8 @@
 title: 鹿鹿有为
 background: /images/background.jpg
 
+defaultimg: /images/nature.jpg
+
 #Nearbar 侧滑栏
 lists:
   - title: 我的主页
