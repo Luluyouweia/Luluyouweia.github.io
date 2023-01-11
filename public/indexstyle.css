@@ -24,7 +24,7 @@
      position: absolute;display:block;top: 70%;text-align: center;width: 100%;
 }
 	.main-content{
-		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.3);padding: 30px 16px;
+		width: 100vw;min-height: 80vh;background: rgb(255,255,255,0.6);padding: 30px 16px;
 	}
 	.content-list{
 		position: relative;width: 92%;margin: 36px auto;padding-bottom: 18px;background-color: #fff;
