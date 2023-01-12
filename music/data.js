@@ -78,7 +78,7 @@
             title:"<h4 style='color:red'>MV</h4>白天不懂夜的黑",text:"嗯...这图片你敢直接看吗？！“年轻人不要太气盛”“不气盛叫年轻人吗”“是龙得盘着，是虎得卧着”“刘华强，我告诉你，你今天要是敢踏出这房门一步...”“痛快，我就喜欢你这脾气”[doge]",
             source:"https://player.bilibili.com/player.html?aid=91073180&bvid=BV11j411f7ak&cid=155517433&page=1",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/ae9b8017098b60fff4639c2cb7206dcc7ab2772269afa6892afe13c629fde1e4eb7d4dc08d046406769805408b7e9229?pictype=scale&from=30113&version=3.3.3.3&fname=v2-b869d0b7668b2cb7f73c90bf252dede6_r.jpg&size=750"}
         data[19]={
-            title: "Lu Be-Free",text:"方特：熊出没奇幻空间",id:"449818326",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
+            title: "Lu Be-Free",text:"方特：熊出没奇幻空间，永远年轻，永远好奇",id:"449818326",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
         }
         data[20]={
             title:"耍把戏",text:"流行歌曲,阿禹ayy",id:"1942278883",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
