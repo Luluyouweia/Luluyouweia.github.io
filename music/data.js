@@ -3,7 +3,7 @@
 			title: "After Tomorrow",
 			text: "网易游戏《明日之后》特辑音乐",
 			id: "1329466574",
-			img:"https://lucel.pages.dev/background.jpg",
+			img:"",
 			type:"游戏;精选;高级"}
 		data[1]={
 			title: "花之舞",
@@ -41,8 +41,8 @@
 			id:"1329466573",
 			img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/ef19750eee8e8d4f50e841cc390ccd02fcab5bdf30495623655b4b7ecdcd945b45f6eaa770cb5717d4f956801e38963a?pictype=scale&from=30113&version=3.3.3.3&fname=R-C.jpg&size=750"}
 		data[8]={
-			title: "狮尾之舞",
-			text:"米哈游游戏背景音乐",
+			title: "这个链接已经失效",
+			text:"音乐项目暂时停止更新",
 			id:"1981803400",
 			img: "https://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"}
 		data[9]={
