@@ -44,7 +44,7 @@
 			title: "这个链接已经失效",
 			text:"音乐项目暂时停止更新",
 			id:"1981803400",
-			img: "https://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"}
+			img: "xxxxhttps://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"}
 		data[9]={
 			title: "钢铁洪流进行曲",
 			text:"国庆70周年庆典背景音乐之一,著名音乐",
@@ -81,7 +81,7 @@
             title: "Lu Be-Free",text:"方特：熊出没奇幻空间，永远年轻，永远好奇",id:"449818326",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
         }
         data[20]={
-            title:"耍把戏",text:"流行歌曲,阿禹ayy",id:"1942278883",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
+            title:"耍把戏",text:"流行的削弱小曲,阿禹ayy,版权可能不稳定",id:"2013499490",img:"https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
         }
         data[21]={
             title:"疾如猛火",text:"燃起来了！",id:"1492283139",img:"https://uploadstatic.mihoyo.com/contentweb/20200319/2020031921552395638.jpg"
