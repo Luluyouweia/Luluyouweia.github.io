@@ -29,13 +29,15 @@
 			<li><a class="fa fa-github" style="color: #414141;" href="https://github.com/Luluyouweia"></a><p>Github</p></li>
 			<li><a style="background: #08f;color: #fff;font-weight: 100;">知</a><p>知乎</p></li>
 		</ul>
-    <div style="font-size: 15%;color: #dadada;">鹿碌有为2023<br><a href="https://beian.miit.gov.cn/#/Integrated/index">新ICP备114514号</a></div>
-	
-    </section>
+	</section>
+    鹿碌有为2023<br>
+    <a href="https://beian.miit.gov.cn/#/Integrated/index">新ICP备114514号</a>
     <section class="DATAS" id="background">
     {% if page %}
          {% if page.background %}
-         {{page.background}}
+              {{ page.background }}
+         {% else %}
+              {{ site.data.config.background }}
          {% endif %}
     {% else %}
         {{site.data.config.background}}
@@ -48,10 +50,10 @@
 				document.getElementsByClassName("overflow-screen")[0].style.display="block";
 			}
 		}
-        document.getElementsByClassName("overflow-screen")[0].onclick=()=>{
+		
+		document.getElementsByClassName("overflow-screen")[0].onclick=()=>{
 			document.getElementsByClassName("overflow-screen")[0].style.display="none";
 			document.getElementsByClassName("too-bar")[0].style.left="-252px";
 		}
         document.body.style.backgroundImage=`url(`+document.getElementById("background").innerText+`)`;
-        document.getElementById("background").style.display="block";
 	</script>
