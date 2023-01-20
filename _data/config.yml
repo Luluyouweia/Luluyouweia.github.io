@@ -5,7 +5,8 @@
 #title: Topbar text 顶栏文本
 #background: Background image 背景图片
 title: 鹿鹿有为
-background: /images/background.jpg
+background: https://imgbed.link/file/15445
+# /images/background.jpg
 
 defaultimg: /images/nature.jpg
 
