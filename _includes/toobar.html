@@ -32,7 +32,15 @@
 	</section>
     鹿碌有为2023<br>
     <a href="https://beian.miit.gov.cn/#/Integrated/index">新ICP备114514号</a>
-    <section class="DATAS" id="background">{{site.data.config.background}}</section>
+    <section class="DATAS" id="background">
+    {% if page %}
+         {% if page.background %}
+         {{ page.background }}
+         {% endif %}
+    {% else %}
+        {{site.data.config.background}}
+    {% endif %}
+    </section>
 <script>
 		var tooBarBtn=(e)=>{
 			if(e==0){
