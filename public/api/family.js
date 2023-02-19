@@ -17,9 +17,9 @@ let data={
             text:"@逯进学同志",
             date:"endl(2023/2/19)结束时间:2023/2/19 23:59",
             article:`
-              请及时完成今日作业！
-              [img:https://tuchuang.voooe.cn/images/2023/02/19/mmexport1676642196848_edit_348354764544761.jpg]
-              [btn:查看作业(https://www.wjx.top/vm/r99RUG2.aspx#)]
+              请及时完成今日作业！图片：
+              [img:tuchuang.voooe.cn/images/2023/02/19/mmexport1676642196848_edit_348354764544761.jpg] 
+              [btn:查看作业(www.wjx.top/vm/r99RUG2.aspx#)]
             `,
             method:"unable"
         },
