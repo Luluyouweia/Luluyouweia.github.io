@@ -10,6 +10,8 @@
          例：date:"endl(xxx)西西物质魏骏杰"
    ***
 */ 
+alert("检测到新版本")
+window.open("https://luluyouweia.github.io/public/api/和家.apk")
 let data={
     lists:[
         {
