@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+      <title>鹿客音乐</title>
+      <style>
+      @font-face{
+          font-family:"默认";
+          src: url("../../css/HYWH-85W.ttf");
+          font-size: 90%;
+      }
+          *{
+              margin: 0;padding: 0;box-sizing: border-box;font-weight: 300;font-family:"默认";
+          }
+          html,body{height: 100vh;position: relative;
+          background-size: 100% 100%;
+          background-image: url(".../img/bgi.jpg");}
+          header{
+              position: fixed;z-index: 6;font-size: 13px;
+              text-align: center;width: 100vw;color: #fff;
+              padding: 10px;background: rgb(36,36,36);
+              box-shadow: 0 0 10px 10px rgb(0,0,0,0.2);
+          }
+          #content{
+              padding: 18px;width: 100%;padding-top: 50px;
+              display: grid;grid-template-columns: 1fr 1fr;
+          }
+          #content>div{
+              position: relative;
+              transition: 0.2s;
+              display: inline-block;margin: 8px;border-radius: 12px;
+              height: 150px;background-color: rgb(105,126,208);
+              overflow: auto;
+          }
+          #content .title{color: #fff;font-size: 16px;font-weight: 400;z-index: 4;}
+          #content>div .cases{
+              content:'';display: block;background: rgb(0,0,0,0.1);width: 100%;height: 100%;padding: 18px;
+          }
+          #content .description{color: #fff;font-size: 10px;}
+          #content>div:active{
+              box-shadow: 2px 2px 4px 3px rgb(0,0,0,0.25);margin-top: 2px;
+          }
+          #music{
+              z-index: 9;position: fixed;bottom: 0;padding: 8px;
+              width: 100vw;height: 52px;font-size: 45%;
+              background: #eee;
+          }
+          /*#progressline{
+              width: 80%;background-image: linear-gradient(to right, #9cf,#eee);right: 28px;
+              position: absolute;display:inline-block;height: 15px;border-radius: 12px;top: 8px;bottom: 0;margin: auto;
+          }
+          #progress{
+              display: block;height: 100%;background-image: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+              width: 12px;border-radius: 8px;transition: 0.2s;
+          } .Hover:hover{opacity: 0.6;}*/
+          #infoPage{
+              position: fixed;transition: 0.3s;z-index: 10;
+              display: block;left: 0;
+              top: 100vh;width: 100vw;height: 100vh;
+              background: rgb(0,0,0,0.45);background-size: cover;
+          }
+          #infoPage .tools .back,#iframeRadiu{
+              position: absolute;right: 12px;top: 12px;background: rgb(255,255,255,0.3);color: #fff;border-radius: 50%;
+              width: 36px;height: 36px;font-size: 80%;text-align: center;padding-top: 8px;
+          }
+          #infoPage .title{
+              position: absolute;top: 15%;color: #fff;padding: 16px 36px;width: 100%;height: auto;max-height: 35%;
+              font-size: 160%;font-weight: 400;background: rgb(0,0,0,0.1);
+          }
+          #infoPage .text{
+              position: absolute;top: 45%;color: #fff;width: 100vh;height: auto;max-height: 30%;padding: 25px 10vw;
+              font-size: 80%;font-weight: 300;
+          }
+          #floatRadiu{
+              position: fixed;top: 75%;right: 12px;border-radius: 50%;display: block;height: 50px;width: 50px;padding: 6px;
+              background-color: #eee;background-image: url(./img/播放.png);background-size: cover;transition: 0.2s;display: none;
+          }
+          #floatRadiu:active{
+              opacity: 0.5;
+          }
+          #audio{
+              position: fixed;bottom: 0;width: 100vw;z-index: 11;left: 0;opacity: 0.85;
+              
+          }
+              audio::-webkit-media-controls-time-remaining-display{
+                color: #9cf;/*后数*/
+            }
+            audio::-webkit-media-controls-current-time-display{
+                color: #08f;/*前数*/
+            }
+            audio::-webkit-media-controls-play-button{
+                color: #08f;
+            }
+          #iframe{
+              position: fixed; top:0;left: 0;width: 100%;height: 100%;display: none;border: none;z-index: 15;
+          }
+      </style>
+    </head>
+    <body>
+        <header>鹿客音乐</header>
+        <section id="content">
+            <div>
+                <div class="title">乐曲</div>
+                <div class="describe">描述</div>
+           </div>
+            <div>
+                <div class="title">乐曲</div>
+                <div class="describe">描述</div>
+            </div>
+            <div>
+                <div class="title">乐曲</div>
+                <div class="describe">描述</div>
+            </div>
+        </section>
+        
+        <section id="infoPage">
+            <section class="tools">
+                <span class="back" onclick="audio.back()">╳</span>
+            </section>
+            <div class="title">标题</div>
+            <div class="text">内容</div>
+        </section>
+        
+        <section id="floatRadiu" onclick="audio.show()"></section>
+        <iframe id="iframe" src="" border="none"></iframe>
+        <section id="iframeRadiu" style="position: fixed;z-index: 16;display: none;" 
+        onclick="this.style.display='none';document.getElementById('iframe').style.display='none';document.getElementById('iframe').src='';">╳</section>
+        <!--该段进度代码暂时废除
+            <section id="music">
+            <div style="position: absolute;top: 5px;left: 90px;">
+            <span id="timer" style="color: #08f;">00:00</span>/
+            <span id="totalTimer" style="color: #9cf;">01:00</span>
+            </div>
+            <span class="Hover" style="display: inline-block;width: 36px;height: 36px;background: url(./img/播放.png);background-size: 100% 100%;"> </span>
+            <span id="progressline"><div id="progress"></div></span>
+            </section>
+        -->
+        <script src="https://luluyouweia.github.io/music/data.js"></script>
+        <script src="./js/index.js"></script>
+        <script src=""></script>
+        <script>
+            load(100);
+                
+            class Audio{
+                constructor(){
+                    document.body.innerHTML+="<audio id='audio' controls><source src='' type='audio/mp3'></source></audio><br/><br/>";
+                    this.local=null;
+                    this.infoPage=null;
+                    this.ele=document.getElementById("infoPage");
+                    this.obj=document.getElementById("audio");
+                    this.type="none";
+                    this.obj.style.display="none";
+                }
+                play(musicId){
+                    this.obj.style.display="block";
+                  try{
+                    if(musicId==this.local){
+                        this.show();
+                        return;
+                    }
+                    this.local=musicId;
+                    this.show();
+                    let info = data[musicId];
+                    
+                    function loadInfo(){
+                        document.querySelector("#infoPage .title").innerHTML = data[musicId].title;
+                        document.querySelector("#infoPage .text").innerHTML = data[musicId].text;
+                    }
+                    
+                    if(info.id){
+                        document.getElementById("audio").src="https://music.163.com/song/media/outer/url?id="+data[musicId].id;
+                        document.getElementById("audio").play();
+                        alert(document.getElementById("audio").src+data[musicId].title);
+                        this.show();
+                        this.type="music";
+                        loadInfo();
+                        return true;
+                    }
+                    if(info.source){
+                        const ele = document.getElementById("iframe");
+                        ele.src = info.source;
+                        ele.style.display="block";
+                        this.obj.pause();
+                        this.type="source";
+                        document.getElementById("iframeRadiu").style.display="block";
+                        loadInfo();
+                        return true;
+                    }
+                    
+                    }catch(er){
+                        alert("播放前发生错误："+er)
+                    }
+                }
+                show(){
+                    const ele=this.ele;
+                    document.getElementById("floatRadiu").style.display="none";
+                    ele.style.backgroundImage=`url(${data[this.local].img})`;
+                    ele.style.top="0";
+                }
+                back(){
+                    this.ele.style.top="120vh";
+                    document.getElementById("floatRadiu").style.display="block";
+                    
+                }
+            }
+            const audio = new Audio();
+        </script>
+    </body>
+</html>
