@@ -2,9 +2,8 @@
 
  _Lucel音乐开发者 Lulu_ 
 
- _ :cn: 来自中国_ 
 
-[点击进入网站:Lucel Music 鹿客音乐](https://lucel.pages.dev/music/)
+[点击进入网站:Lucel Music 鹿客音乐](https://luluyouwei.netlify.app/music/)
 
 ### 关于
 1. 本网页不用于商业用途
