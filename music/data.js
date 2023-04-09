@@ -123,5 +123,8 @@
             title:"岩壑之崩",text:"Hoyomix 陈致逸",id:1861578703,img:"/images/m/img-rtlw.jpg"
         }
         data[34]={
-            title:"鲸波鼍浪",text:"Undersea Encounters ",id=1937114514
+            title:"鲸波鼍浪",text:"Undersea Encounters ",id=1937114514,img:""
+        }
+        data[35]={
+            title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:""
         }
