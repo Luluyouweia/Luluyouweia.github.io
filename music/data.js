@@ -37,7 +37,7 @@
 			img: ""}
 		data[7]={
 			title: "营地中心",
-			text:"网易游戏背景音乐",
+			text:"网易游戏背景音乐 ",
 			id:"1329466573",
 			img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/ef19750eee8e8d4f50e841cc390ccd02fcab5bdf30495623655b4b7ecdcd945b45f6eaa770cb5717d4f956801e38963a?pictype=scale&from=30113&version=3.3.3.3&fname=R-C.jpg&size=750"}
 		data[8]={
@@ -123,7 +123,7 @@
             title:"岩壑之崩",text:"Hoyomix 陈致逸",id:1861578703,img:"/images/m/img-rtlw.jpg"
         }
         data[34]={
-            title:"鲸波鼍浪",text:"Undersea Encounters ",id=1937114514,img:""
+            title:"鲸波鼍浪",text:"Undersea Encounters ",id:1937114514,img:""
         }
         data[35]={
             title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:""
