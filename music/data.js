@@ -1,4 +1,4 @@
-	var data=new Array();//Data数据数组
+	let data=new Array();//Data数据数组
 		data[0]={
 			title: "After Tomorrow",
 			text: "网易游戏《明日之后》特辑音乐",
