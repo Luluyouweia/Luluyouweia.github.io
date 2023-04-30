@@ -3,23 +3,14 @@ try{
 /*
 const data = [
     {
-        id: 0,title: "示例",text: "none",img:"./img/jpg"
-    },
-    {
-        id: 0,title: "示例",text: "none",img:"./img/jpg"
-    },
-    {
-        id: 0,title: "示例",text: "none",img:"./img/jpg"
-    },
-    {
-        id: 0,title: "示例",text: "none",img:"./img/jpg"
-    },
+        id: 0,title: "示例",text: "none",img:"./img/jpg"...
 ]
 */
 function load(num){
   try{
     let n=num;
     data.forEach((data,index)=>{
+        if(data.img=="")data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;">
                 <div class="cases">
