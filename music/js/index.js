@@ -10,7 +10,10 @@ function load(num){
   try{
     let n=num;
     data.forEach((data,index)=>{
-        if(data.img=="")data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+        if(data.img==""){
+            alert(true)
+            data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+        }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;">
                 <div class="cases">
