@@ -131,3 +131,6 @@
         data[36]={
             title:"WATER(Feat.Miku)",text:"Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39",id:1404469236,img:""
         }
+        data[37]={
+            title:"MV:三千娑世御咏歌-演绎版",text:"渺小虫孑，岂敢视神......",source:"https://player.bilibili.com/player.html?bvid=BV1Xh4y1H72Q",img:""
+        }
