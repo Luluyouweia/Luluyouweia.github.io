@@ -129,7 +129,6 @@
         <script src=""></script>
         <script>
             load(100);
-            const IMG_BACKGROUND="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
 
             class Audio{
                 constructor(){
@@ -183,11 +182,7 @@
                 show(){
                     const ele=this.ele;
                     document.getElementById("floatRadiu").style.display="none";
-                    if(data.img!=""){
                         ele.style.backgroundImage=`url(${data[this.local].img})`;
-                     }else{
-                        ele.style.background="url("+IMG_BACKGROUND+")";
-                     }
                     ele.style.top="0";
                 }
                 back(){
