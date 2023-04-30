@@ -11,7 +11,6 @@ function load(num){
     let n=num;
     data.forEach((data,index)=>{
         if(data.img==""){
-            alert(true)
             data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
