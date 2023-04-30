@@ -128,3 +128,6 @@
         data[35]={
             title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:""
         }
+        data[36]={
+            title:"WATER(Feat.Miku)",text:"Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39",id:1404469236,img:""
+        }
