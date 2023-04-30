@@ -14,7 +14,7 @@ function load(num){
             data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
-            <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;">
+            <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;background-position: center bottom;">
                 <div class="cases">
                     <div class="title">${data.title}</div>
                     <div class="description">${data.text}</div>
