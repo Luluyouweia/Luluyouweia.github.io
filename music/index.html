@@ -206,14 +206,15 @@
                 e.style.bottom="0";
                 return true;
             }
-            let lock = false;//audio控件是否升起
+            let lock = false;//audio控件是否升
+
+            let t=setTimeout(()=>{
+                         lock=false;
+                         hideAudio();
+                    },5000000)
             document.body.onmouseover=()=>{
                     displayAudio();
                     lock=true;
-                    let t=setTimeout(()=>{
-                         lock=false;
-                         hideAudio();
-                    },5000)
                     
                     if(t){
                         clearTimeout(t);
