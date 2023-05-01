@@ -87,7 +87,7 @@
           }
           #audio{
               position: fixed;bottom: 0;width: 100vw;z-index: 11;left: 0;opacity: 0.85;
-              transition: 0.75s;
+              transition: 0.8s;
           }
               audio::-webkit-media-controls-time-remaining-display{
                 color: #9cf;/*后数*/
@@ -198,7 +198,7 @@
             const audio = new Audio();
             function hideAudio(){
                 const e=audio.obj;
-                e.style.bottom="-100%";
+                e.style.bottom="-30%";
                 return true;
             }
             function displayAudio(){
