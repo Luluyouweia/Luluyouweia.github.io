@@ -196,6 +196,22 @@
                 }
             }
             const audio = new Audio();
+            function displayAudio(){
+                const e=audio.obj;
+                e.style.bottom="-100%";
+                return true;
+            }
+            function hideAudio(){
+                const e=audio.obj;
+                e.style.bottom="0";
+                return true;
+            }
+            document.body.onmouseover=()=>{
+                displayAudio();
+                setTimeout(()=>{
+                       hideAudio();
+                },5000)
+            }
         </script>
     </body>
 </html>
