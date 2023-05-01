@@ -210,7 +210,10 @@
             document.body.onmouseover=()=>{
                     displayAudio();
                     lock=true;
-                    if(t)clearTimeout(t);
+                    if(t){
+                        alert("settimeout")
+                        clearTimeout(t);
+                    }
                     let t=setTimeout(()=>{
                         lock=false;
                         hideAudio();
