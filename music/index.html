@@ -87,7 +87,7 @@
           }
           #audio{
               position: fixed;bottom: 0;width: 100vw;z-index: 11;left: 0;opacity: 0.85;
-              
+              transition: 0.75s;
           }
               audio::-webkit-media-controls-time-remaining-display{
                 color: #9cf;/*后数*/
@@ -206,11 +206,16 @@
                 e.style.bottom="0";
                 return true;
             }
+            let lock = false;//audio控件是否升起
             document.body.onmouseover=()=>{
-                displayAudio();
-                setTimeout(()=>{
-                       hideAudio();
-                },5000)
+                if(lock==false){
+                    displayAudio();
+                    lock=true;
+                    setTimeout(()=>{
+                        lock=false;
+                        hideAudio();
+                    },5000)
+                }
             }
         </script>
     </body>
