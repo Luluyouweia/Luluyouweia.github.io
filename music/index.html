@@ -208,14 +208,13 @@
             }
             let lock = false;//audio控件是否升起
             document.body.onmouseover=()=>{
-                if(lock==false){
                     displayAudio();
                     lock=true;
-                    setTimeout(()=>{
+                    if(t)clearTimeout(t);
+                    let t=setTimeout(()=>{
                         lock=false;
                         hideAudio();
                     },5000)
-                }
             }
         </script>
     </body>
