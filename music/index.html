@@ -213,6 +213,10 @@
                     if(t){
                         alert("settimeout")
                         clearTimeout(t);
+                        let t=setTimeout(()=>{
+                        lock=false;
+                        hideAudio();
+                    },5000)
                     }
                     let t=setTimeout(()=>{
                         lock=false;
