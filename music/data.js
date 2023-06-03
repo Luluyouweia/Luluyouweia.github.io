@@ -126,7 +126,7 @@
             title:"鲸波鼍浪",text:"Undersea Encounters ",id:1937114514,img:""
         }
         data[35]={
-            title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:""
+            title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:"https://tuchuang.voooe.cn/images/2023/05/22/22-22-7519843a-957e-4e9a-89ae-adea78b7c8ccf1a0fb67-40df-4407-9ef2-8fd93957264e.jpg"
         }
         data[36]={
             title:"WATER(Feat.Miku)",text:"Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39",id:1404469236,img:"https://tuchuang.voooe.cn/images/2023/05/01/farawaylight.jpg"
@@ -135,5 +135,8 @@
             title:"MV:三千娑世御咏歌-演绎版",text:"微小虫孑，岂敢视神......",source:"https://player.bilibili.com/player.html?bvid=BV1Xh4y1H72Q",img:"https://pic1.zhimg.com/v2-3162af7701f2d18120accdc6224805a8_r.jpg"
         }
         data[38]={
-            title:"EXEC_COSMOFLIPS/.",text:"作词 : KOKIA  作曲 : KOKIA  编曲 : 伊藤真澄",id:4940455,img:""
+            title:"EXEC_COSMOFLIPS/.",text:"作词 : KOKIA  作曲 : KOKIA  编曲 : 伊藤真澄",id:4940455,img:"https://tuchuang.voooe.cn/images/2023/05/22/00-45-7519843a-957e-4e9a-89ae-adea78b7c8ccdb1c29a3-1738-41b7-b2c4-a09c2cc95f1b.jpg"
+        }
+        data[39]={
+            title:"Wildfire野火",text:"崩坏：星穹铁道 战斗音乐  作曲：mihoyo",id:2045806409,img:"https://tuchuang.voooe.cn/images/2023/05/01/nightskywithblueeyes.jpg"
         }
