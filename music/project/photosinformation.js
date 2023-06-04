@@ -1,5 +1,5 @@
 		var img=new Array();
-			img[0]="pictures/main.jpg";//本地
+			img[0]="https://tuchuang.voooe.cn/images/2023/05/22/00-45-7519843a-957e-4e9a-89ae-adea78b7c8ccdb1c29a3-1738-41b7-b2c4-a09c2cc95f1b.jpg";
 			img[1]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1651450661048-be61eba55f1a?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=joshua-lawrence-_GPn7zmkjD4-unsplash.jpg";//链接 链接至  Unplash 图库			img[1]
             img[2]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1621290102989-e9865bef2dcf?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=vlad-d-nqSeto6vWfU-unsplash.jpg";
 			img[3]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1649605184337-c4dc52c6e32e?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=parsa-mahmoudi-nfi-TXXzwjI-unsplash.jpg&w=1920";
@@ -12,6 +12,8 @@
             img[10]="https://images.unsplash.com/photo-1516545595035-b494dd0161e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
             img[11]="https://images.unsplash.com/photo-1569660003459-6c30601dc19c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
             img[12]="https://images.unsplash.com/photo-1542931287-023b922fa89b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80";
+            img[13]="https://tuchuang.voooe.cn/images/2023/05/22/00-28-7519843a-957e-4e9a-89ae-adea78b7c8ccd25465e7-8824-472b-beea-84e3ba03f3b8.jpg";
+            img[14]="https://tuchuang.voooe.cn/images/2023/05/22/22-22-7519843a-957e-4e9a-89ae-adea78b7c8ccf1a0fb67-40df-4407-9ef2-8fd93957264e.jpg";
 
 		var amusic=new Array(); 
 			amusic[0]="";
