@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>云端逍遥</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="photoscss.css">
+	<style>
+	
+	</style>
+</head>
+
+<body>
+
+	<div id="picture"></div>
+	<div id="loadPicture"></div>
+	
+	<div id="blackBar"></div>
+	<div id="toolBar">
+		<span onclick="before()">←</span>
+		<span>≡</span>
+		<span onclick="show()">→</span>
+		<span onclick="getMusic()">音乐</span>
+		<span onclick="toolBar.top='-20%';">╳</span>
+		<a onclick="msgbox.style.top='15%';">关于</a>
+	</div>
+	<h3 style="text-align:center;color:#7B68EE">精选图库，发现美好</h3>
+	<div style="margin:25% 35% 0;color:green;">加载中......</div>
+	
+	<div id="load">
+		<div id="loading"></div>
+	</div>
+	<div id="text"></div>
+	
+	
+	
+	<div id="msgbox">
+		<h3>提示</h3>
+		<div>
+			1.如果你不想费钱，就不要打开流量；2.如果图片加载不出来，或音乐不播放，那不是Bug，要么是网易云的服务器拿去烤土豆崩了，要么你自己网线被老鼠啃了!自己设备不行就别乱说。
+			<br>网站采用预加载加速代码，注意流量信息!
+		</div>
+		<button onclick="msgbox.style.top='-90%';msgbox.style.zIndex='1000';msgbox.style.zIndex='1001';msgbox.style.zIndex='99';">确认</button>
+	</div>
+
+	<section id="pageOn">
+		<span id="toLeft" onclick="before()"><</span>
+		<span id="toRight" onclick="show()">></span>
+	</section>
+
+
+	<!--乐曲选框-->
+	<div id="music-choose">
+		<h4>乐曲选择<i>网易云音乐</i>
+		<button onclick="returnMusicMenu()">╳</button>
+		<button onclick="audio.src='';">| |</button></h4>
+		<div style="height:40px;width:100%;"></div>
+		<div class="coninter">
+			<div onclick="music(1)">蓝色多瑙河</div>
+			<div onclick="music(2)">钢铁洪流进行曲</div>
+			<div onclick="none()">?????[狗头]</div>
+			<div onclick="none()">音乐</div>
+			<div onclick="music(5)">aLize</div>
+			<div onclick="music(6)">Rise</div>
+			<div onclick="music(7)">英雄的黎明</div>
+			<div onclick="music(8)">Sold out</div>
+			<div onclick="music(9)">千本樱</div>
+			<div onclick="music(10)">Minecraft</div>
+			<div onclick="music(11)">营地中心</div>
+			<div onclick="music(12)">After Tomorrow</div>
+			<div onclick="music(13)">在野外</div>
+			<div onclick="music(14)">Last Reunion</div>
+			<div onclick="music(15)">Love Theme from Tiga</div>
+            <div onclick="music(16)">起风了</div>
+            <div onclick="music(17)">营地外</div>
+            <div onclick="music(18)">Soviet March</div>
+            <div onclick="music(19)">Just Blue</div>
+            <div onclick="music(20)">螺丝刀，螺丝刀，半夜起来安地板</div>
+            <div onclick="music(21)">Song from a Secret Garden</div>
+            <div onclick="music(22)">瓦妮莎的微笑——每段句子读2遍</div>
+            <div onclick="music(23)">多冷的隆冬</div>
+		</div>
+		<iframe id="none" loading="lazy" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" src=""></iframe>
+		<button id="returnNonePage" onclick="none()" style="z-index:129;padding:3px;background:#000;display:none;font-size:16px;position:fixed;top:0;right:0;color:#fff;border:none;opacity:8;">╳</button>
+		<section class="player">
+			<iframe id="audio" onload="console.log('Music Loading')" frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52></iframe>
+		</section>
+	</div>
+	<noscript>
+		您的浏览器未支持主插件：javascript未启用!!!
+	</noscript>
+
+	<script src="photosInformation.js"></script><script src="photosjs.js"></script>
+</body>
