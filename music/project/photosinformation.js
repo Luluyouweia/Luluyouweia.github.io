@@ -1,6 +1,7 @@
 		var img=new Array();
 			img[0]="https://tuchuang.voooe.cn/images/2023/05/22/00-45-7519843a-957e-4e9a-89ae-adea78b7c8ccdb1c29a3-1738-41b7-b2c4-a09c2cc95f1b.jpg";
-			img[1]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1651450661048-be61eba55f1a?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=joshua-lawrence-_GPn7zmkjD4-unsplash.jpg";//链接 链接至  Unplash 图库			img[1]
+
+			img[1]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1651450661048-be61eba55f1a?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=joshua-lawrence-_GPn7zmkjD4-unsplash.jpg";//链接 链接至  Unplash 图库
             img[2]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1621290102989-e9865bef2dcf?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=vlad-d-nqSeto6vWfU-unsplash.jpg";
 			img[3]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1649605184337-c4dc52c6e32e?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=parsa-mahmoudi-nfi-TXXzwjI-unsplash.jpg&w=1920";
 			img[4]="https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1538428494232-9c0d8a3ab403?ixlib=rb-1.2.1&q=80&fmt=jpg&crop=entropy&cs=tinysrgb&dl=edward-he-uKyzXEc2k_s-unsplash.jpg&w=2400";
