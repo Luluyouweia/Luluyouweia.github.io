@@ -123,10 +123,10 @@
             title:"岩壑之崩",text:"Hoyomix 陈致逸",id:1861578703,img:"/images/m/img-rtlw.jpg"
         }
         data[34]={
-            title:"鲸波鼍浪",text:"Undersea Encounters ",id:1937114514,img:""
+            title:"鲸波鼍浪",text:"Undersea Encounters ",id:1937114514,img:"https://tuchuang.voooe.cn/images/2023/06/04/e022587eb2f128dcebde0fa0b20cb1af49970d12.jpg1256w_708h_progressive.webp"
         }
         data[35]={
-            title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:"https://tuchuang.voooe.cn/images/2023/05/22/22-22-7519843a-957e-4e9a-89ae-adea78b7c8ccf1a0fb67-40df-4407-9ef2-8fd93957264e.jpg"
+            title:"不冻的激浪",text:"Genshin Impact Game OST ",id:1861579691,img:"https://pic3.zhimg.com/v2-e8bc3bf99c890ff0353b28c20fdc071a_r.jpg"
         }
         data[36]={
             title:"WATER(Feat.Miku)",text:"Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39",id:1404469236,img:"https://tuchuang.voooe.cn/images/2023/05/01/farawaylight.jpg"
