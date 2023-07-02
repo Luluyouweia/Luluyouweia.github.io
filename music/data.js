@@ -143,3 +143,6 @@
         data[40]={
             title:"<b style='color: red;'>MV </b> Fake Love",text:"一路走来，都是值得的，美好是世界本色，请不要忘记人生每一场旅途本身的意义！",source:"https://player.bilibili.com/player.html?bvid=BV1JP411H7ib",img:"https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1682685796766-0fddd3e480de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
         }
+        data[41]={
+            title:"Daylight",text:"治愈系宝藏",id:1372188635
+        }
