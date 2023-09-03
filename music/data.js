@@ -154,10 +154,10 @@
             id:34002930,img:""
         }
         data[44]={
-            title: "花与剑的轮舞",text:"枫丹战斗主题曲 <br/>hoyo-mix",source:"local:https://Luluyouweia.github.io/music/data/music_attack0.mp3",
+            title: "花与剑的轮舞",text:"枫丹战斗主题曲 <br/>hoyo-mix",source:"local:https://Luluyouweia.github.io/music/data/music_themeattack.mp3",
             img: "https://pic.imgdb.cn/item/64f42a73661c6c8e54057de1.jpg"
         }
         data[45]={
-            title: "枫丹战斗曲-精选",text:"枫丹战斗曲 <br/>hoyo-mix",source:"local:https://Luluyouweia.github.io/music/data/music_themeattack.mp3",
+            title: "枫丹战斗曲-精选",text:"枫丹战斗曲 <br/>hoyo-mix",source:"local:https://Luluyouweia.github.io/music/data/music_attack0.mp3",
             img: "https://pic.imgdb.cn/item/64f43c02661c6c8e540878ef.jpg"
         }
