@@ -173,6 +173,11 @@
                         if(info.source.search("local:")!=-1){
                             //本地音乐文件
                             document.getElementById("audio").src=info.source.split('local:')[1];
+                            document.getElementById("audio").play();
+                            this.show();
+                            this.type="music";
+                            loadInfo();
+                            return true;
                         }
                         const ele = document.getElementById("iframe");
                         ele.src = info.source;
