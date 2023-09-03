@@ -147,7 +147,7 @@
             title:"Daylight",text:"治愈系宝藏",id:1372188635,img:""
         }
         data[42]={
-            title: "Empire of Angels",text:"“以激昂的泪水奏响成功的高歌，勿忘旧时沉重的的阴霾！”<article style='font-size: 65%;'>曲风：悲壮</article>",id:29460377,img:""
+            title: "Empire of Angels",text:"“以激昂的泪水奏响成功的高歌，勿忘旧时沉重的的阴霾！”<article style='font-size: 65%;'>曲风：悲壮</article>",id:29460377,img:"https://pic.imgdb.cn/item/64f42a73661c6c8e54057de1.jpg"
         }
         data[43]={
             title:"<span style='color:red'>Катюша</span>(喀秋莎)",text:"听点特别的如何？苏联是二战中伤亡人数最大的国家，为国际反法西斯战争的成功奠定了坚实的基础。离别的悲痛与历史的使命造就了“喀秋莎”，它不仅是时代的悲歌，不仅是锐利的武器，更是人类的精神文明。",
@@ -155,5 +155,5 @@
         }
         data[44]={
             title: "花与剑的轮舞",text:"枫丹战斗主题曲 <br/>hoyo-mix",source:"local:https://Luluyouweia.github.io/music/data/music_themeattack.mp3",
-            img: ""
+            img: "https://pic.imgdb.cn/item/64f42a73661c6c8e54057de1.jpg"
         }
