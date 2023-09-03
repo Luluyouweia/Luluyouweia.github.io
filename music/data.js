@@ -153,3 +153,7 @@
             title:"<span style='color:red'>Катюша</span>(喀秋莎)",text:"听点特别的如何？苏联是二战中伤亡人数最大的国家，为国际反法西斯战争的成功奠定了坚实的基础。离别的悲痛与历史的使命造就了“喀秋莎”，它不仅是时代的悲歌，不仅是锐利的武器，更是人类的精神文明。",
             id:34002930,img:""
         }
+        data[44]={
+            title: "花与剑的轮舞",text:"枫丹战斗主题曲 <br/>hoyo-mix",source:"local:https://Luluyouweia.github.io/music/data/music_themeattack.mp3",
+            img: ""
+        }
