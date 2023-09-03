@@ -33,7 +33,7 @@
 		data[6]={
 			title: "オラリオン",
 			text:"点击播放",
-			mid:"https://lucel.pages.dev/cloud/file/private/musicZjdcrts2-2.mp3",
+			mid:"local:https://lucel.pages.dev/cloud/file/private/musicZjdcrts2-2.mp3",
 			img: ""}
 		data[7]={
 			title: "营地中心",
