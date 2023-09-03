@@ -161,6 +161,7 @@
                     }
                     
                     if(info.id){
+                        
                         document.getElementById("audio").src="https://music.163.com/song/media/outer/url?id="+data[musicId].id;
                         document.getElementById("audio").play();
                         this.show();
@@ -169,6 +170,10 @@
                         return true;
                     }
                     if(info.source){
+                        if(info.source.search("local:")!=-1){
+                            //本地音乐文件
+                            document.getElementById("audio").src=info.source.split('local:')[1];
+                        }
                         const ele = document.getElementById("iframe");
                         ele.src = info.source;
                         ele.style.display="block";
@@ -225,6 +230,25 @@
                     return;
                     }
             }
+
+        document.querySelector('HEADER').onclick=()=>{
+            if(document.documentElement.RequestFullScreen){
+            document.documentElement.RequestFullScreen();
+          }
+          //兼容火狐
+          console.log(document.documentElement.mozRequestFullScreen)
+          if(document.documentElement.mozRequestFullScreen){
+            document.documentElement.mozRequestFullScreen();
+          }
+          //兼容谷歌等可以webkitRequestFullScreen也可以webkitRequestFullscreen
+          if(document.documentElement.webkitRequestFullScreen){
+            document.documentElement.webkitRequestFullScreen();
+          }
+          //兼容IE,只能写msRequestFullscreen
+          if(document.documentElement.msRequestFullscreen){
+            document.documentElement.msRequestFullscreen();
+          }
+       }
         </script>
     </body>
 </html>
