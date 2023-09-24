@@ -9,9 +9,11 @@ const data = [
 function load(num){
   try{
     let n=num;
-    data.forEach((data,index)=>{
+    for(let i=0;i<n;++i){
+        let random = Math.floor(100*Math.random());
         if(data.img==""){
-            data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+            if(random>=30)data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+            data.img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;background-position: center center;">
@@ -20,11 +22,10 @@ function load(num){
                     <div class="description">${data.text}</div>
                 </div>
             </div>
-        `
-        n--;
+            `
+    }
         NUMBER++;
-        if(n<=0)throw 'break';
-    })
+    
   }catch(err){
     if(err=='break')return true;
     if(err=="ReferenceError: data is not defined")return alert("服务器连接失败。");
