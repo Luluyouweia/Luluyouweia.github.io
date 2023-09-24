@@ -10,6 +10,7 @@ function load(num){
   try{
     let n=num;
     for(let i=0;i<n;++i){
+        let index = i;//0924更新接口
         let random = Math.floor(100*Math.random());
         alert(random)
         if(data.img==""){
