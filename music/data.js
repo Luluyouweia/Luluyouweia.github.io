@@ -182,5 +182,9 @@ data[45] = {
 }
 data[46] = {
     title: "Alpha", text: "我的世界Minecraft 终末之诗 背景音乐 <br/>Minecraft C418", id: 27961148,
-    img: "https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
+    img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c572.jpg"
+}
+data[47] = {
+    title: "",text:"",id:0,
+    img: ""
 }
