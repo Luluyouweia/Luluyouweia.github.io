@@ -8,11 +8,9 @@ const data = [
 */
 function load(num){
   try{
-    let n=data.length;
-    for(let i=0;i<n;++i){
-        let index=i;//0924更新接口
-        let random = Math.floor(100*Math.random());
-        if(data[index].img==""){
+    const n=data.length;
+    for(let index=0;index<n;++index){
+        if(data[index].img==''){
             data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
