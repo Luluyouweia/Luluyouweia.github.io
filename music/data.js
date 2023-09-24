@@ -148,7 +148,7 @@ data[35] = {
     title: "不冻的激浪", text: "Genshin Impact Game OST ", id: 1861579691, img: "https://pic3.zhimg.com/v2-e8bc3bf99c890ff0353b28c20fdc071a_r.jpg"
 }
 data[36] = {
-    title: "WATER(Feat.Miku)", text: "Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39", id: 1404469236, img: "https://tuchuang.voooe.cn/images/2023/05/01/farawaylight.jpg"
+    title: "WATER(Feat.Miku)", text: "Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39", id: 1404469236, img: "https://pic.imgdb.cn/item/650fe977c458853aef63f27f.jpg"
 }
 data[37] = {
     title: "MV:三千娑世御咏歌-演绎版", text: "微小虫孑，岂敢视神......", source: "https://player.bilibili.com/player.html?bvid=BV1Xh4y1H72Q", img: "https://pic1.zhimg.com/v2-3162af7701f2d18120accdc6224805a8_r.jpg"
