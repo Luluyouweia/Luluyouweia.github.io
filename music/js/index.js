@@ -11,6 +11,7 @@ function load(num){
     let n=num;
     for(let i=0;i<n;++i){
         let random = Math.floor(100*Math.random());
+        alert(random)
         if(data.img==""){
             if(random>=30)return data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
             data.img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
