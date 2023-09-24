@@ -11,18 +11,17 @@ function load(num){
     let n=data.length;
     alert(n)
     for(let i=0;i<n;++i){
-        let data=data[i];
-        let index = i;//0924更新接口
+        let index=i;//0924更新接口
         let random = Math.floor(100*Math.random());
-        if(data.img==""){
-            if(random>=30){data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";}
-            else{data.img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png";}
+        if(data[index].img==""){
+            if(random>=30){data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";}
+            else{data[index].img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png";}
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;background-position: center center;">
                 <div class="cases">
-                    <div class="title">${data.title}</div>
-                    <div class="description">${data.text}</div>
+                    <div class="title">${data[index].title}</div>
+                    <div class="description">${data[index].text}</div>
                 </div>
             </div>
             `
