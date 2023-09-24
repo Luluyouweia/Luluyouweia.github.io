@@ -12,10 +12,9 @@ function load(num){
     for(let i=0;i<n;++i){
         let index = i;//0924更新接口
         let random = Math.floor(100*Math.random());
-        alert(random)
         if(data.img==""){
-            if(random>=30)return data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
-            data.img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
+            if(random>=30){data.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";}
+            else{data.img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png";}
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;background-position: center center;">
