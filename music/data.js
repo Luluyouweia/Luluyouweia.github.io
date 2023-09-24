@@ -49,8 +49,8 @@ data[7] = {
     img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/ef19750eee8e8d4f50e841cc390ccd02fcab5bdf30495623655b4b7ecdcd945b45f6eaa770cb5717d4f956801e38963a?pictype=scale&from=30113&version=3.3.3.3&fname=R-C.jpg&size=750"
 }
 data[8] = {
-    title: "这个链接已经失效",
-    text: "音乐项目暂时停止更新",
+    title: "晨曦酒庄 Dawn Winery Theme",
+    text: "提瓦特初印象。本人2.8版本入坑。",
     id: "1981803400",
     img: "xxxxhttps://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"
 }
@@ -177,7 +177,7 @@ data[44] = {
     img: "https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
 }
 data[45] = {
-    title: "枫丹战斗曲-精选", text: "枫丹战斗曲 <br/>hoyo-mix", source: "local:https://Luluyouweia.github.io/music/data/music_attack0.mp3",
+    title: "咏歌与凯旋", text: "原神？启动！ 枫丹？优雅！<br/>hoyo-mix", source: "local:https://Luluyouweia.github.io/music/data/music_attack0.mp3",
     img: "https://pic.imgdb.cn/item/64f43c02661c6c8e540878ef.jpg"
 }
 data[46] = {
@@ -185,6 +185,30 @@ data[46] = {
     img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c572.jpg"
 }
 data[47] = {
-    title: "",text:"",id:0,
+    title: "Ich bin Himmel, wenn ich den Himmel liebe (feat. Seraphina Theresa)",text:"我不是归人，而是过客。",id:522320784,
+    img: ""
+}
+data[48] = {
+    title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",id:2013880610,
+    img: ""
+}
+data[49] = {
+    title: "Nevada",text:"[电音]重返2018的感觉！",id:447281026,
+    img: ""
+}
+data[50] = {
+    title: "Between Worlds",text:"“当你觉得孤独无助时，想一想还有十几亿的细胞只为了你一个人而活。”",id:28661549,
+    img: ""
+}
+data[51] = {
+    title: "Lake Arrowhead (Radio Mix)",text:"给我燃起来!于角逐中战胜自我！",id:563129860,
+    img: ""
+}
+data[52] = {
+    title: "Umbrella (Matte Remix)",text:"获得成就：超越生死",id:518904426,
+    img: ""
+}
+data[53] = {
+    title: "玫瑰少年（小提琴版）",text:"“你知道哭是解决不了问题的 ”“没有人哭是为了解决问题。”",id:1498723813,
     img: ""
 }
