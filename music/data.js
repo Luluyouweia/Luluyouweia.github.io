@@ -212,3 +212,24 @@ data[53] = {
     title: "玫瑰少年（小提琴版）",text:"“你知道哭是解决不了问题的 ”“没有人哭是为了解决问题。”",id:1498723813,
     img: ""
 }
+data[54] = {
+        title: "Swift",text:"（｡ò ∀ ó｡）",id:1501952920,
+            img: ""
+}
+data[55] = {
+        title: "Experience",text:"回忆人生，我的初心到底是什么呢？",id:1966101009,
+            img: ""
+}
+data[56] = {
+        title: "Been through 顺其自然",text:"EXO（video source）",source:"https://player.bilibili.com/player.html?bvid=Bv1oV4y1d7CE",
+            img: ""
+}
+data[57] = {
+        title: "As It Was",text:"溥仪的小曲儿",source:"https://player.bilibili.com/player.html?aid=91073180&bvid=BV1ak4y1M7vm",
+            img: ""
+}
+data[58] = {
+        title: "Without you(MC MV)",text:"其实世界上没有相同的事。有人说生活像爬山，爬到最高处还要回到谷底。但这只是相似。世界上相似不相同的事多了去了，我们为什么非要以悲观的事情来比喻现在呢？也许生活像视频里的远足，雪山会在脑后，大海会在脑后，好多美景都会被跨过，但前方仍是新的美景，也许比以前经过的更好。​",
+        source: "https://player.bilibili.com/player.html?aid=91073180&bvid=BV1iL411678e"
+
+}
