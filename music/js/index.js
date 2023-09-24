@@ -9,13 +9,11 @@ const data = [
 function load(num){
   try{
     let n=data.length;
-    alert(n)
     for(let i=0;i<n;++i){
         let index=i;//0924更新接口
         let random = Math.floor(100*Math.random());
         if(data[index].img==""){
-            if(random>=30){data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";}
-            else{data[index].img="https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png";}
+            data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data.img});background-size: cover;background-position: center center;">
