@@ -190,11 +190,11 @@ data[47] = {
 }
 data[48] = {
     title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",id:2013880610,
-    img: ""
+    img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[49] = {
     title: "Nevada",text:"[电音]重返2018的感觉！",id:447281026,
-    img: ""
+    img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[50] = {
     title: "Between Worlds",text:"“当你觉得孤独无助时，想一想还有十几亿的细胞只为了你一个人而活。”",id:28661549,
@@ -202,7 +202,7 @@ data[50] = {
 }
 data[51] = {
     title: "Lake Arrowhead (Radio Mix)",text:"给我燃起来!于角逐中战胜自我！",id:563129860,
-    img: ""
+    img: "https://pic.imgdb.cn/item/650feaa3c458853aef6487eb.jpg"
 }
 data[52] = {
     title: "Umbrella (Matte Remix)",text:"获得成就：超越生死",id:518904426,
@@ -210,26 +210,26 @@ data[52] = {
 }
 data[53] = {
     title: "玫瑰少年（小提琴版）",text:"“你知道哭是解决不了问题的 ”“没有人哭是为了解决问题。”",id:1498723813,
-    img: ""
+    img: "https://pic.imgdb.cn/item/650feaa3c458853aef64872e.jpg"
 }
 data[54] = {
         title: "Swift",text:"（｡ò ∀ ó｡）",id:1501952920,
-            img: ""
+            img: "https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
 }
 data[55] = {
         title: "Experience",text:"回忆人生，我的初心到底是什么呢？",id:1966101009,
-            img: ""
+            img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[56] = {
         title: "Been through 顺其自然",text:"EXO（video source）",source:"https://player.bilibili.com/player.html?bvid=Bv1oV4y1d7CE",
-            img: ""
+            img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c555.webp"
 }
 data[57] = {
-        title: "As It Was",text:"溥仪的小曲儿",source:"https://player.bilibili.com/player.html?aid=91073180&bvid=BV1ak4y1M7vm",
-            img: ""
+        title: "As It Was",text:"溥仪的小曲儿",source:"https://player.bilibili.com/player.html?bvid=BV1ak4y1M7vm",
+            img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c555.webp"
 }
 data[58] = {
         title: "Without you(MC MV)",text:"其实世界上没有相同的事。有人说生活像爬山，爬到最高处还要回到谷底。但这只是相似。世界上相似不相同的事多了去了，我们为什么非要以悲观的事情来比喻现在呢？也许生活像视频里的远足，雪山会在脑后，大海会在脑后，好多美景都会被跨过，但前方仍是新的美景，也许比以前经过的更好。​",
-        source: "https://player.bilibili.com/player.html?aid=91073180&bvid=BV1iL411678e"
-
+        source: "https://player.bilibili.com/player.html?bvid=BV1iL411678e",
+        img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
