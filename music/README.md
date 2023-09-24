@@ -16,9 +16,9 @@
 
 ### 音乐资源来源
 
-|  网易云音乐 | 无  |
-|---|---|
-|  Lucel音乐 | 其他  |
+|  网易云音乐 | 鹿客  | Bilibili |
+|---|---|---|
+|  Lucel音乐 | 存储资源  | Iframe视频资源 |
 
 ### luluyouwei.netlify.app/music/
  
