@@ -3,7 +3,7 @@
  _Lucel音乐开发者 Lulu_ 
 
 
-[点击进入网站:Lucel Music 鹿客音乐](https://luluyouwei.netlify.app/music/)
+[点击进入网站:Lucel Music 鹿客音乐](https://luluyouwei.github.io/music/)
 
 ### 关于
 1. 本网页不用于商业用途
