@@ -27,11 +27,11 @@ function load(num){
                 dataIndexs.splice(random,1);
             }
     }
-    alert(randomList)
-    function fillBlocks(index){
-    for(;index<n;++index){
-        if(data[randomList[index]].img==''){
-            data[randomList[index]].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+    alert(randomList+"\n\n"+random[0])
+    function fillBlocks(i){
+    for(let index=i;index<n;++index){
+        if(data[index].img==''){
+            data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data[index].img});background-size: cover;background-position: center center;">
