@@ -27,7 +27,7 @@ function load(num){
                 dataIndexs.splice(random,1);
             }
     }
-    
+    alert(randomList)
     function fillBlocks(index){
     for(;index<n;++index){
         if(data[randomList[index]].img==''){
@@ -47,6 +47,7 @@ function load(num){
             break;
         }
   }
+  fillBlocks(30);
   }catch(err){
     if(err=='break')return true;
     if(err=="ReferenceError: data is not defined")return alert("服务器连接失败。");
