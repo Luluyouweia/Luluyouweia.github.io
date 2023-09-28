@@ -27,9 +27,10 @@ function load(num){
                 dataIndexs.splice(random,1);
             }
     }
-    alert(randomList+"\n\n"+randomList[0])
+
     function fillBlocks(num){
-    for(let index=NUMBER;index<NUMBER+num;++index){
+    let maxLen = NUMBER+num>=data.length?data.length:NUMBER+num;
+    for(let index=NUMBER;index<maxLen;++index){
         let obj=data[randomList[index]];
         if(obj.img==''){
             obj.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
@@ -44,8 +45,22 @@ function load(num){
             `
     }
         NUMBER++;
+        if(maxLen==data.length){
+            //如果所有数据都罗列出时：
+            return false;
+        }
   }
   fillBlocks(30);
+
+  function loadMore(){
+      let isMore = fillBlocks(30);
+      //如果全部数据展示完成，关闭按钮显示状态。
+      if(isMore==flase){
+        document.getElementById("loadMore").style.display = "none";
+        return false;
+      }
+      return true;
+  }
   }catch(err){
     if(err=='break')return true;
     if(err=="ReferenceError: data is not defined")return alert("服务器连接失败。");
