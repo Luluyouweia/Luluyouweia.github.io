@@ -54,14 +54,14 @@ function load(num){
 
   function loadMore(){
       console.log("Loading More...");
-      let isMore = true;
+      /*let isMore = true;
       fillBlocks(30);
       //如果全部数据展示完成，关闭按钮显示状态。
       if(isMore==flase){
         document.getElementById("loadMore").style.display = "none";
         return false;
       }
-      return true;
+      return true;*/
   }
   }catch(err){
     if(err=='break')return true;
