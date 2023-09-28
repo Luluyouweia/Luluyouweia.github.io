@@ -43,8 +43,8 @@ function load(num){
                 </div>
             </div>
             `
+            NUMBER++;
     }
-        NUMBER++;
         if(maxLen==data.length){
             //如果所有数据都罗列出时：
             return false;
