@@ -53,7 +53,8 @@ function load(num){
   fillBlocks(30);
 
   function loadMore(){
-      let isMore = fillBlocks(30);
+      let isMore = true;
+      fillBlocks(30);
       //如果全部数据展示完成，关闭按钮显示状态。
       if(isMore==flase){
         document.getElementById("loadMore").style.display = "none";
