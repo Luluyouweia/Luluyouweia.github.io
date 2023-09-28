@@ -27,25 +27,23 @@ function load(num){
                 dataIndexs.splice(random,1);
             }
     }
-    alert(randomList+"\n\n"+random[0])
-    function fillBlocks(i){
-    for(let index=i;index<n;++index){
-        if(data[index].img==''){
-            data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+    alert(randomList+"\n\n"+randomList[0])
+    function fillBlocks(num){
+    for(let index=NUMBER;index<NUMBER+num;++index){
+        let obj=data[randomList[index]];
+        if(obj.img==''){
+            obj.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data[index].img});background-size: cover;background-position: center center;">
                 <div class="cases">
-                    <div class="title">${data[index].title}</div>
-                    <div class="description">${data[index].text}</div>
+                    <div class="title">${obj.title}</div>
+                    <div class="description">${obj.text}</div>
                 </div>
             </div>
             `
     }
         NUMBER++;
-        if(index==30){
-            break;
-        }
   }
   fillBlocks(30);
   }catch(err){
