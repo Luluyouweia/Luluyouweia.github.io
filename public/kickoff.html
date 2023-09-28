@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+      <title>Genshin Impact?...</title>
+      <style>
+      *{
+          margin: 0;padding: 0;box-sizing: border-box;
+      }
+      html,body{height: 100%;width: 100%;}
+      #screen{
+          position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;
+          background-image: url('https://pic.imgdb.cn/item/6513cab9c458853aef33f7d2.jpg');
+          background-size: cover;
+          background-position: center bottom;
+          opacity: 0;transition: 1.5s;
+          z-index: 0;
+      }
+      #warning{
+          position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;
+          display: none;background: rgb(0,0,0,0.9);padding: 20% 30%;color: #fff;
+          font-size: 32px;z-index:1;
+      }
+      #video{
+          position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;
+          display: none;z-index: 9;border: none;
+      }
+      </style>
+    </head>
+    <body>
+        <section id="screen"></section>
+        <section id="warning">请旋转手机屏幕至横屏。</section>
+        <iframe id="video" src='' border="none"></iframe>
+        <script>
+        var isReady = false;
+        var c=0;
+        setInterval(()=>{
+            if(document.body.clientHeight/document.body.clientWidth>=1){
+                document.getElementById("warning").style.display = "block";
+                document.getElementById("screen").style.opacity="0";
+                isReady = false;
+            }else{
+                isReady = true;
+                document.getElementById("warning").style.display = "none";
+                kickoff();
+            }
+        },1000)
+        
+        let kickoff=()=>{
+            setTimeout(()=>{
+                if(isReady==true){
+                    document.getElementById("screen").style.opacity="1";
+                    if(c==0){c++;
+                        setTimeout(()=>{
+                            document.getElementById("video").src = "https://player.bilibili.com/player.html?bvid=BV1pF411U7mn";
+                            document.getElementById("video").style.display="block";
+                        },6000)
+                    }
+                    return true;
+                }
+                document.getElementById("screen").style.opacity="0";  
+            },3500)
+            return true;
+        }
+        
+        </script>
+    </body>
+</html>
