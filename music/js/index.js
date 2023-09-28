@@ -29,7 +29,7 @@ function load(num){
     }
 
     function fillBlocks(num){
-    let maxLen = NUMBER+num>=data.length?data.length:NUMBER+num;
+    let maxLen = (NUMBER+num)>=data.length?data.length:NUMBER+num;
     for(let index=NUMBER;index<maxLen;++index){
         let obj=data[randomList[index]];
         if(obj.img==''){
@@ -43,7 +43,7 @@ function load(num){
                 </div>
             </div>
             `
-            NUMBER++;
+            ++NUMBER;
     }
         if(maxLen==data.length){
             //如果所有数据都罗列出时：
@@ -53,6 +53,7 @@ function load(num){
   fillBlocks(30);
 
   function loadMore(){
+      console.log("Loading More...");
       let isMore = true;
       fillBlocks(30);
       //如果全部数据展示完成，关闭按钮显示状态。
