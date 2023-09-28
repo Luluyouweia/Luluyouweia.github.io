@@ -9,9 +9,28 @@ const data = [
 function load(num){
   try{
     const n=data.length;
+
+     //###随机化推荐实现代码：
+     //创建一个储存data中的序列的有序数组
+     let dataIndexs = new Array();
+     //填充dataIndexs：
+          for(let orderl=0;orderl<data.length;++orderl){
+               dataIndexs.push(orderl);
+          }
+     let randomList = new Array();//创建随机数组
+     const DATALENGTH = dataIndexs.length;//储存dataIndexs的长度
+     //循环更新randomList内容
+         while(randomList.length<DATALENGTH){
+            let random = Math.floor(100*Math.random());
+            if(typeof(dataIndexs[random])!="undefined"){
+                randomList.push(dataIndexs[random]);
+                dataIndexs.splice(random,1);
+            }
+    }
+
     for(let index=0;index<n;++index){
-        if(data[index].img==''){
-            data[index].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+        if(data[randomList[index]].img==''){
+            data[randomList[index]].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
             <div onclick="audio.play(${index})" style="background-image: url(${data[index].img});background-size: cover;background-position: center center;">
