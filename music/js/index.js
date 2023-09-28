@@ -35,7 +35,7 @@ function load(num){
             obj.img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
         document.getElementById("content").innerHTML += `
-            <div onclick="audio.play(${index})" style="background-image: url(${data[index].img});background-size: cover;background-position: center center;">
+            <div onclick="audio.play(${randomList[index]})" style="background-image: url(${data[index].img});background-size: cover;background-position: center center;">
                 <div class="cases">
                     <div class="title">${obj.title}</div>
                     <div class="description">${obj.text}</div>
