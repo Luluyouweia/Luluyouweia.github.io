@@ -9,7 +9,7 @@ const data = [
 function load(num){
   try{
     const n=data.length;
-
+    let indexCallback = 0;
      //###随机化推荐实现代码：
      //创建一个储存data中的序列的有序数组
      let dataIndexs = new Array();
@@ -27,8 +27,9 @@ function load(num){
                 dataIndexs.splice(random,1);
             }
     }
-
-    for(let index=0;index<n;++index){
+    
+    function fillBlocks(index){
+    for(;index<n;++index){
         if(data[randomList[index]].img==''){
             data[randomList[index]].img="https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
         }
@@ -42,7 +43,10 @@ function load(num){
             `
     }
         NUMBER++;
-    
+        if(index==30){
+            break;
+        }
+  }
   }catch(err){
     if(err=='break')return true;
     if(err=="ReferenceError: data is not defined")return alert("服务器连接失败。");
