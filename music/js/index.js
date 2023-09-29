@@ -6,6 +6,7 @@ const data = [
         id: 0,title: "示例",text: "none",img:"./img/jpg"...
 ]
 */
+let loadMore = null;
 function load(num){
   try{
     const n=data.length;
@@ -52,7 +53,7 @@ function load(num){
   }
   fillBlocks(30);
 
-  function loadMore(){
+  loadMore=()=>{
       console.log("Loading More...");
       /*let isMore = true;
       fillBlocks(30);
