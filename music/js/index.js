@@ -53,7 +53,7 @@ function load(num){
   }
   fillBlocks(30);
 
-  loadMore=()=>{
+  loadMore=function(){
       console.log("Loading More...");
       /*let isMore = true;
       fillBlocks(30);
