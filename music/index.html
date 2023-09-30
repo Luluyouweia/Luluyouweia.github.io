@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <!-- Version 2.0.0.3 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>鹿客音乐</title>
+    <style>
+        @font-face {
+            font-family: "默认";
+            src: url("/public/font/HYWH-85W.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 300;
+            font-family: "默认";
+        }
+
+        html,
+        body {
+            height: 100vh;
+            position: relative;
+            background-size: 100% 100%;
+        }
+
+        header {
+            position: fixed;
+            z-index: 6;
+            font-size: 16px;
+            text-align: center;
+            width: 100vw;
+            color: #fff;
+            padding: 10px;
+            background: rgb(36, 36, 36);
+            box-shadow: 0 0 10px 10px rgb(0, 0, 0, 0.2);
+        }
+
+        #content {
+            padding: 18px;
+            width: 100%;
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #content>div {
+            position: relative;
+            transition: 0.2s;
+            display: inline-block;
+            margin: 8px;
+            border-radius: 12px;
+            height: 150px;
+            background-color: rgb(105, 126, 208);
+            overflow: auto;
+        }
+
+        #content .title {
+            color: #fff;
+            font-size: 125%;
+            font-weight: 400;
+            z-index: 4;
+            text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+        }
+
+        #content>div .cases {
+            content: '';
+            display: block;
+            background: rgb(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100%;
+            padding: 18px;
+            text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+        }
+
+        #content .description {
+            color: #fff;
+            font-size: 90%;
+        }
+
+        #content>div:active {
+            box-shadow: 2px 2px 4px 3px rgb(0, 0, 0, 0.25);
+            margin-top: 2px;
+        }
+
+        #music {
+            z-index: 9;
+            position: fixed;
+            bottom: 0;
+            padding: 8px;
+            width: 100vw;
+            height: 52px;
+            font-size: 45%;
+            background: #eee;
+        }
+
+        /*#progressline{
+              width: 80%;background-image: linear-gradient(to right, #9cf,#eee);right: 28px;
+              position: absolute;display:inline-block;height: 15px;border-radius: 12px;top: 8px;bottom: 0;margin: auto;
+          }
+          #progress{
+              display: block;height: 100%;background-image: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+              width: 12px;border-radius: 8px;transition: 0.2s;
+          } .Hover:hover{opacity: 0.6;}*/
+        #infoPage {
+            position: fixed;
+            transition: 0.3s;
+            z-index: 10;
+            display: block;
+            left: 0;
+            top: 100vh;
+            width: 100vw;
+            height: 100vh;
+            background: rgb(0, 0, 0, 0.45);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #infoPage .tools .back,
+        #iframeRadiu {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            background: rgb(255, 255, 255, 0.3);
+            color: #fff;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 80%;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        #infoPage .title {
+            position: absolute;
+            top: 15%;
+            color: #fff;
+            padding: 16px 36px;
+            width: 100%;
+            height: auto;
+            max-height: 35%;
+            font-size: 170%;
+            font-weight: 400;
+            background: rgb(0, 0, 0, 0.1);
+            text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+        }
+
+        #infoPage .text {
+            position: absolute;
+            top: 45%;
+            color: #fff;
+            width: 100vh;
+            height: auto;
+            max-height: 30%;
+            padding: 25px 10vw;
+            backdrop-filter: blur(1px);
+            font-size: 115%;
+            font-weight: 300;
+            border-radius: 8px;
+            text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.3px rgb(0, 0, 0, 0.7);
+        }
+
+        #floatRadiu {
+            position: fixed;
+            top: 75%;
+            right: 12px;
+            border-radius: 50%;
+            display: block;
+            height: 50px;
+            width: 50px;
+            padding: 6px;
+            background-color: #eee;
+            background-image: url(./img/播放.png);
+            background-size: cover;
+            transition: 0.2s;
+            display: none;
+        }
+
+        #floatRadiu:active {
+            opacity: 0.5;
+        }
+
+        #audio {
+            position: fixed;
+            bottom: 0;
+            width: 100vw;
+            z-index: 11;
+            left: 0;
+            opacity: 0.85;
+            transition: 0.8s;
+        }
+
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #9cf;
+            /*后数*/
+        }
+
+        audio::-webkit-media-controls-current-time-display {
+            color: #08f;
+            /*前数*/
+        }
+
+        audio::-webkit-media-controls-play-button {
+            color: #08f;
+        }
+
+        #iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            border: none;
+            z-index: 15;
+        }
+
+        #loadMore {
+            width: 100%;
+            height: 56px;
+            margin-top: 16px;
+            background: #fff;
+            text-align: center;
+            color: #08f;
+            padding: 8px;
+            display: block;
+            outline: none;
+            border: 1px solid #08f;
+        }
+    </style>
+</head>
+
+<body>
+    <header>鹿客音乐</header>
+    <section id="content"></section>
+    <button id="loadMore" onclick="loadMore()">加载更多</button>
+
+    <section id="infoPage">
+        <section class="tools">
+            <span class="back" onclick="audio.back()">╳</span>
+        </section>
+        <div class="title"></div>
+        <div class="text"></div>
+    </section>
+
+    <section id="floatRadiu" onclick="audio.show()"></section>
+    <iframe id="iframe" src="" border="none"></iframe>
+    <section id="iframeRadiu" style="position: fixed;z-index: 16;display: none;" onclick="this.style.display='none';document.getElementById('iframe').style.display='none';document.getElementById('iframe').src='';">╳</section>
+    <!--该段进度代码暂时废除
+            <section id="music">
+            <div style="position: absolute;top: 5px;left: 90px;">
+            <span id="timer" style="color: #08f;">00:00</span>/
+            <span id="totalTimer" style="color: #9cf;">01:00</span>
+            </div>
+            <span class="Hover" style="display: inline-block;width: 36px;height: 36px;background: url(./img/播放.png);background-size: 100% 100%;"> </span>
+            <span id="progressline"><div id="progress"></div></span>
+            </section>
+        -->
+    <script src="https://luluyouweia.github.io/music/data.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        fillBlocks(20);
+        //填充@fillBlock(randomDataLength):index.js;
+    </script>
+</body>
+
+</html>
