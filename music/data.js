@@ -51,7 +51,7 @@ data[7] = {
 data[8] = {
     title: "晨曦酒庄 Dawn Winery Theme",
     text: "提瓦特初印象。本人2.8版本入坑。",
-    id: "1981803400",
+    id: "1481390619",
     img: "https://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"
 }
 data[9] = {
