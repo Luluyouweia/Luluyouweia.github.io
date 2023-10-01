@@ -1,4 +1,4 @@
-let data = new Array();//Data数据数组
+let data = new Array();
 data[0] = {
     title: "After Tomorrow",
     text: "网易游戏《明日之后》特辑音乐",
@@ -38,8 +38,8 @@ data[5] = {
 }
 data[6] = {
     title: "オラリオン",
-    text: "点击播放",
-    mid: "local:https://lucel.pages.dev/cloud/file/private/musicZjdcrts2-2.mp3",
+    text: "《终结的炽天使》第2季 片尾曲",
+    id: "local:https://lucel.pages.dev/cloud/file/private/musicZjdcrts2-2.mp3",
     img: ""
 }
 data[7] = {
@@ -52,7 +52,7 @@ data[8] = {
     title: "晨曦酒庄 Dawn Winery Theme",
     text: "提瓦特初印象。本人2.8版本入坑。",
     id: "1981803400",
-    img: "xxxxhttps://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"
+    img: "https://webstatic.mihoyo.com/upload/contentweb/2022/07/24/3c16216d6e7f1dc788ba783d3a793d9e_8358466801763713902.jpg"
 }
 data[9] = {
     title: "钢铁洪流进行曲",
