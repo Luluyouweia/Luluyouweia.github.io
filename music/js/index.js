@@ -255,7 +255,7 @@ function fillBlocks(num) {
     for (let index = NUMBER; index < maxLen; ++index) {
         let obj = data[randomList[index]];
         if (obj.img == '') {
-            obj.img = "https://tuchuang.voooe.cn/images/2023/01/24/65261833.jpg";
+            obj.img = "https://pic.imgdb.cn/item/65194bddc458853aefacb2de.jpg";
         }
         document.getElementById("content").innerHTML += `
                 <div onclick="audio.play(${randomList[index]})" style="background-image: url(${obj.img});background-size: cover;background-position: center center;">
