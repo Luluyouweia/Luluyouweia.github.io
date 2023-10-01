@@ -178,10 +178,11 @@
             width: 50px;
             padding: 6px;
             background-color: #eee;
-            background-image: url(./img/播放.png);
-            background-size: cover;
             transition: 0.2s;
             display: none;
+            text-align: center;padding: 20px;border: none;
+		    font-size: 25px;font-weight: 600;
+            background-image: linear-gradient(to bottom right, #fb698f, #08f);background-clip:text;-webkit-background-clip:text;color: transparent;	
         }
 
         #floatRadiu:active {
@@ -251,7 +252,7 @@
         <div class="text"></div>
     </section>
 
-    <section id="floatRadiu" onclick="audio.show()"></section>
+    <section id="floatRadiu" class="fa fa-headphones" onclick="audio.show()"></section>
     <iframe id="iframe" src="" border="none"></iframe>
     <section id="iframeRadiu" style="position: fixed;z-index: 16;display: none;" onclick="this.style.display='none';document.getElementById('iframe').style.display='none';document.getElementById('iframe').src='';">╳</section>
     <!--该段进度代码暂时废除
