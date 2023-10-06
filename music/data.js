@@ -39,7 +39,7 @@ data[5] = {
 data[6] = {
     title: "オラリオン",
     text: "《终结的炽天使》第2季 片尾曲",
-    id: "local:https://lucel.pages.dev/cloud/file/private/musicZjdcrts2-2.mp3",
+    source: "local:https://lucel.pages.dev/cloud/file/private/musicZjdcrts2-2.mp3",
     img: ""
 }
 data[7] = {
