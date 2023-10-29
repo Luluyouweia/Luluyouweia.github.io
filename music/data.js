@@ -173,11 +173,11 @@ data[43] = {
     id: 34002930, img: ""
 }
 data[44] = {
-    title: "花与剑的轮舞", text: "枫丹战斗主题曲 <br/>hoyo-mix", source: "local:https://Luluyouweia.github.io/music/data/music_themeattack.mp3",
+    title: "花与剑的轮舞", text: "枫丹战斗主题曲 <br/>hoyo-mix 苑迪萌", id: 2085836773,
     img: "https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
 }
 data[45] = {
-    title: "咏歌与凯旋", text: "原神？启动！ 枫丹？优雅！<br/>hoyo-mix", source: "local:https://Luluyouweia.github.io/music/data/music_attack0.mp3",
+    title: "咏歌与凯旋", text: "原神？启动！ 枫丹？优雅！<br/>hoyo-mix丁谦", id: 2085833561,
     img: "https://pic.imgdb.cn/item/64f43c02661c6c8e540878ef.jpg"
 }
 data[46] = {
@@ -232,4 +232,8 @@ data[58] = {
         title: "Without you(MC MV)",text:"其实世界上没有相同的事。有人说生活像爬山，爬到最高处还要回到谷底。但这只是相似。世界上相似不相同的事多了去了，我们为什么非要以悲观的事情来比喻现在呢？也许生活像视频里的远足，雪山会在脑后，大海会在脑后，好多美景都会被跨过，但前方仍是新的美景，也许比以前经过的更好。​",
         source: "https://player.bilibili.com/player.html?bvid=BV1iL411678e",
         img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
+}
+data[59]={
+    title:"轻雨何故落",text:"致郁之曲</br>Hoyomix 苑迪萌",id:2085833525,
+    img:""
 }
