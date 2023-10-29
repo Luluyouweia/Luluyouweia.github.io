@@ -237,3 +237,7 @@ data[59]={
     title:"轻雨何故落",text:"致郁之曲</br>Hoyomix 苑迪萌",id:2085833525,
     img:""
 }
+data[60]={
+    title:"Wake",text:"自律的小曲儿",id:1873321491,
+    img:""
+}
