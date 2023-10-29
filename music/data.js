@@ -77,8 +77,8 @@ data[13] = {
     id: "31654478", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
 }
 data[14] = {
-    title: "Astronomia", text: "黑人抬棺主题交响乐",
-    id: "430114655", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/d972e5420adff2d193af09a50066665b7df78241564afb10f3ae462b268b3bd2b547d8f191129de9e2b7b11dc9b35346?pictype=scale&from=30113&version=3.3.3.3&fname=HRTG.jpg&size=750"
+    title: "加速世界", text: "如果这首曲子与迷你无关，那它一定是个好曲子。",
+    id: "2015634549", img: ""
 }
 data[15] = {
     title: "", text: "平静的小曲，网友神评：“听着这音乐打代码，感觉我在拯救世界！！！”",
