@@ -241,3 +241,7 @@ data[60]={
     title:"Wake",text:"自律的小曲儿",id:1873321491,
     img:""
 }
+data[61]={
+    title: "Fool for you",text: "为你痴狂",id:1817576399,
+    img:""
+}
