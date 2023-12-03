@@ -8,7 +8,7 @@ if(application){
     }
     if(application.app=="鹿客"){
         if(application.version<114){
-            msgbox("好好好","什么年代了你还不更新是吧")
+            msgbox("好好好,都什么年代了你还不更新是吧，知道在哪更新吧？<a style='color: #08f' href=''>点击更新</a>")
         }
     }
 }
