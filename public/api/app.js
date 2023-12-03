@@ -4,4 +4,9 @@ if(application){
             alert("检测到更新！");
         }
     }
+    if(application.app=="鹿客"){
+        if(application.version<114){
+            alert("检测到更新！");
+        }
+    }
 }
