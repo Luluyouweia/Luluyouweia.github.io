@@ -112,7 +112,7 @@ data[23] = {
     title: "Free Lucky", text: "纯音乐", id: "1392600538", img: ""
 }
 data[24] = {
-    title: "Time to pretend", text: "让我们再次伟大哈哈哈！！！", id: "1899726376", img: ""
+    title: "Time to pretend x Memory Reboot x On the sun(Mix)", text: "杂交音乐", id: "2091974677", img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[25] = {
     title: "带我去找夜生活", text: "告五人作曲", id: "1410647903", img: "https://images.unsplash.com/photo-1515981590392-502e83bbf224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
