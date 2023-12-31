@@ -112,10 +112,10 @@ data[23] = {
     title: "Free Lucky", text: "纯音乐", id: "1392600538", img: ""
 }
 data[24] = {
-    title: "Time to pretend x Memory Reboot x On the sun(Mix)", text: "杂交音乐", id: "2091974677", img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
+    title: "Time to pretend x Memory Reboot x On the sun(Mix)", text: "还记得彼时的乐趣吗？", id: "2091974677", img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[25] = {
-    title: "带我去找夜生活", text: "告五人作曲", id: "1410647903", img: "https://images.unsplash.com/photo-1515981590392-502e83bbf224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
+    title: "带我去找夜生活", text: "告五人作曲", local: "./data/dwqzysh.mp3", img: "https://images.unsplash.com/photo-1515981590392-502e83bbf224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
 }
 data[26] = {
     title: "飞向遥远的天空", text: "遠い空へ【ヨスガノソラ メインテーマ】", id: "411755222", img: ""
@@ -130,7 +130,7 @@ data[29] = {
     title: "<h4 style='color:red'>MV</h4>永远不会放弃您(Never Gonna Give You Up 豪华版)", text: "您要被骗了！", source: "https://player.bilibili.com/player.html?aid=601888108&bvid=BV1vB4y1574y&cid=802251467&page=1", img: "https://www.concierto.cl/wp-content/uploads/2021/02/Rick-Astley.jpg"
 }
 data[30] = {
-    title: "轻涟", text: "宣布无人罪！", id: "2100334024", img: ""
+    title: "轻涟", text: "罪人舞步旋。现于明灯熠熠，归于沉海茫茫。", id: "2100334024", img: ""
 }
 data[31] = {
     title: "His theme", text: "音乐源于传说之下", id: "39227633", img: ""
@@ -145,10 +145,10 @@ data[34] = {
     title: "鲸波鼍浪", text: "Undersea Encounters ", id: 1937114514, img: "https://tuchuang.voooe.cn/images/2023/06/04/e022587eb2f128dcebde0fa0b20cb1af49970d12.jpg1256w_708h_progressive.webp"
 }
 data[35] = {
-    title: "不冻的激浪", text: "Genshin Impact Game OST ", id: 1861579691, img: "https://pic3.zhimg.com/v2-e8bc3bf99c890ff0353b28c20fdc071a_r.jpg"
+    title: "不冻的激浪", text: "Genshin Impact Game OST <br/>初入雪山的恐惧记忆", id: 1861579691, img: "https://pic3.zhimg.com/v2-e8bc3bf99c890ff0353b28c20fdc071a_r.jpg"
 }
 data[36] = {
-    title: "WATER(Feat.Miku)", text: "Phigros收录片段曲目</br>作词 : 沙包P & 作曲 : A-39", id: 1404469236, img: "https://pic.imgdb.cn/item/650fe977c458853aef63f27f.jpg"
+    title: "WATER(Feat.Miku)", text: "Phigros的神曲！</br>作词 : 沙包P & 作曲 : A-39", id: 1404469236, img: "https://pic.imgdb.cn/item/650fe977c458853aef63f27f.jpg"
 }
 data[37] = {
     title: "MV:三千娑世御咏歌-演绎版", text: "微小虫孑，岂敢视神......", source: "https://player.bilibili.com/player.html?bvid=BV1Xh4y1H72Q", img: "https://pic1.zhimg.com/v2-3162af7701f2d18120accdc6224805a8_r.jpg"
@@ -160,10 +160,10 @@ data[39] = {
     title: "Wildfire野火", text: "崩坏：星穹铁道 战斗音乐  作曲：mihoyo", id: 2045806409, img: "https://tuchuang.voooe.cn/images/2023/05/01/nightskywithblueeyes.jpg"
 }
 data[40] = {
-    title: "<b style='color: red;'>MV </b> Fake Love", text: "一路走来，都是值得的，美好是世界本色，请不要忘记人生每一场旅途本身的意义！", source: "https://player.bilibili.com/player.html?bvid=BV1JP411H7ib", img: "https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1682685796766-0fddd3e480de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+    title: "<b style='color: red;'>MV </b> Fake Love", text: "一路走来，美好永驻，这是世界本色，不要迷失在人生的旅途中！", source: "https://player.bilibili.com/player.html?bvid=BV1JP411H7ib", img: "https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1682685796766-0fddd3e480de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
 }
 data[41] = {
-    title: "Daylight", text: "治愈系宝藏", id: 1372188635, img: ""
+    title: "Daylight", text: "幻月倒影，东方既白。", id: 1372188635, img: ""
 }
 data[42] = {
     title: "Empire of Angels", text: "“以激昂的泪水奏响成功的高歌，勿忘旧时沉重的的阴霾！”<article style='font-size: 65%;'>曲风：悲壮</article>", id: 29460377, img: "https://pic.imgdb.cn/item/64f42a73661c6c8e54057de1.jpg"
@@ -181,11 +181,11 @@ data[45] = {
     img: "https://pic.imgdb.cn/item/64f43c02661c6c8e540878ef.jpg"
 }
 data[46] = {
-    title: "Alpha", text: "我的世界Minecraft 终末之诗 背景音乐 <br/>Minecraft C418", id: 27961148,
+    title: "Alpha", text: "结束了？<br/><i>Minecraft终末之诗  by C418</i>", id: 27961148,
     img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c572.jpg"
 }
 data[47] = {
-    title: "Ich bin Himmel, wenn ich den Himmel liebe (feat. Seraphina Theresa)",text:"我不是归人，而是过客。",id:522320784,
+    title: "Ich bin Himmel, wenn ich den Himmel liebe (feat. Seraphina Theresa)",text:"盈虚者如彼，而卒莫消长也。",id:522320784,
     img: ""
 }
 data[48] = {
@@ -193,7 +193,7 @@ data[48] = {
     img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[49] = {
-    title: "Nevada",text:"[电音]重返2018的感觉！",id:447281026,
+    title: "Nevada",text:"那是2018的感觉！",id:447281026,
     img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[50] = {
@@ -225,7 +225,7 @@ data[56] = {
             img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c555.webp"
 }
 data[57] = {
-        title: "As It Was",text:"溥仪的小曲儿",source:"https://player.bilibili.com/player.html?bvid=BV1ak4y1M7vm",
+        title: "As It Was",text:"溥仪之曲也。",source:"https://player.bilibili.com/player.html?bvid=BV1ak4y1M7vm",
             img: "https://pic.imgdb.cn/item/650fd5e7c458853aef59c555.webp"
 }
 data[58] = {
@@ -243,5 +243,9 @@ data[60]={
 }
 data[61]={
     title: "Fool for you",text: "为你痴狂",id:1817576399,
+    img:""
+}
+data[62]={
+    title: "Aria Math",text:"这是无际的迷茫与飘渺的希望的斗争之声 <br/> Minecraft C418",id:27961159,
     img:""
 }
