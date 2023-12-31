@@ -115,7 +115,7 @@ data[24] = {
     title: "Time to pretend x Memory Reboot x On the sun(Mix)", text: "还记得彼时的乐趣吗？", id: "2091974677", img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[25] = {
-    title: "带我去找夜生活", text: "告五人作曲", local: "./data/dwqzysh.mp3", img: "https://images.unsplash.com/photo-1515981590392-502e83bbf224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
+    title: "带我去找夜生活", text: "告五人作曲", source: "local:./data/dwqzysh.mp3", img: "https://images.unsplash.com/photo-1515981590392-502e83bbf224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=80"
 }
 data[26] = {
     title: "飞向遥远的天空", text: "遠い空へ【ヨスガノソラ メインテーマ】", id: "411755222", img: ""
@@ -189,7 +189,7 @@ data[47] = {
     img: ""
 }
 data[48] = {
-    title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",local:"./data/memory_reboot.mp3",
+    title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",source:"local:./data/memory_reboot.mp3",
     img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[49] = {
