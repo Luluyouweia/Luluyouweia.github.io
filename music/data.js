@@ -189,7 +189,7 @@ data[47] = {
     img: ""
 }
 data[48] = {
-    title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",id:2013880610,
+    title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",local:"./data/memory_reboot.mp3",
     img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[49] = {
@@ -248,4 +248,11 @@ data[61]={
 data[62]={
     title: "Aria Math",text:"这是无际的迷茫与飘渺的希望的斗争之声 <br/> Minecraft C418",id:27961159,
     img:""
+}
+data[63]={
+    title: "One last kiss(Scene)",text:"旧梦新曦",id:1835122771,
+    img:""
+}
+data[64]={
+    title: "神のまにまに",text: "神的随波逐流<br/> 歌手：初音ミク / 鏡音リン / GUMI / れるりり",id: 32431066,img: ""
 }
