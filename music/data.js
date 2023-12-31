@@ -66,7 +66,7 @@ data[10] = {
 }
 data[11] = {
     title: "千本桜", text: "歌手：黒うさP / 初音ミク",
-    id: "26096272", img: "https://images.unsplash.com/photo-1522383225653-ed111181a951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+    id: "26096272", img: "https://pic.imgdb.cn/item/65913368c458853aefb59a90.jpg"
 }
 data[12] = {
     title: "Never Gonna Give You Up", text: "你被骗了，但是自愿。<br>维诺.理查德.汪苏泷",
@@ -121,10 +121,10 @@ data[26] = {
     title: "飞向遥远的天空", text: "遠い空へ【ヨスガノソラ メインテーマ】", id: "411755222", img: ""
 }
 data[27] = {
-    title: "尘世闲游", text: "悠然，悠然，不过，？？？", id: "1817410059", img: ""
+    title: "尘世闲游", text: "悠然，悠然，不过，？？？", id: "1817410059", img: "https://pic.imgdb.cn/item/65913008c458853aefaa7f4f.jpg"
 }
 data[28] = {
-    title: "环太平洋", text: "猛燃", id: "26625301", img: ""
+    title: "环太平洋", text: "猛燃", id: "26625301", img: "https://pic.imgdb.cn/item/650fe774c458853aef62d305.webp"
 }
 data[29] = {
     title: "<h4 style='color:red'>MV</h4>永远不会放弃您(Never Gonna Give You Up 豪华版)", text: "您要被骗了！", source: "https://player.bilibili.com/player.html?aid=601888108&bvid=BV1vB4y1574y&cid=802251467&page=1", img: "https://www.concierto.cl/wp-content/uploads/2021/02/Rick-Astley.jpg"
@@ -133,13 +133,13 @@ data[30] = {
     title: "轻涟", text: "罪人舞步旋。现于明灯熠熠，归于沉海茫茫。", id: "2100334024", img: ""
 }
 data[31] = {
-    title: "His theme", text: "音乐源于传说之下", id: "39227633", img: ""
+    title: "His theme", text: "音乐源于传说之下", id: "39227633", img: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[32] = {
     title: "只因你太美", text: "小黑子露出只因脚了吧", id: 1340439829, img: ""
 }
 data[33] = {
-    title: "岩壑之崩", text: "Hoyomix 陈致逸", id: 1861578703, img: "/images/m/img-rtlw.jpg"
+    title: "岩壑之崩", text: "Hoyomix 陈致逸", id: 1861578703, img: "https://pic.imgdb.cn/item/650fe774c458853aef62d305.webp"
 }
 data[34] = {
     title: "鲸波鼍浪", text: "Undersea Encounters ", id: 1937114514, img: "https://tuchuang.voooe.cn/images/2023/06/04/e022587eb2f128dcebde0fa0b20cb1af49970d12.jpg1256w_708h_progressive.webp"
@@ -186,11 +186,11 @@ data[46] = {
 }
 data[47] = {
     title: "Ich bin Himmel, wenn ich den Himmel liebe (feat. Seraphina Theresa)",text:"盈虚者如彼，而卒莫消长也。",id:522320784,
-    img: ""
+    img: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[48] = {
     title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",source:"local:./data/memory_reboot.mp3",
-    img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
+    img: "https://www.superbed.cn/info/65913372c458853aefb5b66a"
 }
 data[49] = {
     title: "Nevada",text:"那是2018的感觉！",id:447281026,
@@ -235,33 +235,33 @@ data[58] = {
 }
 data[59]={
     title:"轻雨何故落",text:"致郁之曲</br>Hoyomix 苑迪萌",id:2085833525,
-    img:""
+    img:"https://pic.imgdb.cn/item/65912ff9c458853aefaa3abb.jpg"
 }
 data[60]={
     title:"Wake",text:"自律的小曲儿",id:1873321491,
-    img:""
+    img:"https://pic.imgdb.cn/item/65912ff9c458853aefaa3abb.jpg"
 }
 data[61]={
     title: "Fool for you",text: "为你痴狂",id:1817576399,
-    img:""
+    img:"https://pic.imgdb.cn/item/65912ff9c458853aefaa3abb.jpg"
 }
 data[62]={
     title: "Aria Math",text:"这是无际的迷茫与飘渺的希望的斗争之声 <br/> Minecraft C418",id:27961159,
-    img:""
+    img:"https://pic.imgdb.cn/item/65913386c458853aefb5f79a.jpg"
 }
 data[63]={
     title: "One last kiss(Scene)",text:"旧梦新曦",id:1835122771,
-    img:""
+    img:"https://pic.imgdb.cn/item/65913008c458853aefaa7f4f.jpg"
 }
 data[64]={
-    title: "神のまにまに",text: "神的随波逐流<br/> 歌手：初音ミク / 鏡音リン / GUMI / れるりり",id: 32431066,img: ""
+    title: "神のまにまに",text: "神的随波逐流<br/> 歌手：初音ミク / 鏡音リン / GUMI / れるりり",id: 32431066,img: "https://pic.imgdb.cn/item/65913368c458853aefb59a90.jpg"
 }
 data[65]={
-    title:"悬溺",text: "救赎",id:1397345903,img:""
+    title:"悬溺",text: "救赎",id:1397345903,img:"https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[66]={
-    title:"琵琶行",text:"作曲：杜甫",id:476513774,img:""
+    title:"琵琶行",text:"作曲：杜甫",id:476513774,img:"https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[67]={
-    title: "春娇与志明",text:"那已经是几年前我朋友打游戏听歌给他推荐放的歌。",id:1925445655,img:""
+    title: "春娇与志明",text:"那已经是几年前我朋友打游戏听歌给他推荐放的歌。",id:1925445655,img:"https://pic.imgdb.cn/item/65913008c458853aefaa7f4f.jpg"
 }
