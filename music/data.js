@@ -190,7 +190,7 @@ data[47] = {
 }
 data[48] = {
     title: "Memory Reboot",text:"时光变迁，美好易逝，唯心存霞光。",source:"local:./data/memory_reboot.mp3",
-    img: "https://www.superbed.cn/info/65913372c458853aefb5b66a"
+    img: "https://pic.imgdb.cn/item/65913372c458853aefb5b66a.jpg"
 }
 data[49] = {
     title: "Nevada",text:"那是2018的感觉！",id:447281026,
