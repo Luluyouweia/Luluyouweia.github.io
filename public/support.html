@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+    <title>赞助</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+      <style>
+          *{
+              margin: 0;padding: 0;box-sizing: border-box;
+          }
+          @font-face{
+              font-family: "得意黑";
+              src: url("https://Luluyouweia.github.io/public/font/SmileySans.ttf")
+          }
+          #title{
+              padding: 60px;text-align: center;margin: 16px;
+              border: none;border-radius: 18px;background: rgb(0,0,0,0.06);
+              font-size: 200%;font-weight: 300;font-family: "得意黑";
+          }
+          #page{
+              position: relative;padding-top: 30px;padding: 20px;margin-top: 80vh;transition: 0.3s;
+              font-weight: 300;box-shadow: 1px -4px 8px rgb(0,0,0,0.15);height: 100vh;
+          }
+          h3{
+          font-weight: 400;font-family: "得意黑";
+          }
+          #support{
+              display: flex;justify-content: space-between;padding: 2vw;width: 100%;
+          }
+          .btn{
+              display: block;transition: 0.3s;
+              background-color: #fff;color: #08f;border: 1px solid #08f;border-radius: 6px;padding: 8px;width: 25vw;height: 12vw;
+          }
+          .btn:hover{
+              color: #fff;background-color: #08f;
+          }
+          #part{
+          position: absolute;top: 100vh;transition: 1s;line-height: 168%;text-align: center;
+          }
+          .bg{
+              display: block;left: 0;right: 0;width: 60vw;height: 60vw;margin: auto;
+          }
+          #sptImg{
+              position: fixed;z-index: 3;display: block;transition: 0.9s;
+              width: 80vw;height: 65vh;top: -100vh;left: 10vw;background: #fff;border-radius: 12px;
+          }
+          #screen{
+              top: 0;display: none;
+              position: fixed;width: 100vw;height: 100vh;z-index: 2;
+              background: rgb(0,0,0,0.25);
+          }
+      </style>
+    </head>
+    <body>
+      <div id="screen"></div>
+      <div id="title" style="font-family: "得意黑";">
+        支持与赞助逯跃翔
+      </div>
+      <div id="page">
+          <h3>您的支持对家庭财务的维护起到了至关重要的作用！</h3>
+          <div id="part">
+              
+          </div>
+      </div>
+      <section id="sptImg">
+          <div style="text-align: center;font-size: 150%;padding: 12px;font-family: '得意黑';">扫描二维码支持我</div>
+          <img class="bg" id='erweima' src=""><br/>
+          <button style="position: absolute;background-color: #fff;color: red;border: 1px solid red;border-radius: 6px;padding: 8px;width: 25vw;height: 12vw;left: 0;right: 0;margin: auto;" onclick="msg(-1)">取消</button>
+      </section>
+      <script>
+          const pg=document.getElementById("page");
+          const pt=document.getElementById("part");
+          const links=[
+          "https://Luluyouweia.github.io/images/2022-12/mm_facetoface_collect_qrcode_1706536564127.png",
+          "https://Luluyouweia.github.io/images/2022-12/mm_facetoface_collect_qrcode_1706536581439.png",
+          "https://Luluyouweia.github.io/images/2022-12/mm_facetoface_collect_qrcode_1706536593693.png"
+          ]
+          
+          pt.innerHTML=`
+              <div class="text">你知道吗：<br/>逯跃翔对家庭建设的贡献远远超乎了你的想象！</div>
+          `
+          
+          setTimeout(()=>{
+              pg.style.marginTop="10vh";
+          },1000)
+          setTimeout(()=>{
+              pt.style.top="15vh";
+          },2000)
+          setTimeout(()=>{
+              pt.innerHTML=`
+              <div class="text">你知道吗：<br/>逯跃翔对家庭建设的贡献远远超乎了你的想象！<br/>家庭发展，多亏了逯跃翔，他的的功劳不能少！</div>
+          `
+          },3500)
+          setTimeout(()=>{
+              pt.innerHTML=`
+              <div class="text">你知道吗：<br/>逯跃翔对家庭建设的贡献远远超乎了你的想象！<br/>家庭发展，多亏了逯跃翔，他的的功劳不能少！<br/>建设美好家庭，少不了您的支持！</div>
+          `
+          },5000)
+          setTimeout(()=>{
+              pt.innerHTML=`
+              <div class="text">你知道吗：<br/>逯跃翔对家庭建设的贡献远远超乎了你的想象！<br/>家庭发展，多亏了逯跃翔，他的的功劳不能少！<br/>建设美好家庭，少不了您的支持！</div>
+              <br/><button class='btn' id="loadBtn" style="display: block;width: 30vw;margin: auto;opacity: 0;transition: 1.2s;">赞助</button>
+          `
+              
+          },6000)
+        setTimeout(()=>{
+              loadBtn.style.opacity="1";
+              loadBtn.style.fontSize="130%";
+              
+              document.getElementById("loadBtn").onclick=()=>{
+              pt.style.display="none";
+              pg.innerHTML+=`
+              <div style="text-align:center;color: green;padding: 30px;">请选择赞助金额以支持家庭建设</div>
+              <img class="bg" style="border-radius: 50%" src="https://Luluyouweia.github.io/images/2022-12/IMG20180708104722.jpg">
+              <section id="support">
+                  <button class="btn">￥6</button>
+                  <button class="btn">￥30</button>
+                  <button class="btn">￥98</button>
+              </section>
+              `
+              for(let index=0;index<3;++index){
+                  document.getElementById("support").getElementsByClassName("btn")[index].onclick=function (){
+                        msg(index+1);
+                  }
+              }
+            }
+       },6500)
+           
+              
+       
+       function msg(x){
+                    displayImg(x)
+       }
+       function displayImg(i){
+           let val=i;
+           let state=i;
+           val=val<0?"-100vh":"20vh";
+           state=i<0?"none":"block";
+            document.getElementById("erweima").src=links[i-1];
+            document.getElementById("sptImg").style.top=val;
+            document.getElementById("screen").style.display=state;
+            
+       }   
+          
+      </script>
+    </body>
+</html>
