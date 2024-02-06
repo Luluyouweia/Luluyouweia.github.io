@@ -10,5 +10,8 @@ if(application){
         if(application.version<114){
             msgbox("好好好,都什么年代了你还不更新是吧，知道在哪更新吧？<a style='color: #08f' href=''>点击更新</a>")
         }
+        if(application.version==115){
+            msgbox("注：测试功能并不代表最终结果");
+        }
     }
 }
