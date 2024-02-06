@@ -11,7 +11,7 @@ if(application){
             msgbox("好好好,都什么年代了你还不更新是吧，知道在哪更新吧？<a style='color: #08f' href=''>点击更新</a>")
         }
         if(application.version==115){
-            msgbox("注：测试功能并不代表最终结果");
+            msgbox("感谢您参与内测，测试功能并不代表最终结果。您可以为鹿客提供以下图片：鹿客待办主界面、创建鹿客待办的界面。");
         }
     }
 }
