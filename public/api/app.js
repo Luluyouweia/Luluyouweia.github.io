@@ -12,8 +12,17 @@ if(application){
         }
         if(application.version==115){
             msgbox(`感谢您参与内测，测试功能并不代表最终结果。您可以为鹿客提供以下图片：鹿客待办主界面、创建鹿客待办的界面。
-            <br>目前出现的问题：百度搜索按钮偏移，百度搜索返回时不能完成"示文"，经过对之前版本的比对，发现这只是该版本的bug，目前已经即使修复。
+            <br>目前出现的问题：百度搜索按钮偏移，百度搜索返回时不能完成"示文"，经过对之前版本的比对，发现这只是该版本的bug，目前已经及时修复。<br>
+            <a href="暂无">下载最新版本</a>
             `);
+         function endSearch(){
+         document.getElementById("search").style.top="-120vh"; 
+         if(document.getElementById("clear").innerHTML=="示文"){
+             document.getElementById("clear").onclick();
+         }
+         getToo("set");
+         return true;
+     }
         }
     }
 }
