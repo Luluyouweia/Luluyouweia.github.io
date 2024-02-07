@@ -9,11 +9,11 @@
             *{margin: 0;padding: 0;box-sizing: border-box;font-weight: 300;}
             @font-face{
                 font-family: "汉仪文黑";
-                src: url('./css/HYWH-85W.ttf');
+                src: url('public/font/HYWH-85W.ttf');
             }
             @font-face{
                 font-family: "得意黑";
-                src: url("./css/SmileySans.ttf");
+                src: url("public/font/SmileySans.ttf");
             }
             html,body{
             position: relative;height: 100vh;overflow: hidden;
@@ -104,13 +104,13 @@
                 
                 <br><br><br>
                 背景图片(Url)：
-                <input type="text" name="backgroundimage" value="${datas.backgroundimage}"><a href="./pages/backgrounds.html">更多</a>
-                <div style="color: #dadada;font-size: 50%;">(可以是网页链接(Url),也可以是本地路径)</div>
+                <input type="text" name="backgroundimage" value="${datas.backgroundimage}"><a href="./pages/backgrounds.html"></a>
+                <div style="color: #dadada;font-size: 50%;">网页链接(Url)</div>
                 <br>
                 中央文本:
                 <input type="text" name="ctexts" value="${datas.centertexts}">
             </form>
-            <a href="./pages/update.html">检测更新</a>
+            <a href="./pages/update.html">关于</a>
             <br>
             <button onclick="dataUpdate();">保存</button>
             `
