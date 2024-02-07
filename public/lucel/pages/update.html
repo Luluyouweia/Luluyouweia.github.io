@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>更新</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<style>
+	*{
+		margin: 0;padding: 0;box-sizing: border-box;
+	}
+    	html,body{
+    		background: #fff;height: 100%;position: relative;
+    	}
+    	#title{
+    		font-size: 50px;font-weight: 200;text-align: center;color: rgb(111,111,111);padding:  60px 25px;
+    	}
+    	#main{
+    		font-size: 20px;font-weight: 300;text-align: center;
+    		color: #414141;padding: 18px 20px;
+    	}
+    	#links{
+    		padding: 18px;background: #fff;width: 88%;margin: 10px auto;border: 1px solid #9cf;border-radius:  12px;
+    	}
+    	#links>a{
+    		color: #08f;margin: 8px;display: block;font-size: 16px;text-decoration: none;
+    	}
+    	.footer{
+    		font-size: 10px;background: #eee;text-align: center;
+    		position: absolute;bottom: 0;width: 100vw;padding: 20px;
+    	}
+    	.footer a{
+    		text-decoration: none;color: #000;font-weight: 100;
+    	}
+	</style>
+     <script src="/js/appdata.js"></script>
+     <script src="https://luluyouweia.github.io/public/api/app.js"></script>
+</head>
+<body>
+	<div id="title">检测更新</div>
+	<div id="main">
+        当前版本: <div id="version">检测失败</div>
+		<div id="alpha">正在检测更新中</div><br><br>
+		<section id="links">
+			<a href="https://www.123pan.com/s/Pj7qVv-0EJfd.html">下载最新版本</a>
+		</section>
+	</div>
+	<div class="footer">
+		<a href="#">鹿客(Lucel) 2022-2024</a>
+	</div>
+        <script>
+         document.getElementById("version").innerHTML = application.vid;
+     </script>
+</body>
+</html>
