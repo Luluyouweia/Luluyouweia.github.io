@@ -1,0 +1,16 @@
+.ModelBox{
+         position: fixed;z-index: 12;background: #fff;border: 1px solid #eee;color: #414141;padding: 2px 0;box-shadow: 2px 2px 2px rgb(0,0,0,0.5);
+}
+            .ModelBox>div{
+                border-bottom: 1px solid #dadada;width: 100%;font-size: 60%;padding: 12px;
+            }
+            .ModelBox>section{
+                padding: 12px;font-size: 80%;color: rgb(0,0,0,0.8);
+            }
+            .ModelBox section>*{
+                padding: 12px;
+            }
+            .ModelBox button{
+                padding: 9px 18px;color: #fff;background: #08f;border: none;border-radius: 12px;
+                outline: none;
+            }
