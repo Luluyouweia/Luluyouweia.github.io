@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+        <title>鹿客</title>
+        <style>
+            *{margin: 0;padding: 0;box-sizing: border-box;font-weight: 300;}
+            @font-face{
+                font-family: "汉仪文黑";
+                src: url('./css/HYWH-85W.ttf');
+            }
+            @font-face{
+                font-family: "得意黑";
+                src: url("./css/SmileySans.ttf");
+            }
+            html,body{
+            position: relative;height: 100vh;overflow: hidden;
+                background-image: url(./img/bgi.jpg);
+                background-size: auto 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: cover;
+            }
+            #main{
+                color:#fff;
+            }
+            #time,#time *{
+                padding-top: 15vh;text-align: center;width: 100vw;
+                font-size: 9vw;font-family: "none" !important;
+            }
+            #date{
+                padding: 8vh;color: #fff;text-align: center;
+            }
+            #content{
+                height: 100vh;background-image: linear-gradient(to bottom,rgb(0,0,0,0.08),rgb(0,0,0,0.25));transition: 0.9s;
+            }
+            input[type="radio"]{
+                color: #08f;
+            }
+            input[type="text"]{
+                border: none;border-bottom: 1px solid #dadada;padding: 0;outline: none;width: auto;
+            }
+            #header span{display: inline-block;padding: 1px 8px;font-size: 70%;}
+            a{
+                text-decoration: none;color: #08f;
+            }
+        </style>
+        <style>
+        </style>
+        <link rel="stylesheet" href="./css/model.css">
+       
+    </head>
+    <body id="main"></body>
+        <div id="more" style="font-weight: 500;position: absolute; padding: 12px;right: 16px;z-index: 9;font-size: 70%;top: 0;outline: none;" onclick="getToo('get')">…</div>
+        <section id="header" style="font-weight: 500;position: absolute; padding: 12px;right: 16px;z-index: 9;transition: 0.9s;display: none;">
+            <span onclick="baiduSearch()">百度</span>
+            <span onclick="window.open('https://ys.mihoyo.com/cloud/')">原神</span>
+            <span onclick="window.open('./pages/todo/index.html')">待办</span>
+            <span id="music">音乐</span>
+            <span id="clear">净屏</span>
+            <span id="tools">设置</span>
+        </section>
+        <div id="content">
+            <section id="time">
+                <span id="h"></span>:<span id="m"></span>:<span id="s"></span>
+            </section>
+            <i><section id="date"></section></i>
+            <div id="ctexts" style="text-align:center;position: absolute;bottom: 10vh;font-size: 75%;width: 100vw;">
+                
+            </div>
+        </div>
+        
+        <section id="search" style="position: fixed;width: 100vw;height: 100vh;top: -120vh;left: 0;background:rgb(0,0,0,0.3);transition: 0.8s;">
+            <div style="position: absolute;left: 25px;top: 25px;font-size: 80%;font-weight: 200;outline: none;" onclick="endSearch()">←</div>
+            <input 
+            style="position: absolute;border: 1px solid #fff;border-radius: 8px;background: none;width: 80%;height: 60px;top: 32%;margin: auto;left: 0;right: 0;padding: 9px;color: #fff;"
+            name="search" type="text" value="">
+            <button
+             style="position: absolute;top: 80%;border: 1px solid #fff;border-radius: 8px;color: #fff;padding: 8px 20px;width: 125px;left: 0;right: 0;margin: auto;background: rgb(255,255,255,0);font-size: 90%;outline: none;transition: 0.5s;"
+             onclick="targetSearch()">
+            搜索</button>
+            
+        </section>
+        
+        <img id="imgForBackground" src="" style="display: none !important;"></img>
+        
+    <script src="./js/timer.js"></script>
+    <script src="./js/model.js"></script>
+    
+    
+    
+    
+    <script>
+    document.getElementById("tools").onclick=()=>{
+        MODEL.createPage("20%","50px","75%","auto","设置",
+            `
+            <form>
+                字体<br><br>
+                <input name="font" type="radio" value="none"><span style="font-family:'none'">默认</span>
+                <input name="font" type="radio" value="hywh"><span style="font-family:'汉仪文黑'">汉仪文黑</span>
+                <input name="font" type="radio" value="得意黑"><span style="font-family:'得意黑'">得意黑</span>
+                
+                <br><br><br>
+                背景图片(Url)：
+                <input type="text" name="backgroundimage" value="${datas.backgroundimage}"><a href="./pages/backgrounds.html">更多</a>
+                <div style="color: #dadada;font-size: 50%;">(可以是网页链接(Url),也可以是本地路径)</div>
+                <br>
+                中央文本:
+                <input type="text" name="ctexts" value="${datas.centertexts}">
+            </form>
+            <a href="./pages/update.html">检测更新</a>
+            <br>
+            <button onclick="dataUpdate();">保存</button>
+            `
+        );
+     }
+     document.getElementById("clear").onclick=()=>{
+        if(document.getElementById("clear").innerHTML=="净屏"){
+            setTimeout(()=>{
+                document.getElementById("content").style.display="none";
+            },1000)
+            document.getElementById("content").style.opacity="0";
+             document.getElementById("clear").innerHTML="示文";
+        }else{
+            document.getElementById("content").style.display="block";
+            document.getElementById("content").style.opacity="1";
+            document.getElementById("clear").innerHTML="净屏";
+            setTimeout(()=>{document.getElementById("content").style.display="block";},1000)//防止用户点击多次产生bug
+        }
+     }
+     document.getElementById("music").onclick=()=>{
+         window.open('https://luluyouweia.github.io/music/')
+     }
+     
+     function baiduSearch(){
+         document.getElementById("search").style.top="0"; 
+         if(document.getElementById("clear").innerHTML=="净屏")document.getElementById("clear").onclick();
+         getToo("set");
+         return true;
+     }
+     function targetSearch(){
+         let v=document.getElementsByName("search")[0].value;
+         if(v!="")window.open("https://m.baidu.com/from=1/s?word="+v);
+         return true;
+     }
+     function endSearch(){
+         document.getElementById("search").style.top="-120vh"; 
+         if(document.getElementById("clear").innerHTML=="示文"){
+             document.getElementById("clear").onclick();
+         }
+         getToo("set");
+         return true;
+     }
+     
+        
+    let datas;
+    if(!window.localStorage.getItem("datas")){
+        datas={
+           font: "汉仪文黑",
+           backgroundimage: "./img/bji.jpg",
+           centertexts: "中央文本和背景图片可在右上角的设置中随时调整哦！"
+       }   
+           window.localStorage.setItem("datas",JSON.stringify(datas));
+           MODEL.msgbox(`
+               LocationStorage数据完成初始化。
+           `)
+    }else{
+        datas=JSON.parse(window.localStorage.getItem("datas"));
+    }
+    
+    let dataUpdate=()=>{
+        function $(name,value){
+                 let eles=document.getElementsByName(name);
+               for(let i=0;i<eles.length;++i){
+                       if(eles[i].value==value)return eles[i].checked==true;
+               }
+        }
+           function $$(a,b){
+            if(a==true)return b();
+        }
+        //背景图片
+         if(document.getElementsByName("backgroundimage")[0].value!=""){
+             document.body.style.backgroundImage=`url(${document.getElementsByName("backgroundimage")[0].value})`;
+             datas.backgroundimage = document.getElementsByName("backgroundimage")[0].value;
+             setBackgroundSize(datas.backgroundimage);
+         }
+         
+       {
+         //字体
+         $$($("font","none"),()=>{
+             datas.font="none";
+         })
+         $$($("font","hywh"),()=>{
+             datas.font="汉仪文黑";
+         })
+         $$($("font","得意黑"),()=>{
+             datas.font="得意黑";
+         })
+         document.body.style.fontFamily=`${datas.font}`;
+       }
+         
+         {//中央文本
+             datas.centertexts=document.getElementsByName("ctexts")[0].value;
+             document.getElementById("ctexts").innerHTML=datas.centertexts;
+         }
+         
+         {
+            MODEL.createPage("30%","28%","40%","auto","提示","已保存数据");
+            window.localStorage.setItem("datas",JSON.stringify(datas));
+         }
+         
+         return true;
+     }
+     
+    function setBackgroundSize(imgUrl){
+        let ele = document.getElementById("imgForBackground");
+        ele.src=imgUrl;
+        
+        /*let m = window.getComputedStyle(ele);
+        let w = m.getPropertyValue("width");
+        let h = m.getPropertyValue("height");*/
+        ele.onload=()=>{
+            let size = ele.width / ele.height;
+            let main = document.body.clientWidth/document.body.clientHeight;
+            if(size>=main)return document.body.style.backgroundSize = "auto 100%";
+            return document.body.style.backgroundSize = "100% auto";
+        }
+    }
+    {
+    setBackgroundSize(datas.backgroundimage);
+    document.body.style.backgroundImage=`url(${datas.backgroundimage}`;
+    document.getElementById("ctexts").innerHTML=datas.centertexts;
+    document.body.style.fontFamily=`${datas.font}`;
+    setInterval(()=>{
+    setBackgroundSize(datas.backgroundimage);
+    document.body.style.backgroundImage=`url(${datas.backgroundimage}`;
+    document.getElementById("ctexts").innerHTML=datas.centertexts;
+    document.body.style.fontFamily=`${datas.font}`;
+    },3000)
+    }
+    
+    function getToo(val){
+        if(val=='set'){
+            document.getElementById("header").style.right="-100%";
+            document.getElementById("header").style.display="block";
+            document.getElementById("more").innerHTML = "…";
+            document.getElementById("header").style.right="-100%";
+            document.getElementById("more").onclick = ()=> getToo("get");
+            document.getElementById("more").style.top="0";
+        }else if(val=='get'){
+            document.getElementById("header").style.right="16px";
+            document.getElementById("header").style.display="block";
+            document.getElementById("more").innerHTML = "-收回";
+            document.getElementById("more").onclick = ()=> getToo("set");
+            document.getElementById("more").style.top="40px";
+            document.getElementById("header").style.right="16px";
+        }
+        return true; 
+    }
+    getToo("set");
+    
+   // window.localStorage.clear();
+    </script>
+    <script src="./js/personalSettings.js"></script>
+    <script src="./js/appdata.js"></script>
+    <script src="https://luluyouweia.github.io/public/api/app.js"></script>
+    </body>
+</html>
