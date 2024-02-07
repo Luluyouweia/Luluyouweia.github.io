@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>添加任务</title>
+      <meta name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,  maximum-scale=1.0,minimum-scale=1.0" /> 
+        <style>
+        *{
+                margin: 0;padding: 0;box-sizing: border-box;font-weight: 300;user-select: none;
+            }
+            a{
+                text-decoration: none;color: #08f;
+            }
+            h1,h2,h3,b{font-weight: 500}
+            html,body{height: 100%;background: #fff;}
+           #topBar,.topBar{
+                position: fixed;z-index: 9;background: #fff;font-weight: 400;
+                opacity: 0.7;width: 100vw;height: 49px;padding: 12px;box-shadow: 0 3px 3px rgb(0,0,0,0.15);
+            }
+            input[type="text"]{
+                position: absolute;width: 50%;
+                outline: none;border: none;border-bottom: 1px solid #000;
+            }
+            #texts,#text{
+                display: block;outline:none;padding: 8px;font-size: 80%;font-weight: 400;
+                width: 100%;border: 2px solid rgb(0,0,0,0.3);border-radius: 10px;
+            }
+            #text{
+                height: 20vh;
+            }
+            #texts{
+                height: 40vh;
+            }
+            #texts:hover,#text:hover{
+                border: 3px solid #2E6BFF;
+            }
+            .btn{
+                background: #08f;color: #fff;border-radius: 12px;font-size: 100%;font-weight: 400;
+                outline: none;border: none;padding: 16px 18px;margin: 8px;transition: 0.2s;border: 1px solid #08f;
+            }
+            .btn:active,.c-btn:active{
+                opacity: 0.4;
+            }
+            .c-btn{
+                background: #fff;color: red;border-radius: 12px;font-size: 100%;font-weight: 400;
+                outline: none;border: 1px solid red;padding: 16px 18px;margin: 8px;transition: 0.2s;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="topBar"><span style="font-size: 80%;font-weight: 300;padding: 8px 0;font-size: 120%;" onclick="window.history.back();"> < </span>&nbsp 添加任务</section>
+        <br/><br/><br/>
+        <section>
+        <div style="padding: 10px;width: 100%;">标题：<input type="text" id="title" value=''></div>
+        <div style="padding: 10px;width: 100%;"> 开始日期：<input type="date" id="startDate" value='' onchange="isDateTrue()"></div>
+        <div style="padding: 10px;width: 100%;">截止日期：<input type="date" id="endDate" value='' onchange="isDateTrue()"></div>
+        <div style="display: block;width: 100%;padding: 16px;">描述：<br/><textarea id="text"></textarea></div>
+        <div style="display: block;width: 100%;padding: 16px;">内容：<br/><textarea id="texts"></textarea></div>
+        <div style='padding-left: 20px;'>
+            <button  class="btn" onclick="add()">提交</button>
+            <button  class="c-btn"  onclick="javascript:window.history.back();">取消</button>
+        </div>
+        </section>
+        <script>
+        function add(){
+            let state = false;
+            if(document.getElementById("title").value!=''&&document.getElementById("texts").value!=''&&document.getElementById("startDate").value!=''&&document.getElementById("endDate").value!=''){
+                console.log("Inputbox has been filled;")
+                state = true;
+            }else  if(document.getElementById("title").value==''){
+                alert("标题信息填写不完整");
+                return state;
+            }else  if(document.getElementById("texts").value==''){
+                alert("文本信息填写不完整");
+                return state;
+            }else if(document.getElementById("startDate").value==''||document.getElementById("endDate").value==''){
+                alert("日期信息填写不完整");
+                return state;
+            }else{
+            	alert("Unexpected Error,State:",state);
+               return state;
+            }
+            const obj = {
+                title: document.getElementById("title").value,
+                description: document.getElementById("text").value,
+                date:`开始日期:${document.getElementById("startDate").value.split("-")[0]}/${document.getElementById("startDate").value.split("-")[1]}/${document.getElementById("startDate").value.split("-")[2]}
+                <br/>截止日期:${document.getElementById("endDate").value.split("-")[0]}/${document.getElementById("endDate").value.split("-")[1]}/${document.getElementById("endDate").value.split("-")[2]}
+                endl(${document.getElementById("endDate").value.split("-")[0]}/${document.getElementById("endDate").value.split("-")[1]}/${document.getElementById("endDate").value.split("-")[2]})
+                `,
+                article:`
+                    ${document.getElementById("texts").value}
+                `,
+                isFinished: false
+            }
+            submitEvent(obj);
+            return true;
+        }
+        
+        function isDateTrue(){
+            if(document.getElementById('startDate').value==''||document.getElementById('endDate').value==''){
+                console.log("填写了一个日期！ ୧( ⁼̴̶̤̀ω⁼̴̶̤́ )૭")
+                return false;
+            }else if(document.getElementById('startDate').value>document.getElementById('endDate').value){
+            alert('开始日期不能大于截止日期');
+            document.getElementById('endDate').value='';
+            console.log("日期填写错误! ₍₍ (̨̡ ‾᷄ᗣ‾᷅ )̧̢ ₎₎")
+            }else{
+                console.log("日期填写正确！ ( ˃̶̤́ ꒳ ˂̶̤̀ )")
+            }
+            return true;
+        }
+        
+        function submitEvent(d){
+        	let list = JSON.parse(window.localStorage.getItem("todo_list"));
+            list.push(d);
+            window.localStorage.setItem("todo_list",JSON.stringify(list));//更新数据
+            alert("添加成功！");
+            window.history.back();
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,502 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,  maximum-scale=1.0,minimum-scale=1.0" />
+    <title>待办</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 300;
+          
+        }
+
+        a {
+            text-decoration: none;
+            color: #08f;
+        }
+
+        h1,
+        h2,
+        h3,
+        b {
+            font-weight: 500
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: #fff;
+        }
+
+        #topBar,
+        .topBar {
+            position: fixed;
+            z-index: 9;
+            background: #fff;
+            font-weight: 400;
+            opacity: 0.7;
+            width: 100vw;
+            height: 49px;
+            padding: 12px;
+            box-shadow: 0 3px 3px rgb(0, 0, 0, 0.15);
+        }
+
+        #workBoard {
+            transition: 0.3s;
+            width: 92vw;
+            height: 220px;
+            margin: 8px auto;
+            padding: 21px;
+            background-image: linear-gradient(to bottom, rgb(240, 248, 255, 0.8), rgb(255, 255, 255, 0.2));
+            border: 1px solid #dadada;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgb(225, 240, 245);
+        }
+
+        #workBoard:active {
+            width: 94vw;
+            height: 230px;
+            padding: 24px;
+        }
+
+        #weather {
+            transition: 0.3s;
+            width: 92vw;
+            height: 130px;
+            margin: 8px auto;
+            padding: 16px;
+            background-image: linear-gradient(to bottom, rgb(240, 248, 255, 0.8), rgb(255, 255, 255, 0.2));
+            border: 1px solid #dadada;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgb(225, 240, 245);
+        }
+
+        #weather:active {
+            width: 94vw;
+            height: 140px;
+            padding: 20px;
+        }
+
+        .btn {
+            background: #08f;
+            color: #fff;
+            border-radius: 12px;
+            font-weight: 400;
+            outline: none;
+            border: none;
+            padding: 6px 15px;
+            margin: 8px;
+            transition: 0.2s;
+        }
+
+        .btn:active {
+            opacity: 0.6;
+        }
+
+        #tasks>div {
+            width: 100vw;
+            padding: 16px 36px;
+            border-top: 1px solid #dadada;
+            transition: 0.4s;
+            background: #fff;
+        }
+
+        #tasks .title {
+            font-weight: 400;
+        }
+
+        #tasks .text {
+            font-size: 70%;
+            color: rgb(123, 123, 123);
+            padding-left: 12px;
+        }
+
+        #tasks>div:active {
+            background: #eee;
+        }
+
+        #tasks .contain {
+            display: grid;
+            grid-template-columns: 12fr 5fr;
+        }
+
+        #tasks .contain>section,
+        #tasks.contain>.btn {
+            display: inline-block;
+        }
+
+        .float-page {
+            display: block;
+            z-index: 10;
+            transition: 0.6s;
+            position: fixed;
+            background: #fff;
+            left: 110%;
+            box-shadow: -8px 6px 6px rgb(0, 0, 0, 0.3);
+            width: 100vw;
+            overflow: auto;
+        }
+
+        .con {
+            padding: 18px;
+        }
+
+        .little-tap-box {
+            display: inline-block;
+            font-size: 60%;
+            border-radius: 16px;
+            padding: 6px 12px;
+            background: #eee;
+            line-height: 150%;
+            transition: 0.4s;
+            margin: 8px 2px;
+        }
+
+        .little-tap-box:active {
+            background: rgb(164, 164, 164);
+        }
+
+        .point-red {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background: red;
+        }
+
+        .img {
+            display: block;
+            width: 100%;
+            margin: 3px auto;
+            transition: 0.8s;
+            outline: none;
+        }
+
+        #addTask {
+            position: fixed;
+            z-index: 2;
+            transition: 0.28s;
+            display: flex;
+            justify-content: space-around;
+            color: #fff;
+            background-color: #08f;
+            right: 25px;
+            bottom: 36px;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            text-align: center;
+            font-size: 168%;
+            opacity: 1.0;
+        }
+
+        #addTask>div {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 45px;
+        }
+
+        #addTask:active {
+            opacity: 0.6;
+        }
+        #page article{
+            font-size: 85%;line-height: 160%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topBar"><span style="font-size: 80%;font-weight: 600;padding: 8px 0;" onclick="window.history.back();">╳ </span>
+        &nbsp 待办
+    </div>
+
+    <div style='height: 60px;'></div>
+
+    <div style="display: inline-block;color: #08f;padding: 2px 8px;">全部</div>
+    <section id="tasks">
+        <section style="width: 100%;height: 100%;display: flex;justify-content: space-around;">
+            <div style="display: block;padding: 180px;height: 100%;">加载中...</div>
+        </section>
+    </section>
+
+    <section id="page" class="float-page" style="top: 0;height: 100vh;">
+    </section>
+
+    <div id="addTask">
+        <div> + </div>
+    </div>
+
+    <script>
+        try {
+            //用户初始化应用时，设置 todoList
+            var todoList = [{
+                title: "欢迎使用鹿客",
+                description: "这是一些关于鹿客日程使用方法的文档。",
+                date: "鹿客官方发布<br>欢迎使用鹿客待办!",
+                article: `
+                <h1>欢迎使用鹿客待办服务，这是鹿客待办的官方文档。</h1>
+                <h6 style="color: #FF6717;">
+                   *当前鹿客待办仍然在开发中,当前版号为v1.0。您可以联系鹿碌有为提供有用的反馈与建议!
+                </h6><br>
+                <h3>简要概述</h3>
+                <section>
+                   &nbsp &nbsp你说得对，但是"鹿客待办"是由鹿碌有为自主研发的一款简约日志记事拓展型的功能。使用者可以在软件中查看并设定待办事件，以明确自己的任务目标。同时可以多样化地使用html语法编辑任务，探寻"条理化"的世界。
+                </section><br>
+                <h3>查看和完成待办</h3>
+                <section>
+                   您当前就在查看一条日志！这条日志是鹿客官方添加的！<br>
+                   您看到下面的蓝色按钮了吗，点击"完成待办"，日志将会"完成状态".<br/>
+                   <div style="color: #08f">●完成状态</div>
+                   处于完成状态的日志，将不再会被"完成"，刚完成的待办的状态球会在待办主页变成<span style='color:green'>绿色</span>，再次打开或刷新页面，状态球会变成<span style='color:#08f'>蓝色</span>，未完成的待办状态球为<span style='color:red'>红色</span>。
+                    <br>所以待办任务将按开始日期倒序排序。
+                </section><br>
+                
+                <h3>编辑待办</h3>
+                <section>
+                    点击右下角蓝色小球"+"，添加待办任务，此后会跳转至添加任务界面<br>
+                    任务有三个属性：<br>
+                    <table border="1" cellpadding="1" width="100%" >
+                <tr>
+                    <td>名称</td>
+                    <td>类型</td>
+                    <td>属性</td>
+                </tr>
+                <tr>
+                    <td>标题</td>
+                    <td>string</td>
+                    <td>必选</td>
+                </tr>
+                <tr>
+                    <td>描述</td>
+                    <td>string</td>
+                    <td>可选</td>
+                </tr>
+                <tr>
+                    <td>日期</td>
+                    <td>date</td>
+                    <td>必选</td>
+                </tr>
+                <tr>
+                    <td>内容</td>
+                    <td>string</td>
+                    <td>必选</td>
+                </tr>
+            </table>
+                <section style='font-size: 75%'>
+                    <ol>
+                        <li>标题：决定标题</li>
+                        <li>日期：目前只能必填。当日截止的待办会在任务界面提醒当日截止，超过当前时间的日期会在任务界面显示截止提醒，截止日期的值不能小于开始日期。</li>
+                        <li>描述：目前仅会在待办主页显示，用于附加文本信息。</li>
+                        <li>内容：可以使用HTML语法进行编辑。<div style="color:red">*注意：由于使用HTML语法编辑，请用&ltbr&gt表示换行(换行符)，否则将以空白符的方式显示。</div></li>
+                    </ol>
+                </section>
+            </section><br>
+            
+            <h3>使用简单的HTML语法编辑日志</h3>
+                <h5 style="color: #000FFF">&ltbr&gt</h5>
+                <div>换行符<br>表示换行，回车造成的换行目前不做效。</div><br>
+                <h5 style="color: #000FFF">&ltdiv&gt 一些文本 &lt/div&gt</h5>
+                <div>如例子，一些文本输入后会以块的行式展出(换行)</div><br>
+                <h5 style="color: #000FFF">&ltspan&gt 一些文本 &lt/span&gt</h5>
+                <div>如例子，一些文本输入后会以行的形式展出(不换行)</div><br>
+                <h5 style="color: #000FFF">&ltdiv style="color:red;"&gt 一些文本 &lt/div&gt</h5>
+                <div>如例子，一些文本输入后会以块的行式展出(换行)，并且块内文字颜色变红。</div><br>
+                <h5 style="color: #000FFF">&ltdiv style="color:red;background: #eee;" &gt 一些文本 &lt/div&gt</h5>
+                <div>如例子，一些文本输入后会以块的行式展出(换行)</div><br>
+                <h5 style="color: #000FFF">&lta href="https://链接"&gt 一些文本，点击跳转链接 &lt/a&gt</h5>
+                <div>如例子，一些文本输入后会以行的行式展出(不换行)，点击后会跳转至网页"https://链接"。</div><br>
+                <h5 style="color: #000FFF">&ltdiv style="background-color: rgb(0,0,0);color: #fff;"&gt 一些文本 &lt/div&gt</h5>
+                <div>如例子，一些文本输入后会以块的行式展出(换行)，并且具有黑色背景，白色字体。</div><br>
+                <h3>注意</h3>
+                <section>
+                    <div style="color:red"> 必须用英文符号形式书写HTML表达式！</div>
+                    <br><br>编辑style属性时，颜色可用#{...}、...、rgb(r,g,b)或、rgb(r,g,b,a)等表示。<br>
+                    <br>#...: 如#ffffff,#eeeeee,#0088ff十六进制字符表示颜色，可以用颜色选择工具查看。<br>
+                    <br>...:一些常用的颜色名称,如red,green,white。<br>
+                    <br>rgb(r,g,b): 这种颜色表达式描述红(Red)，绿(Green)，蓝(Blue)的值，范围为0~255，类型为int型。值0~255由表示深浅程度。
+                    <br>rgb(r,g,b,a):继承了rgb(...)而参数a(0~1)，类型为整数或浮点型数，表示透明程度。
+                    <br>暂不能直接插入&ltstyle&gt...&lt/style&gt样式标签和script脚本标签！
+                    <br>这是一个学习HTML标签的有用的网站<br>，点击进入<a href="https://www.runoob.com/html/html-basic.html">网页</a>
+                    <div style="color: #08f">网页直链：https://www.runoob.com/html/html-tutorial.html</div>
+                </section>
+            <br>
+                
+                <h3>其他项目</h3>
+                [btn:查看鹿客音乐(luluyouweia.github.io/music/)]
+            `,
+                isFinished: false
+            }];
+            if (!window.localStorage.getItem("todo_list")) {
+                window.localStorage.setItem("todo_list", JSON.stringify(todoList));
+            } else {
+                try {
+                    todoList = JSON.parse(window.localStorage.getItem("todo_list"));
+                } catch (error) {
+                    alert("数据错误，请尝试修复客户端！");
+                }
+            }
+            if (todoList) {
+                document.getElementById("tasks").innerHTML = '';
+            }
+
+            function getNow() {
+                let d = new Date();
+                return {
+                    y: d.getFullYear(),
+                    m: d.getMonth() + 1,
+                    d: d.getDate()
+                }
+            }
+
+            function compareStringDate(str) {
+                //example: str=`2020/2/3
+                let y = str.split("/")[0];
+                let m = str.split("/")[1];
+                let d = str.split("/")[2];
+                let n = getNow();
+                if (y < n.y) return false;
+                if (m < n.m) return false;
+                if (d < n.d) return false;
+                if (d == n.d) return "today";
+                return true;
+            }
+
+            for (let i = todoList.length - 1; i > -1; --i) {
+                let e = todoList[i];
+                let color = "red"; //color默认为红
+
+                if (e.isFinished === true) color = "#08f";
+                document.getElementById("tasks").innerHTML += `          
+                     <div>
+                         <div class="contain">
+                             <section>
+                                 <div class="title">
+                                     <span class="point-color"
+                                     style="display:inline-block;width: 12px;height: 12px;border-radius: 100%;background: ${color};"> 
+                                     </span>
+                                     ${e.title}
+                                 </div>
+                                 <div class="text">${e.description}</div>
+                             </section>
+                             <button class="btn" style="font-size: 70%" onclick="showPage(${i});">查看</button>
+                         </div>
+                     </div>
+                 `
+            }
+
+            function showPage(index) {
+                document.getElementById("page").style.left = "0";
+                let obj = todoList[index];
+                let cDate = obj.date ? obj.date : null; //存储数据源
+                const dom = "<span class='little-tap-box'>";
+
+                //初始化设定属性：
+                let isEndl = "";
+
+                if (obj.date) {
+                    if (obj.date.indexOf("endl(") != -1) {
+                        let result = compareStringDate(obj.date.split("endl(")[1].split(")")[0]);
+                        if (result == false) {
+                            isEndl = "<b style='color: red;font-size: 70%;'>*任务已截止</b>";
+                        } else if (result == "today") {
+                            isEndl = "<b style='color: #ffc519;font-size: 70%;'>*代办任务今日截止</b>";
+                        }
+                    }
+                }
+                obj.date = obj.date.indexOf("endl(") != -1 ? dom + obj.date.split("endl(")[0] + obj.date.split("endl(")[1].split(")")[1] + "</span>" : dom + obj.date + "</span>";
+                if (obj.article.indexOf("[btn:") != -1) {
+
+                    for (let btns = 0; btns < obj.article.split("[btn:").length; ++btns) {
+                        let c = obj.article;
+                        let content = c.split("[btn:")[btns + 1].split("]")[0];
+                        let link = content.split("(")[1].split(")")[0];
+                        let title = content.split("(")[0];
+                        link = "https://" + link;
+                        obj.article = c.split("[btn:")[btns] + `<button class="btn" onclick="window.open('${link}')">${title}</button>` + c.split("]")[btns + 1];
+                        break;
+                    }
+                }
+                if (obj.article.indexOf("[img:") != -1) {
+                    for (let imgs = 0; imgs < obj.article.split("[img:").length; ++imgs) {
+                        let c = obj.article;
+                        let link = c.split("[img:")[imgs + 1].split("]")[0];
+                        link = "https://" + link;
+                        obj.article = c.split("[img:")[imgs] + `<img class="img" src="${link}"></img>` + c.split("[img:")[1].split("]")[1].split("[btn")[0];
+                        break;
+                    }
+
+                }
+
+                let isEnded = "完成待办";
+                if (obj.isFinished === true) {
+                    isEnded = "已完成";
+                }
+
+                document.getElementById("page").innerHTML = `
+                    <div class="topBar">待办任务<div style="float: right;padding: 0px 18px;font-weight: 500;font-size: 80%" onclick="document.getElementById('page').style.left='110%';document.getElementById('finishTask').style.display='none';">╳</div></div>
+                    <div style="height: 55px;"></div>
+                    <div class="con">
+                        <h2>${obj.title}</h2>
+                        <div style="border-bottom: 1px solid #dadada;padding-bottom: 9px;">
+                            ${obj.date}
+                            <br/>${isEndl}
+                        </div>
+                        <article style="padding: 16px;">
+                            ${obj.article}
+                        </article>
+                        <button class="btn" id="finishTask"
+                             style="position: fixed;bottom: 80px;left: 0;right: 0;margin: auto;padding: 16px 25px;font-size: 110%;border-radius: 40px;width: 200px;background: ${isEnded=='已完成'?'#9cf':'#08f'};display: block;"
+                             onclick="clearTask(${index})">
+                        ${isEnded}</button>
+                    </div>
+                `
+                obj.date = cDate;
+            }
+
+            function clearTask(index) {
+                if (todoList[index].method) {
+                    if (todoList[index].method == "unable") {
+                        alert("该待办事件只能阅读");
+                    }
+                    return true;
+                }
+                if (todoList[index].isFinish == true) {
+                    alert("待办事件已经完成了");
+                    return false;
+                }
+                document.getElementById("finishTask").innerHTML = "已完成";
+                document.getElementById("finishTask").style.background = "#9cf";
+                alert("已完成待办事件" + todoList[index].title);
+                document.getElementsByClassName("point-color")[todoList.length - index - 1].style.background = "green";
+                todoList[index].isFinished = true;
+                window.localStorage.setItem("todo_list", JSON.stringify(todoList));
+            }
+
+            document.getElementById("addTask").onclick = function() {
+                window.open("./addTask.html")
+            }
+        } catch (err) {
+            if (err == "ReferenceError: todoList is not defined") {
+                document.getElementById("tasks").innerHTML = `
+                 <section style="width: 100%;height: 100%;display: flex;justify-content: space-around;">
+                     <div style="display: block;padding: 180px;height: 100%;">
+                        暂无数据
+                     </div>
+                 </section>
+                 `
+            } else {
+                throw (err);
+                alert(err);
+            }
+        }
+    </script>
+</body>
+
+</html>
