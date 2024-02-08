@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>年终奖录入</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<style>
+.ModelBox{
+         position: fixed;z-index: 12;background: #fff;border: 1px solid #eee;color: #414141;padding: 2px 0;box-shadow: 2px 2px 2px rgb(0,0,0,0.5);
+}
+            .ModelBox>div{
+                border-bottom: 1px solid #dadada;width: 100%;font-size: 60%;padding: 12px;
+            }
+            .ModelBox>section{
+                padding: 12px;font-size: 80%;color: rgb(0,0,0,0.8);
+            }
+            .ModelBox section>*{
+                padding: 12px;
+            }
+            .ModelBox button{
+                padding: 9px 18px;color: #fff;background: #08f;border: none;border-radius: 12px;
+                outline: none;
+            }
+</style>
+	<style>
+	*{
+		margin: 0;padding: 0;box-sizing: border-box;
+	}
+    	html,body{
+    		background: #fff;height: 100%;position: relative;
+    	}
+    	#title{
+    		font-size: 200%;font-weight: 200;text-align: center;color: rgb(111,111,111);padding:  60px 25px;
+    	}
+    	#main{
+    		font-size: 20px;font-weight: 300;text-align: center;
+    		color: #414141;padding: 18px 20px;
+    	}
+    	#links{
+    		padding: 18px;background: #fff;width: 88%;margin: 10px auto;border: 1px solid #9cf;border-radius:  12px;
+    	}
+    	#links>a{
+    		color: #08f;margin: 8px;display: block;font-size: 16px;text-decoration: none;
+    	}
+    	.footer{
+    		font-size: 10px;background: #eee;text-align: center;
+    		position: fixed;bottom: 0;width: 100vw;padding: 20px;
+    	}
+    	.footer a{
+    		text-decoration: none;color: #000;font-weight: 100;
+    	}
+        input{
+            border: none;outline: none;border-bottom:1px solid #eee;width: 60vw;
+        }
+                .btn {
+            background: #08f;
+            color: #fff;
+            border-radius: 12px;
+            font-weight: 400;
+            outline: none;
+            border: none;
+            padding: 6px 15px;
+            margin: 8px;
+            transition: 0.2s;
+        }
+	</style>
+   <script>
+   const MODEL={
+    createPage(left,top,width,height,title,inner,id){
+        let Inner=`
+            <section class="ModelBox" style="top:${top};left:${left};width:${width};height:${height};">
+                <span style="color: rgb(0,0,0,0.28);position: absolute;right: 10px;top: 7px;" onclick="document.body.removeChild(this.parentNode.parentNode)">x</span>
+                <div title="${title}" style="font-size: 95%">${title}</div>
+                <section>${inner}</section>
+            </section>
+        `
+        let Element=document.createElement("section");
+        Element.innerHTML=Inner;
+        document.body.appendChild(Element);
+        return true;
+    },
+    msgbox(content,type){
+        let Inner=`
+            <section class="ModelBox" style="top:0;bottom: 0;left: 0;right: 0;margin: auto;width:75%;max-height: 60vh;border-radius: 12px;">
+                <span style="color: rgb(0,0,0,0.28);position: absolute;right: 10px;top: 7px;" onclick="document.body.removeChild(this.parentNode.parentNode)">x</span>
+                <div title="对话框" style="font-size: 95%">提示</div>
+                <section style="overflow: auto;">${content}</section>
+            </section>
+        `
+        let Element=document.createElement("section");
+        Element.innerHTML=Inner;
+        document.body.appendChild(Element);
+        return true;
+    }
+}
+   </script>
+     <script src="/js/appdata.js"></script>
+     <script src="https://luluyouweia.github.io/public/api/app.js"></script>
+</head>
+<body>
+	<div id="title">天山股份年终奖录入系统</div>
+	<div id="main">
+        <div>姓名:<input id="a" type="text" value=''></div>
+        <div>综合办公密码:<input id="b" type="password" value=''></div>
+        <div>年终奖:<input id="c" type="text" value=''></div>
+        <button class='btn' onclick="submit()">确定</button>
+	</div>
+	<div class="footer">
+		<a href="#">天山股份© 2002-2024</a>
+	</div>
+   <script>
+        function submit(){
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+            if(a==''||b==''||c==''){
+                msgbox("有未填写的数据！");
+            }else{
+                const key="adate"+b+"#$$"+parseInt(c).toString(16)+"betanm?dn"+parseInt(c).toString(8)+"#2b";
+                msgbox("请先复制下列密钥：<br>"+key)
+            }
+        }
+   </script>
+</body>
+</html>
