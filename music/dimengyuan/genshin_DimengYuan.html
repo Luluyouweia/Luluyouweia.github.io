@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <style>
+        @font-face {
+            font-family: "默认";
+            src: url("/public/font/HYWH-85W.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 300;
+            font-family: "默认";
+        }
+
+        html,
+        body {
+            height: 100vh;
+            position: relative;
+            background-size: 100% 100%;
+        }
+        #board,#content{
+            position: fixed;
+            height: 100%;color: #fff;
+        }
+        #board{
+            z-index: 2;transition: 0.8s;overflow: auto;
+            width: 250px;left: -251px;top: 0;padding-top: 50px;
+            background-image: linear-gradient(to right,rgb(0,0,0,1.0),rgb(0,0,0,0.5));
+        }
+        #content{
+            z-index: 0;
+            width: 100%;left: 0;top: 0;
+            background-attachment: bottom center;background-position: bottom center;
+            background-size: cover;
+        }
+        audio{
+            position: fixed;display: block;z-index: 1;
+            bottom: 0;width: 100%;
+            background: #fff;
+        }
+        #board .block{
+            display: block;
+            width: 100%;padding: 8px;color: #fff;
+            border-bottom: 2px solid #fff;
+        }
+        .block .title{
+            font-weight: 500;
+        }
+        .block .description{
+            font-size: 65%;
+        }
+        #getBoard{
+            position: fixed;top: 6px;left: 10px;z-index:4;color: #fff;font-weight: 500;
+        }
+        #fullScreen{
+            position: fixed;top: 6px;right: 10px;z-index:4;color: #fff;font-weight: 500;
+        }
+        
+        #musicTitle{
+            position: absolute;
+            left: 15vw;top: 20vh;
+            font-size: 150%;
+        }
+        #musicDescription{
+            position: absolute;
+            width: 70%;left: 12px;top: 32vh;
+            padding: 28px;
+            text-align: center;
+            font-size: 75%;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="mainPage"></div>
+      <section id="board"></section>
+      <div id="getBoard" onclick="getBoard();">目录</div>
+      <div id="fullScreen" onclick="this.style.display = 'none';fullScreen()">全屏</div>
+      <section id="content">
+          <div id="musicTitle">苑迪萌@Hoyo-mix专辑鉴赏</div>
+          <div id="musicDescription">苑迪萌，当前Hoyo-mix原神音乐监制，与陈致逸为师友、同学关系。</div>
+      </section>
+      <audio id="audio" autoplay controls title="音频播放器" src=''></audio>
+      <script>
+      let img=[]
+      img["a"] = "https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png"
+      img["b"] = "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
+          const song =[{
+           title:"鲸波鼍浪",
+           description: "渊下宫战斗曲",
+           img: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg",
+           id:1937114514
+          },{
+              title:"花与剑的轮舞",
+              description:"枫丹战斗主题曲",
+              img: "https://pic.imgdb.cn/item/650c73cac458853aeff7d50a.png",
+              id:2085836773,
+          },{
+              title:"时暮的思暮",
+              description:"枫丹城傍晚音乐",
+              img: img["b"],
+              id:2085833517,
+          },{
+              title:"枫丹",
+              description:"枫丹主题音乐",
+              img: img["a"],
+              id:2085833516,
+          },{
+              title: "众水之诗",
+              description:"枫丹场景音乐",
+              img: img["a"],
+              id:2085833518,
+          },{
+              title:"荒波椛叶",
+              description:"枫原万叶PV",
+              img: img["a"],
+              id:1913533270,
+          },{
+              title:"风仪之舞",
+              description:"神里绫华PV",
+              img: img["a"],
+              id:1913532413,
+          },{
+              title:"行水盈盈",
+              description:"神里绫人PV",
+              img: img["b"],
+              id:2014246626,
+          },{
+              title:"白夜的子民",
+              description:"渊下宫场景音乐",
+              img: img["b"],
+              id:1937114394,
+          },{
+              title:"轻雨何故落",
+              description:"枫丹场景音乐及雨天音乐",
+              img: img["b"],
+              id:2085833525,
+          },{
+              title:"镜中之梦",
+              description:"枫丹世界任务场景配乐",
+              img: img["b"],
+              id:2085836756,
+          },{
+              title:"轻涟",
+              description:"苑迪萌@Hoyo-mix作曲/编曲",
+              img: img["a"],
+              id:2100334024,
+          },{
+              title:"硝华流焰",
+              description:"宵宫PV",
+              img: img["b"],
+              id:1913532415,
+          },{
+              title:"邀欢同游",
+              description:"芙宁娜角色演示",
+              img: img["a"],
+              id:2116862943,
+          },{
+              title:"流金的烈怒",
+              description:"沙漠战斗曲",
+              img: img["b"],
+              id:2041862752,
+          },
+          ]
+      
+          let $ = (ele) => document.getElementById(ele);
+          $("content").style.backgroundImage = "url('https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg')";
+          for(let i=0;i<song.length;++i){
+              //目录板中显示目录
+              $("board").innerHTML += `
+              <section class="block" onclick="audioPlay(${i})">
+                  <div class="title">${song[i].title}</div>
+                  <div class="description">${song[i].description}</div>
+              </section>
+              `
+          }
+          
+          let audioPlay = (index) =>{
+              $("musicTitle").innerHTML = song[index].title;
+              $("musicDescription").innerHTML = song[index].description;
+              $("content").style.backgroundImage = `url('${song[index].img}')`;
+              $("audio").src = "https://music.163.com/song/media/outer/url?id="+song[index].id;
+              $("audio").play();
+          }
+          
+          var isNearbarCovered = false;//默认侧边栏未打开
+          let getBoard = () =>{
+              let ele = $("board");
+              $("getBoard").style.backgroundColor = isNearbarCovered===false?"rgb(128,128,128,1)":"rgb(0,0,0,0)"
+              $("getBoard").innerHTML = isNearbarCovered===false?"关闭目录":"目录";
+              ele.style.left = isNearbarCovered===false?"0px":"-251px";
+              isNearbarCovered = !isNearbarCovered;
+          }
+          
+let fullScreen = () =>{
+    if (document.documentElement.RequestFullScreen) {
+        document.documentElement.RequestFullScreen();
+    }
+    //兼容火狐
+    if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+    }
+    //兼容谷歌等可以webkitRequestFullScreen也可以webkitRequestFullscreen
+    if (document.documentElement.webkitRequestFullScreen) {
+        document.documentElement.webkitRequestFullScreen();
+    }
+    //兼容IE,只能写msRequestFullscreen
+    if (document.documentElement.msRequestFullscreen) {
+        document.documentElement.msRequestFullscreen();
+    }
+}
+          
+      </script>
+    </body>
+</html>
