@@ -3,7 +3,7 @@ layout: blog
 title: "关于我的性格"
 excerpt: "MBTI测试参照结果及感悟"
 img: "https://pic.imgdb.cn/item/65c619b69f345e8d03c5a94f.jpg"
-background: "https://pic.imgdb.cn/item/6598f397871b83018a1cab7d.jpg"
+background: "https://pic.imgdb.cn/item/65bca7cd871b83018a0605b8.png"
 ---
 
 # 起因
