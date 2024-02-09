@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "鹿客待办官方文档"
-except: "你说的对，但是鹿客待办是......"
+excerpt: "你说的对，但是鹿客待办是......"
 img: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 background: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 ---
