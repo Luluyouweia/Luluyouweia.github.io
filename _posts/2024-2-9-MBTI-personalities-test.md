@@ -2,7 +2,7 @@
 layout: blog
 title: "关于我的性格"
 excerpt: "MBTI测试参照结果及感悟"
-img: "https://pic.imgdb.cn/item/6598f397871b83018a1cab7d.jpg"
+img: "https://pic.imgdb.cn/item/65c619b69f345e8d03c5a94f.jpg"
 background: "https://pic.imgdb.cn/item/6598f397871b83018a1cab7d.jpg"
 ---
 
@@ -84,5 +84,6 @@ i人和e人，据此我得知了MBTI16人格并参与了测试。
 ## 最后
 
  ** 我个人认为啊，这个意大利面，就应该拌54号混凝土。**
- ** 第三人格 第四人格 《第五人格》暂不论述 **
-> 我这写的都是什么玩意？
+ ** "第三人格" "第四人格" 《第五人格》 暂不论述 **
+
+> 我这写的都是什么些玩意？哪天我肯定会删掉的。
