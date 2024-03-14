@@ -18,6 +18,9 @@ background: "/images/bg1.jpg"
 ### 鹿客音乐
 [鹿客音乐](https://luluyouweia.github.io/music/)
 
+### 鹿客待办
+[点击下载鹿客待办](https://www.123pan.com/s/Pj7qVv-2ZJfd.html)
+
 ### 联系方式：
 
 QQ:1208197626
