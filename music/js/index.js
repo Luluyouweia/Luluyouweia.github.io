@@ -286,6 +286,17 @@ if (!window.localStorage.getItem("System")) {
     System = JSON.parse(window.localStorage.getItem("System"));
 }
 
+function getIdByLink(){
+    let musicId = window.location.pathname.split('?')[1]||false;
+    if(musicId==false){
+        return false;
+    }
+    setTimeout(()=>{
+        play(musicId)
+    },2000)
+    return true;
+}
+
 
 //全屏模式(Copied from website)[doge]
 document.querySelector('HEADER').onclick = () => {
