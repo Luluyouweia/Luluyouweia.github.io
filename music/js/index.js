@@ -292,7 +292,8 @@ function getIdByLink(){
         return false;
     }
     setTimeout(()=>{
-        audio.play(musicId)
+        audio.play(musicId);
+        console.log("@getIdByLink():msuicId:"+musicId)
     },2000)
     return true;
 }
