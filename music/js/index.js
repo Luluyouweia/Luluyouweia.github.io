@@ -294,7 +294,7 @@ function getIdByLink(){
     setTimeout(()=>{
         audio.play(musicId);
         console.log("@getIdByLink():msuicId:"+musicId)
-    },2000)
+    },800)
     return true;
 }
 getIdByLink();
