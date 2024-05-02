@@ -297,7 +297,7 @@ function getIdByLink(){
     },2000)
     return true;
 }
-getLinkById();
+getIdByLink();
 
 
 //全屏模式(Copied from website)[doge]
