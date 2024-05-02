@@ -106,7 +106,7 @@ data[21] = {
     title: "疾如猛火", text: "燃起来了！", id: "1492283139", img: "https://uploadstatic.mihoyo.com/contentweb/20200319/2020031921552395638.jpg"
 }
 data[22] = {
-    title: "寒光裂涛", text: "Genshin Impact二创音乐", id: "1938344204", img: ""
+    title: "寒光裂涛", text: "Combat Beneath the Waves", id: "1937111536", img: ""
 }
 data[23] = {
     title: "浮光", text: "The history", id: "1394601255", img: ""
@@ -169,7 +169,7 @@ data[42] = {
     title: "Empire of Angels", text: "“以激昂的泪水奏响成功的高歌，勿忘旧时沉重的的阴霾！”<article style='font-size: 65%;'>曲风：悲壮</article>", id: 29460377, img: "https://pic.imgdb.cn/item/64f42a73661c6c8e54057de1.jpg"
 }
 data[43] = {
-    title: "<span style='color:red'>Катюша</span>(喀秋莎)", text: "听点特别的如何？苏联是二战中伤亡人数最大的国家，为国际反法西斯战争的成功奠定了坚实的基础。离别的悲痛与历史的使命造就了“喀秋莎”，它不仅是时代的悲歌，不仅是锐利的武器，更是人类的精神文明。",
+    title: "<span style='color:red'>Катюша</span>(喀秋莎)", text: "听点特别的如何？苏联是二战中伤亡人数最大的国家，为国际反法西斯战争的成功奠定了坚实的基础。离别的悲痛与历史的使命造就了“喀秋莎”，它不仅是时代的悲歌，更是人类精神文明的体现。",
     id: 34002930, img: ""
 }
 data[44] = {
@@ -238,7 +238,7 @@ data[59]={
     img:"https://pic.imgdb.cn/item/65912ff9c458853aefaa3abb.jpg"
 }
 data[60]={
-    title:"Wake",text:"自律的小曲儿",id:1873321491,
+    title:"镜中之梦",text:"Dream Through the Looking-Glass",id:2085836756,
     img:"https://pic.imgdb.cn/item/65912ff9c458853aefaa3abb.jpg"
 }
 data[61]={
