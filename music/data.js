@@ -260,10 +260,10 @@ data[65]={
     title:"悬溺",text: "救赎",id:1397345903,img:"https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[66]={
-    title:"琵琶行",text:"作曲：杜甫",id:476513774,img:"https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
+    title:"琵琶行",text:"作词：杜甫",id:476513774,img:"https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[67]={
-    title: "春娇与志明",text:"那已经是几年前我朋友打游戏听歌给他推荐放的歌。",id:1925445655,img:"https://pic.imgdb.cn/item/65913008c458853aefaa7f4f.jpg"
+    title: "春娇与志明",text:"那已经是几年前我朋友打游戏听歌他推荐放的歌。",id:1925445655,img:"https://pic.imgdb.cn/item/65913008c458853aefaa7f4f.jpg"
 }
 data[68]={
     title: "Villanelle",text: "",id:2100374661,img:"https://pic.imgdb.cn/item/65ffa5219f345e8d03c1cda5.jpg"
