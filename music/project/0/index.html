@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0"> 
+        <meta>
+        <title>编曲工作台(正在开发中)</title>
+        <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        #piano{
+            position: fixed;bottom: 0;width: 100%;height: 45%;background: #000;
+            display:flex;flex-direction: row;border-top: 2px solid #000;
+        }
+        #piano>.item-white{
+            display: block;
+            border: 0.5px solid #000;
+            background: #fff;
+        }
+        #piano>.item-black{
+            position: absolute;
+            display: block;
+            background: #000;
+        }
+        #piano>.item-white:active,#piano>.item-black:active{
+            opacity: 0.8;
+        }
+        .line>span{
+            display: inline-block;
+        }
+        .line>.s1{
+            color: #08f;
+        }
+        .line>.s2{
+            color: #9cf;
+        }
+        .line>.s3{
+            color: #00FFF4;
+        }
+        .line>.s4{
+            color: #17FF1B;
+        }
+        .line>.s5{
+            color: #FFA000;
+        }
+        .line>.s6{
+            color: #FF4668;
+        }
+        #editorLine{
+            position: fixed;
+            background: #eee;
+            bottom: -100%;
+            height: 50%;width: 100%;
+        }
+        #ids>span{
+            display: inline-block;padding: 2px;width: 64px;height: 64px;
+            border-radius: 9px;background: #08f;margin: 3px;color: #fff;
+            text-algin: center;
+        }
+        </style>
+    </head> 
+    <body> 
+        <section id="piano" style="">
+        </section>
+
+        <section id="editorLine">
+        <form id="musicData">
+        </form>
+        <section id="ids"></section>
+        </section>
+        
+        <section id="musicInformation">
+            <div id="description">1=C</div>
+            <div class="line">
+                <span class="s4">0</span>
+            </div>
+        </section>
+        
+        <button onclick="play()">Play</button>
+        <button onclick="addLine()">Add One Part</button>
+        <button onclick="document.getElementById('editorLine').style.bottom='-100%';">Close</button>
+        <button onclick="dts.push([{osVal:0,T:1}])">Add '0'</button>
+        <audio id="audioObject"></audio>
+        <script src="./audioIndex.js"></script>
+        <script src="./piano.js"></script>
+        <script src="./musicEditor.js"></script>
+        <script>
+            const audio = new AudioObject(60);
+            function play(){
+               audio.anysData(dts)
+               //alert(JSON.stringify(dts)+"\n"+"[[{osVal:494,T:1}],[{osVal:466,T:1}],[{osVal:474,T:1}]]")
+            }
+            document.getElementById("description").innerHTML += " 每分钟"+audio.bpm+"拍";
+        </script> 
+    </body>
+</html>
