@@ -26,7 +26,7 @@ class AudioObject{
         let violin = audioContext.createOscillator();
         os.frequency.setValueAtTime(Val,start);
         violin.frequency.setValueAtTime(Val,start);
-        os.type = 'sawtooth';
+        os.type = 'sine';
         //violin.type="square";
         os.connect(vol); 
         violin.connect(vol);
