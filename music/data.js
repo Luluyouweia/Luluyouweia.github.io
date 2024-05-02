@@ -81,8 +81,8 @@ data[14] = {
     id: "2015634549", img: ""
 }
 data[15] = {
-    title: "", text: "undefined",
-    id: "2112355", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/90c5f8a7a662afcf71306e72e4e18e9f8e07c5fce6f52c4718e2967764866651c65d6717089bfc9b96defcaf3ad934c9?pictype=scale&from=30113&version=3.3.3.3&fname=DMKJ.jpg&size=750"
+    title: "Swan Lake, Op. 20, TH.12 / Act 2:No. 13 Danses des cygnes: a) Valse - b) Moderato assai - c) Valse - d) Allegro moderato - e) Pas d'action (Andante) - f) Valse - g) Coda (Allegro vivace)", text: "<i>天鹅湖，第二幕：天鹅之舞/四小天鹅......</i>",
+    id: "1995384254", img: ""
 }
 data[16] = {
     title: "苏维埃进行曲", text: "不知道该怎么描述",
@@ -157,7 +157,7 @@ data[38] = {
     title: "EXEC_COSMOFLIPS/.", text: "作词 : KOKIA  作曲 : KOKIA  编曲 : 伊藤真澄", id: 4940455, img: "https://tuchuang.voooe.cn/images/2023/05/22/00-45-7519843a-957e-4e9a-89ae-adea78b7c8ccdb1c29a3-1738-41b7-b2c4-a09c2cc95f1b.jpg"
 }
 data[39] = {
-    title: "Wildfire野火", text: "崩坏：星穹铁道 战斗音乐  作曲：mihoyo", id: 2045806409, img: "https://tuchuang.voooe.cn/images/2023/05/01/nightskywithblueeyes.jpg"
+    title: "Croatian Rhapsody", text: "克罗地亚狂想曲", id: 1695956, img: "https://tuchuang.voooe.cn/images/2023/05/01/nightskywithblueeyes.jpg"
 }
 data[40] = {
     title: "<b style='color: red;'>MV </b> Fake Love", text: "一路走来，美好永驻，这是世界本色，不要迷失在人生的旅途中！", source: "https://player.bilibili.com/player.html?bvid=BV1JP411H7ib", img: "https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1682685796766-0fddd3e480de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
