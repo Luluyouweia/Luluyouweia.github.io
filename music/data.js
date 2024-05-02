@@ -142,7 +142,7 @@ data[33] = {
     title: "岩壑之崩", text: "Hoyomix 陈致逸", id: 1861578703, img: "https://pic.imgdb.cn/item/650fe774c458853aef62d305.webp"
 }
 data[34] = {
-    title: "鲸波鼍浪", text: "Undersea Encounters ", id: 1937114514, img: "https://tuchuang.voooe.cn/images/2023/06/04/e022587eb2f128dcebde0fa0b20cb1af49970d12.jpg1256w_708h_progressive.webp"
+    title: "鲸波鼍浪", text: "Undersea Encounters ", id: 1937114514, img: "https://pic.imgdb.cn/item/65bca7cd871b83018a0605b8.png"
 }
 data[35] = {
     title: "不冻的激浪", text: "Genshin Impact Game OST <br/>初入雪山的恐惧记忆", id: 1861579691, img: "https://pic3.zhimg.com/v2-e8bc3bf99c890ff0353b28c20fdc071a_r.jpg"
