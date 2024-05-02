@@ -292,7 +292,7 @@ function getIdByLink(){
         return false;
     }
     setTimeout(()=>{
-        play(musicId)
+        audio.play(musicId)
     },2000)
     return true;
 }
