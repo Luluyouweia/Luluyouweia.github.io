@@ -17,7 +17,7 @@ Lucel-mix单曲
 
 描述 Test
 
-链接 [https://luluyouweia.github.io/music/?69](https:luluyouweia.github.io/music/?69)
+链接 [https://luluyouweia.github.io/music/?69](https://luluyouweia.github.io/music/?69)
 
 
 > 测试用例1
