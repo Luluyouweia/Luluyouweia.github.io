@@ -2,8 +2,8 @@
 layout: blog
 title: "MC吸血鬼模组下载地址及文档说明"
 except: "Minecraft娱乐时刻！"
-img: "https://pic.imgdb.cn/item/6598f397871b83018a1cab7d.jpg"
-background: "https://pic.imgdb.cn/item/6598f397871b83018a1cab7d.jpg"
+img: "https://pic.imgdb.cn/item/66335afa0ea9cb1403ac74f8.jpg"
+background: "https://pic.imgdb.cn/item/66335afa0ea9cb1403ac74f8.jpg"
 ---
 
 # 我的世界吸血鬼模组官方版下载和文档地址
@@ -29,3 +29,9 @@ background: "https://pic.imgdb.cn/item/6598f397871b83018a1cab7d.jpg"
 作品的Github链接：
 [链接](http://https://github.com/TeamLapen/Vampirism/)
 
+
+## N年后，当我下载了PCL2启动器，发现我之前所做的毫无必要
+
+## 我的存档
+
+https://www.123pan.com/s/Pj7qVv-NUIfd.html
