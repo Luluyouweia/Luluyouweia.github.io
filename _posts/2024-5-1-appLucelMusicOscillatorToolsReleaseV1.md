@@ -9,6 +9,7 @@ background: "https://pic.imgdb.cn/item/66335afa0ea9cb1403ac748d.jpg"
 ### 测试音频
 
 ![输入图片说明](https://pic.imgdb.cn/item/66335afa0ea9cb1403ac74f8.jpg)
+
 Lucel-mix单曲
 
 标题 幻
@@ -33,10 +34,16 @@ Lucel-mix单曲
 
 作曲/编曲 鹿碌有为
 
-链接 https://luluyouweia.github.io/music/data/last_summer.mp3
+链接 [https://luluyouweia.github.io/music/data/last_summer.mp3](https://luluyouweia.github.io/music/data/last_summer.mp3)
 
 > 测试用例2
 
 ### 开发版体验网站
 
 [点击跳转至：https://luluyouweia.github.io/music/project/0/](https://luluyouweia.github.io/music/project/0/)
+
+ _技术细节_
+
+使用Web Audio Api拟合音色。
+
+ ..Beta v1.0 
