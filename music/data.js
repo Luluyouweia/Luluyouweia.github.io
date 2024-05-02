@@ -269,5 +269,5 @@ data[68]={
     title: "Villanelle",text: "",id:2100374661,img:"https://pic.imgdb.cn/item/65ffa5219f345e8d03c1cda5.jpg"
 }
 data[69]={
-    title:"幻",text:"首个公开测试音频",source:"local:https://luluyouweia.github.io/music/data/whinNight.mp3"
+    title:"幻",text:"鹿客编曲首个公开测试音频",source:"local:./data/whinNight.mp3"
 }
