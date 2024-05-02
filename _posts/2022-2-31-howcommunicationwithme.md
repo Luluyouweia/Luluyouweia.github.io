@@ -3,7 +3,7 @@ layout: blog
 title: "如何同我交流"
 excerpt: "世界未解之谜"
 img: "https://luluyouweia.github.io/images/nature.jpg"
-background: "https://pic.imgdb.cn/item/65bca7cd871b83018a0605b8.png"
+background: "https://luluyouweia.github.io/images/nature.jpg"
 ---
 
 ### 如何同我交流
