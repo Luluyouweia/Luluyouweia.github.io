@@ -287,7 +287,7 @@ if (!window.localStorage.getItem("System")) {
 }
 
 function getIdByLink(){
-    let musicId = window.location.pathname.split('?')[1]||false;
+    let musicId = window.location.search.split('?')[1]||false;
     if(musicId==false){
         return false;
     }
