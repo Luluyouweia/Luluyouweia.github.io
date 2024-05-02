@@ -81,7 +81,7 @@ data[14] = {
     id: "2015634549", img: ""
 }
 data[15] = {
-    title: "", text: "平静的小曲，网友神评：“听着这音乐打代码，感觉我在拯救世界！！！”",
+    title: "", text: "undefined",
     id: "2112355", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/90c5f8a7a662afcf71306e72e4e18e9f8e07c5fce6f52c4718e2967764866651c65d6717089bfc9b96defcaf3ad934c9?pictype=scale&from=30113&version=3.3.3.3&fname=DMKJ.jpg&size=750"
 }
 data[16] = {
@@ -89,8 +89,8 @@ data[16] = {
     id: "5042951", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
 }
 data[17] = {
-    title: "So far away", text: "热门电音",
-    id: "1313584359", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
+    title: "White trees", text: "都市天际",
+    id: "1365032920", img: ""
 }
 data[18] = {
     title: "<h4 style='color:red'>MV</h4>白天不懂夜的黑", text: "嗯...这图片你敢直接看吗？！“年轻人不要太气盛”“不气盛叫年轻人吗”“是龙得盘着，是虎得卧着”“刘华强，我告诉你，你今天要是敢踏出这房门一步...”“痛快，我就喜欢你这脾气”[doge]",
@@ -100,16 +100,16 @@ data[19] = {
     title: "Lu Be-Free", text: "方特：熊出没奇幻空间，永远年轻，永远好奇", id: "449818326", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
 }
 data[20] = {
-    title: "耍把戏", text: "流行的削弱小曲,阿禹ayy,版权可能不稳定", id: "2013499490", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
+    title: "Blink of an Eye", text: "无法捉摸的美才是最美的意境。", id: "1437166764", img: ""
 }
 data[21] = {
     title: "疾如猛火", text: "燃起来了！", id: "1492283139", img: "https://uploadstatic.mihoyo.com/contentweb/20200319/2020031921552395638.jpg"
 }
 data[22] = {
-    title: "寒光裂涛", text: "二创音乐", id: "1938344204", img: ""
+    title: "寒光裂涛", text: "Genshin Impact二创音乐", id: "1938344204", img: ""
 }
 data[23] = {
-    title: "Free Lucky", text: "纯音乐", id: "1392600538", img: ""
+    title: "浮光", text: "The history", id: "1394601255", img: ""
 }
 data[24] = {
     title: "Time to pretend x Memory Reboot x On the sun(Mix)", text: "还记得彼时的乐趣吗？", id: "2091974677", img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
