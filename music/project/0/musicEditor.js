@@ -6,7 +6,7 @@ for(let i=-2;i<3;++i){
         <input type="radio" name="bpmType" value=${i} onclick='setBpmType(${i+3})'>${i}级</input>
     `
 }
-//作曲界面UI
+//作曲界面GUI
 let typeVal= -1;
 let addLine=(x)=>{
     document.getElementById("editorLine").style.bottom="0";
