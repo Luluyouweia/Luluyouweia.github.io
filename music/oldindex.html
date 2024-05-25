@@ -58,6 +58,18 @@
 	<script src="/music/data.js"></script>
 	<script src="/music/render.js"></script>
     <script>
+        function getIdByLink(){
+    let musicId = window.location.search.split('?')[1]||false;
+    if(musicId==false){
+        return false;
+    }
+    setTimeout(()=>{
+        audio.play(musicId);
+        console.log("@getIdByLink():msuicId:"+musicId)
+    },800)
+    return true;
+}
+getIdByLink();
         $("#topbar").onclick=()=>{
             if(document.documentElement.RequestFullScreen){
             document.documentElement.RequestFullScreen();
