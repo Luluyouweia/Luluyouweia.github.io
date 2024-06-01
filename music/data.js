@@ -157,7 +157,7 @@ data[38] = {
     title: "EXEC_COSMOFLIPS/.", text: "作词 : KOKIA  作曲 : KOKIA  编曲 : 伊藤真澄", id: 4940455, img: "https://tuchuang.voooe.cn/images/2023/05/22/00-45-7519843a-957e-4e9a-89ae-adea78b7c8ccdb1c29a3-1738-41b7-b2c4-a09c2cc95f1b.jpg"
 }
 data[39] = {
-    title: "Croatian Rhapsody", text: "克罗地亚狂想曲", id: 1695956, img: "https://tuchuang.voooe.cn/images/2023/05/01/nightskywithblueeyes.jpg"
+    title: "Croatian Rhapsody", text: "克罗地亚狂想曲", id: 1695956, img: "https://pic.imgdb.cn/item/650feaa2c458853aef6486cc.jpg"
 }
 data[40] = {
     title: "<b style='color: red;'>MV </b> Fake Love", text: "一路走来，美好永驻，这是世界本色，不要迷失在人生的旅途中！", source: "https://player.bilibili.com/player.html?bvid=BV1JP411H7ib", img: "https://dogefs.s3.ladydaily.com/~/source/unsplash/photo-1682685796766-0fddd3e480de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
