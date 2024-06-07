@@ -136,7 +136,7 @@ data[31] = {
     title: "His theme", text: "音乐源于传说之下", id: "39227633", img: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 }
 data[32] = {
-    title: "只因你太美", text: "小黑子露出只因脚了吧", id: 1340439829, img: ""
+    title: "Mariage d'amour", text: "不忘初心，方得始终。初心难守,始终难得。", id: 5038302, img: ""
 }
 data[33] = {
     title: "岩壑之崩", text: "Hoyomix 陈致逸", id: 1861578703, img: "https://pic.imgdb.cn/item/650fe774c458853aef62d305.webp"
