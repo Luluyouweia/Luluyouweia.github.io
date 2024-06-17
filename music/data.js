@@ -100,7 +100,7 @@ data[19] = {
     title: "Lu Be-Free", text: "方特：熊出没奇幻空间，永远年轻，永远好奇", id: "449818326", img: "https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/7ee2d65d34641da4d41517e9979276e589a3e03b782df16e464a5e2bf0b8da412c142880b7a490f67beda834ef447751?pictype=scale&from=30113&version=3.3.3.3&fname=Screenshot_20220806_222718_cn.wps.moffice_eng_edit_96068856515548.jpg&size=750"
 }
 data[20] = {
-    title: "Blink of an Eye", text: "无法捉摸的美才是最美的意境。", id: "1437166764", img: ""
+    title: "Blink of an Eye", text: "无法捉摸的美。", id: "1437166764", img: ""
 }
 data[21] = {
     title: "疾如猛火", text: "燃起来了！", id: "1492283139", img: "https://uploadstatic.mihoyo.com/contentweb/20200319/2020031921552395638.jpg"
@@ -205,7 +205,7 @@ data[51] = {
     img: "https://pic.imgdb.cn/item/650feaa3c458853aef6487eb.jpg"
 }
 data[52] = {
-    title: "Umbrella (Matte Remix)",text:"获得成就：超越生死",id:518904426,
+    title: "蓝色多瑙河",text:"你知道吗，我做的第一个音乐网站便是用它最为首选音乐的。",id:5276811,
     img: ""
 }
 data[53] = {
