@@ -256,7 +256,7 @@ function fillBlocks(num) {
     for (let index = NUMBER; index < maxLen; ++index) {
         let obj = data[randomList[index]];
         if (obj.img == '') {
-            obj.img = audio.orginalImgUrl;
+            obj.img = audio.originalImgUrl;
         }
         document.getElementById("content").innerHTML += `
                 <div onclick="audio.play(${randomList[index]})" style="background-image: url(${obj.img});background-size: cover;background-position: center center;">
