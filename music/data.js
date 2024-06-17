@@ -271,3 +271,6 @@ data[68]={
 data[69]={
     title:"幻",text:"鹿客编曲首个公开测试音频",source:"local:./data/whinNight.mp3",img:"https://pic.imgdb.cn/item/66335afa0ea9cb1403ac748d.jpg"
 }
+data[70]={
+    title:"",text:"",id:0,img:""
+}
