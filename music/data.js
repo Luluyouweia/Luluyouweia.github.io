@@ -272,5 +272,14 @@ data[69]={
     title:"幻",text:"鹿客编曲首个公开测试音频",source:"local:./data/whinNight.mp3",img:"https://pic.imgdb.cn/item/66335afa0ea9cb1403ac748d.jpg"
 }
 data[70]={
-    title:"",text:"",id:0,img:""
+    title:"ICARUS(伊卡洛斯)",text:"作曲：Tony Ann<br>伊卡洛斯（希腊文：Ίκαρος英文名称：Icarus）是希腊神话中代达罗斯的儿子，与代达罗斯使用蜡和羽毛造的翼逃离克里特岛时，他因飞得太高双翼上的蜡遭太阳融化跌落水中丧生，被埋葬在一个海岛上。为了纪念伊卡洛斯，埋葬伊卡洛斯的海岛命名为伊卡利亚岛。",id:2108766934,img:""
+}
+data[71]={
+    title:"DESIRE",text:"作曲：Tony Ann",id:2086315090,img:""
+}
+data[72]={
+    title:"Courage勇气",text:"作曲：Tony Ann",id:2098398095,img:""
+}
+data[73]={
+    title:"History Repeating",text:"作曲：Jo Blankenburg",id:1971315292,img:""
 }
