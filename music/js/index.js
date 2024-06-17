@@ -6,6 +6,7 @@ class Audio {
         document.body.innerHTML += "<audio id='audio' controls><source src='' type='audio/mp3'></source></audio><br/><br/>";
         this.local = null;
         this.infoPage = null;
+        this.originalImgUrl = "https://pic.imgdb.cn/item/66706bb0d9c307b7e9069b74.jpg";
         this.ele = document.getElementById("infoPage");
         this.obj = document.getElementById("audio");
         this.type = "none";
@@ -255,7 +256,7 @@ function fillBlocks(num) {
     for (let index = NUMBER; index < maxLen; ++index) {
         let obj = data[randomList[index]];
         if (obj.img == '') {
-            obj.img = "https://pic.imgdb.cn/item/65194bddc458853aefacb2de.jpg";
+            obj.img = audio.orginalImgUrl;
         }
         document.getElementById("content").innerHTML += `
                 <div onclick="audio.play(${randomList[index]})" style="background-image: url(${obj.img});background-size: cover;background-position: center center;">
