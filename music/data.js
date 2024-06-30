@@ -266,13 +266,13 @@ data[67]={
     title: "春娇与志明",text:"那已经是几年前我朋友打游戏听歌他推荐放的歌。",id:1925445655,img:"https://pic.imgdb.cn/item/65913008c458853aefaa7f4f.jpg"
 }
 data[68]={
-    title: "Villanelle",text: "",id:2100374661,img:"https://pic.imgdb.cn/item/65ffa5219f345e8d03c1cda5.jpg"
+    title: "Villanelle",text: "",id:2100374661,img:"https://pic.imgdb.cn/item/668101d6d9c307b7e9c88a2f.png"
 }
 data[69]={
     title:"幻",text:"鹿客编曲首个公开测试音频",source:"local:./data/whinNight.mp3",img:"https://pic.imgdb.cn/item/66335afa0ea9cb1403ac748d.jpg"
 }
 data[70]={
-    title:"ICARUS(伊卡洛斯)",text:"作曲：Tony Ann<br>伊卡洛斯（希腊文：Ίκαρος英文名称：Icarus）是希腊神话中代达罗斯的儿子，与代达罗斯使用蜡和羽毛造的翼逃离克里特岛时，他因飞得太高双翼上的蜡遭太阳融化跌落水中丧生，被埋葬在一个海岛上。为了纪念伊卡洛斯，埋葬伊卡洛斯的海岛命名为伊卡利亚岛。",id:2108766934,img:""
+    title:"ICARUS(伊卡洛斯)",text:"作曲：Tony Ann<br>伊卡洛斯（希腊文：Ίκαρος英文名称：Icarus）是希腊神话中代达罗斯的儿子，与代达罗斯使用蜡和羽毛造的翼逃离克里特岛时，他因飞得太高双翼上的蜡遭太阳融化跌落水中丧生，被埋葬在一个海岛上。为了纪念伊卡洛斯，埋葬伊卡洛斯的海岛命名为伊卡利亚岛。",id:2108766934,img:"https://pic.imgdb.cn/item/668102c5d9c307b7e9cac14c.jpg"
 }
 data[71]={
     title:"DESIRE",text:"作曲：Tony Ann",id:2086315090,img:""
