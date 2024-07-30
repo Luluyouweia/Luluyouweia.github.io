@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>跳转</title>
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+	<script src="/music/data.js"></script>
+	<style>
+		.song {
+			display: block;
+			padding: 12px;
+			margin: 6px 0px;
+			color: #5846FF;
+			background: #eee;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="color: rgb(99,99,99);">新功能跳转页面</h1>
+	<h2 style="color: #9C17FF">选择需要跳转的音乐<br/>(请提前进行横屏以增强观感)</h2>
+	列表：
+	<section id="content"></section>
+	<div style="color: #08f;padding-top: 60px;">
+		<a style="color: blue;" href=>点击返回鹿客音乐主页</a><br/> 鹿鹿悠为 - 鹿客音乐©2022-2024
+	</div>
+	<script>
+		data.forEach((e,i)=>{
+                                                                                                                                    document.getElementById("content").innerHTML+=`
+                                                                                                                                                  <a class="song" href="/music/3d/index.html?${i}">${i} - ${e.title}</a>
+                                                                                                                                                            `
+                                                                                                                      })
+	</script>
+</body>
+
+</html>
+}) }
