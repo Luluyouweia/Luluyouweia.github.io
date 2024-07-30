@@ -30,7 +30,14 @@ function main() {
     document.getElementById("content").onclick = () => {
         init();
         document.getElementById("fps").innerHTML = "";
-        document.getElementById("content").onclick = ()=>false;
+        if (document.documentElement.RequestFullScreen) {
+        document.documentElement.RequestFullScreen();
+        }
+        document.getElementById("content").onclick = ()=>{
+            if (document.documentElement.RequestFullScreen) {
+                document.documentElement.RequestFullScreen();
+            }
+        };
     }
     let analyser = null;
     let dataArray = null;
