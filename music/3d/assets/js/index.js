@@ -26,13 +26,30 @@ function main() {
     });
 
     const audio = document.getElementById("audio");
+    let musicId = window.location.search.split('?')[1] || false;
+    if (musicId == false) {
+        alert('音频数据错误');
+        window.open("/music/3d/target.html")
+        return false;
+    }
+    if (data[musicId].id) {
+        audio.src = "https://music.163.com/song/media/outer/url?id=" + data[musicId].id;
+    } else if (data[musicId].source) {
+        if (info.source.search("local:") != -1) {
+            //本地音乐文件播放
+            audio.src = data[musucId].source.split('local:')[1];
+        } else {
+            //ifrane
+            alert("暂不支持此音乐的播放")
+        }
+    }
     document.getElementById("content").onclick = () => {
         init();
         document.getElementById("fps").innerHTML = "";
         if (document.documentElement.RequestFullScreen) {
-        document.documentElement.RequestFullScreen();
+            document.documentElement.RequestFullScreen();
         }
-        document.getElementById("content").onclick = ()=>{
+        document.getElementById("content").onclick = () => {
             if (document.documentElement.RequestFullScreen) {
                 document.documentElement.RequestFullScreen();
             }
@@ -65,46 +82,46 @@ function main() {
             let targetArray = [];
             dataArray.forEach((e, index) => {
                 //tempSum = Math.max(tempSum,-e);
-                tempSum-=e;
+                tempSum -= e;
                 if (index % 4 === 0) {
-                    targetArray.push(tempSum/4);
+                    targetArray.push(tempSum / 4);
                     tempSum = 0;
                 }
             })
             for (let i = 0; i < 55; ++i) {
                 //keys[i].scale.y = 320 * Math.sin(Math.PI / 2 * (targetArray[i] / 55)) + 1;
-                keys[i].scale.y = targetArray[i] ;
+                keys[i].scale.y = targetArray[i];
             }
-            a = dataArray; 
+            a = dataArray;
         }
     }
 
     function init() {
         audio.play();
-        let mainLine = createLine([new THREE.Vector3(0,0,0),new THREE.Vector3(0,100,0)]);
+        let mainLine = createLine([new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, 100, 0)]);
         let lines = [];
-        let positionXZ = [{x: -36,z: -24},{x: 36,z: -24},{x: 0,z: 36}];
-        positionXZ.forEach((e)=>{
-            lines.push(createLine([new THREE.Vector3(e.x,0,e.z),new THREE.Vector3(e.x,100,e.z)]));
+        let positionXZ = [{ x: -36, z: -24 }, { x: 36, z: -24 }, { x: 0, z: 36 }];
+        positionXZ.forEach((e) => {
+            lines.push(createLine([new THREE.Vector3(e.x, 0, e.z), new THREE.Vector3(e.x, 100, e.z)]));
         })
         positionXZ = null;
         scene.add(mainLine);
-        setTimeout(()=>{
-            lines.forEach((e)=>{scene.add(e)})
-        },2500)
+        setTimeout(() => {
+            lines.forEach((e) => { scene.add(e) })
+        }, 2500)
         setTimeout(() => {
             locks[0] = true;
             scene.remove(mainLine);
-            lines.forEach((e)=>{scene.remove(e)});
+            lines.forEach((e) => { scene.remove(e) });
             lines = null;
             mainLine = null;
-            risingLines(0,10,0)
+            risingLines(0, 10, 0)
         }, 5000)
     }
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 512);
-    const controls = new OrbitControls(camera,canvas);
+    const controls = new OrbitControls(camera, canvas);
     controls.autoRotate = true;
     controls.enabled = false;
     controls.update();
@@ -119,8 +136,8 @@ function main() {
     })()
     plane.rotation.x = Math.PI / 2;
     scene.add(plane);
-    
-   function createLine(points){
+
+    function createLine(points) {
         const material = new THREE.LineBasicMaterial({
             color: 0x99ccff,
             linewidth: 3
@@ -128,9 +145,9 @@ function main() {
         const geometry = new THREE.BufferGeometry().setFromPoints(points);
         return new THREE.Line(geometry, material);
     }
-    
-    function risingLines(x,y,z){
-        let obj = createLine([new THREE.Vector3(x,0,z),new THREE.Vector3(x,-y,z)]);
+
+    function risingLines(x, y, z) {
+        let obj = createLine([new THREE.Vector3(x, 0, z), new THREE.Vector3(x, -y, z)]);
         renderLines.push(obj);
         scene.add(obj);
     }
@@ -144,14 +161,14 @@ function main() {
     camera.up.set(0, 1, 0);
     camera.position.set(-60, 50, 0);
     camera.lookAt(10, 6, 0);
-    
+
 
     const stageSys = new THREE.Object3D();
     stageSys.position.set(0, 0, 0);
     scene.add(stageSys);
     const stageRotate = new THREE.Object3D();
     stageSys.add(stageRotate);
-    stageRotate.rotation.x = Math.PI/6;
+    stageRotate.rotation.x = Math.PI / 6;
     stageRotate.position.y = 6;
 
     const ball = (() => {
@@ -175,7 +192,7 @@ function main() {
         return new THREE.Points(model, material);
     })()
     stageSys.add(universe);
-    
+
 
     //辉光图层
     const bloomLayer = new THREE.Layers();
@@ -277,22 +294,22 @@ function main() {
         keys.push(obj);
         scene.add(obj);
     }
-    
-    function roundLines(){
+
+    function roundLines() {
         let n = 0;
-        setInterval(()=>{
-            let x = 32*Math.sin(2*Math.PI/25*n);
-            let z = 32*Math.cos(2*Math.PI/25*n);
-            let line = createLine([new THREE.Vector3(x,0,z),new THREE.Vector3(x,64,z)])
+        setInterval(() => {
+            let x = 32 * Math.sin(2 * Math.PI / 25 * n);
+            let z = 32 * Math.cos(2 * Math.PI / 25 * n);
+            let line = createLine([new THREE.Vector3(x, 0, z), new THREE.Vector3(x, 64, z)])
             scene.add(line);
             ++n;
-            setTimeout(()=>{
+            setTimeout(() => {
                 scene.remove(line);
-            },550)
-        },200)
+            }, 550)
+        }, 200)
     }
 
-    function render(time) {   
+    function render(time) {
         time *= 0.001; // 将时间单位变为秒
 
         // 实现局部辉光
@@ -319,7 +336,7 @@ function main() {
             if (locks[2]) {
                 if (stageRotate.position.y <= 25) {
                     camera.position.set(36 * Math.sin(time * 0.5), 12, 36 * Math.cos(time * 0.5));
-                    camera.lookAt(0,0,0);
+                    camera.lookAt(0, 0, 0);
                     //controls.rotation.x = Math.PI/5;
                     stageRotate.position.y += 0.05;
                     console.log(stageRotate.position.y)
@@ -347,12 +364,12 @@ function main() {
                     locks[2] = true;
                     camera.position.y = 12;
                     stageRotate.add(camera);
-                    camera.lookAt(0,0,0);
+                    camera.lookAt(0, 0, 0);
                     controls.autoRotateSpeed = 6.0;
-                  //  camera.rotation.z = Math.PI / 3;
+                    //  camera.rotation.z = Math.PI / 3;
                 }
             } else {
-                camera.position.x += time *0.01;
+                camera.position.x += time * 0.01;
                 camera.position.y -= time * 0.005;
                 if (camera.position.y <= 14) {
                     locks[1] = true;
@@ -377,29 +394,29 @@ setInterval(() => {
 
 main();
 
-function getIdByLink(){
-    let musicId = window.location.search.split('?')[1]||false;
-    if(musicId==false){
+function getIdByLink() {
+    let musicId = window.location.search.split('?')[1] || false;
+    if (musicId == false) {
         alert('音频数据错误');
         window.open("/music/3d/target.html")
         return false;
     }
-    setTimeout(()=>{
+    setTimeout(() => {
         let info = data[musicId];
-          if (data[musicId].id){
-                document.getElementById("audio").src = "https://music.163.com/song/media/outer/url?id=" + data[musicId].id;
+        if (data[musicId].id) {
+            document.getElementById("audio").src = "https://music.163.com/song/media/outer/url?id=" + data[musicId].id;
+            return true;
+        }
+        if (data[musicId].source) {
+            if (info.source.search("local:") != -1) {
+                //本地音乐文件播放
+                document.getElementById("audio").src = data[musucId].source.split('local:')[1];
                 return true;
             }
-            if (data[musicId].source) {
-                if (info.source.search("local:") != -1) {
-                    //本地音乐文件播放
-                    document.getElementById("audio").src = data[musucId].source.split('local:')[1];
-                    return true;
-                }
-                //ifrane
-                alert("暂不支持此音乐的播放")
-            }
-    },800)
+            //ifrane
+            alert("暂不支持此音乐的播放")
+        }
+    }, 800)
     return true;
 }
 getIdByLink();
