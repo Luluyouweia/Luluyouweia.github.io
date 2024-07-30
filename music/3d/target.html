@@ -26,13 +26,12 @@
 		<a style="color: blue;" href=>点击返回鹿客音乐主页</a><br/> 鹿鹿悠为 - 鹿客音乐©2022-2024
 	</div>
 	<script>
-		data.forEach((e,i)=>{
-                                                                                                                                    document.getElementById("content").innerHTML+=`
-                                                                                                                                                  <a class="song" href="/music/3d/index.html?${i}">${i} - ${e.title}</a>
-                                                                                                                                                            `
-                                                                                                                      })
+    data.forEach((e,i)=>{
+    document.getElementById("content").innerHTML+=`
+        <a class="song" href="/music/3d/index.html?${i}">${i} - ${e.title}</a>
+    `
+    })
 	</script>
 </body>
 
 </html>
-}) }
