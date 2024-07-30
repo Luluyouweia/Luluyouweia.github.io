@@ -368,13 +368,13 @@ function main() {
     }
     requestAnimationFrame(render);
 }
-
+/*
 setInterval(() => {
     document.getElementById("fps").innerHTML = "fps:" + fpsFrequency;
     fpsFrequency = 0;
     
 }, 1000)
-
+*/
 
 main();
 
@@ -384,8 +384,20 @@ function getIdByLink(){
         return false;
     }
     setTimeout(()=>{
-        document.getElementById("audio").src = data[musicId];
-        console.log("@getIdByLink():msuicId:"+musicId)
+        let info = data[musicId];
+          if (info.id){
+                document.getElementById("audio").src = "https://music.163.com/song/media/outer/url?id=" + data[musicId].id;
+                return true;
+            }
+            if (info.source) {
+                if (info.source.search("local:") != -1) {
+                    //本地音乐文件播放
+                    document.getElementById("audio").src = info.source.split('local:')[1];
+                    return true;
+                }
+                //163外部音乐链接播放
+                alert("暂不支持此音乐的播放")
+            }
     },800)
     return true;
 }
