@@ -27,8 +27,8 @@ function main() {
 
     const audio = document.getElementById("audio");
     let musicId = window.location.search.split('?')[1] || false;
-    if (musicId == false) {
-        alert('音频数据错误');
+    if (musicId === false) {
+        alert('找不到对象：音频数据');
         window.open("/music/3d/target.html")
         return false;
     }
@@ -37,6 +37,7 @@ function main() {
     } else if (data[musicId].source) {
         if (info.source.search("local:") != -1) {
             //本地音乐文件播放
+            document.getElementById("fps").innerHTML+="○您当前所选音乐可能播放较慢或无法正常播放"
             audio.src = data[musucId].source.split('local:')[1];
         } else {
             //ifrane
