@@ -26,7 +26,6 @@ function main() {
     });
 
     const audio = document.getElementById("audio");
-    audio.src = "./assets/audio/main.mp3";
     document.getElementById("content").onclick = () => {
         init();
         document.getElementById("fps").innerHTML = "";
