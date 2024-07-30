@@ -377,3 +377,16 @@ setInterval(() => {
 
 
 main();
+
+function getIdByLink(){
+    let musicId = window.location.search.split('?')[1]||false;
+    if(musicId==false){
+        return false;
+    }
+    setTimeout(()=>{
+        document.getElementById("audio").src = data[musicId];
+        console.log("@getIdByLink():msuicId:"+musicId)
+    },800)
+    return true;
+}
+getIdByLink();
