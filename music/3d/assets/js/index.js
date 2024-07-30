@@ -381,21 +381,23 @@ main();
 function getIdByLink(){
     let musicId = window.location.search.split('?')[1]||false;
     if(musicId==false){
+        alert('音频数据错误');
+        window.open("/music/3d/target.html")
         return false;
     }
     setTimeout(()=>{
         let info = data[musicId];
-          if (info.id){
+          if (data[musicId].id){
                 document.getElementById("audio").src = "https://music.163.com/song/media/outer/url?id=" + data[musicId].id;
                 return true;
             }
-            if (info.source) {
+            if (data[musicId].source) {
                 if (info.source.search("local:") != -1) {
                     //本地音乐文件播放
-                    document.getElementById("audio").src = info.source.split('local:')[1];
+                    document.getElementById("audio").src = data[musucId].source.split('local:')[1];
                     return true;
                 }
-                //163外部音乐链接播放
+                //ifrane
                 alert("暂不支持此音乐的播放")
             }
     },800)
