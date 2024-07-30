@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "/scripts/three.module.min.js",
+            "three/addons/": "/scripts/jsm/"
+          }
+        }
+      </script>
+    <style>
+        * {
+            margin: 0;
+            padding: ;
+            box-sizing: border;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+        #content {
+            z-index: 5;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        #fps{
+            position: fixed;color: red;z-index: 9;
+            font-size: 200%;color: #fff;
+            top: 0;left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="content" width="1920px" height="1080px"></canvas>
+    <audio id="audio" src="./assets/audio/main.mp3"></audio>
+    <div id="fps">点击空白区域开始测试<br/>测试版本不代表最终版本(鹿客©)</div>
+    <script type="module" src="./assets/js/aitest.js"></script>
+</body>
+
+</html>
