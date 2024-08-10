@@ -28,9 +28,26 @@ function main() {
     const audio = document.getElementById("audio");
     audio.src = "./assets/audio/gs.m4a";
     document.getElementById("content").onclick = () => {
+        document.querySelector('HEADER').onclick = () => {
+            if (document.documentElement.RequestFullScreen) {
+                document.documentElement.RequestFullScreen();
+            }
+            //兼容火狐
+            if (document.documentElement.mozRequestFullScreen) {
+                document.documentElement.mozRequestFullScreen();
+            }
+            //兼容谷歌等可以webkitRequestFullScreen也可以webkitRequestFullscreen
+            if (document.documentElement.webkitRequestFullScreen) {
+                document.documentElement.webkitRequestFullScreen();
+            }
+            //兼容IE,只能写msRequestFullscreen
+            if (document.documentElement.msRequestFullscreen) {
+                document.documentElement.msRequestFullscreen();
+            }
+        }
         init();
         document.getElementById("fps").innerHTML = "";
-        document.getElementById("content").onclick = ()=>false;
+        document.getElementById("content").onclick = () => false;
     }
     let analyser = null;
     let dataArray = null;
@@ -59,37 +76,37 @@ function main() {
             let targetArray = [];
             dataArray.forEach((e, index) => {
                 //tempSum = Math.max(tempSum,-e);
-                tempSum-=e;
+                tempSum -= e;
                 if (index % 4 === 0) {
-                    targetArray.push(tempSum/4);
+                    targetArray.push(tempSum / 4);
                     tempSum = 0;
                 }
             })
             for (let i = 0; i < 55; ++i) {
-                keys[i].scale.y = 300 * Math.sin(Math.PI / 2 * (targetArray[i] / 55)) ;
+                keys[i].scale.y = 300 * Math.sin(Math.PI / 2 * (targetArray[i] / 55));
                 //keys[i].scale.y = targetArray[i] ;
             }
-            a = dataArray; 
+            a = dataArray;
         }
     }
 
     function init() {
         audio.play();
-        let mainLine = createLine([new THREE.Vector3(0,-128,0),new THREE.Vector3(0,128,0)]);
+        let mainLine = createLine([new THREE.Vector3(0, -128, 0), new THREE.Vector3(0, 128, 0)]);
         let lines = [];
-        let positionXZ = [{x: -36,z: -24},{x: 36,z: -24},{x: 0,z: 36}];
-        positionXZ.forEach((e)=>{
-            lines.push(createLine([new THREE.Vector3(e.x,-128,e.z),new THREE.Vector3(e.x,128,e.z)]));
+        let positionXZ = [{ x: -36, z: -24 }, { x: 36, z: -24 }, { x: 0, z: 36 }];
+        positionXZ.forEach((e) => {
+            lines.push(createLine([new THREE.Vector3(e.x, -128, e.z), new THREE.Vector3(e.x, 128, e.z)]));
         })
         positionXZ = null;
         scene.add(mainLine);
-        setTimeout(()=>{
-            lines.forEach((e)=>{scene.add(e)})
-        },2500)
+        setTimeout(() => {
+            lines.forEach((e) => { scene.add(e) })
+        }, 2500)
         setTimeout(() => {
             locks[0] = true;
             scene.remove(mainLine);
-            lines.forEach((e)=>{scene.remove(e)});
+            lines.forEach((e) => { scene.remove(e) });
             lines = null;
             mainLine = null;
             //risingLines(0,256,0)
@@ -97,13 +114,13 @@ function main() {
     }
 
     const scene = new THREE.Scene();
-    scene.name='scene';
+    scene.name = 'scene';
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2048);
-    const controls = new OrbitControls(camera,canvas);
+    const controls = new OrbitControls(camera, canvas);
     controls.autoRotate = true;
     controls.enabled = false;
     controls.update();
-    
+
     /*
     const plane = (() => {
         const model = new THREE.PlaneGeometry(1, 1);
@@ -117,8 +134,8 @@ function main() {
     plane.name = 'groundPlane';
     scene.add(plane);
     */
-    
-   function createLine(points){
+
+    function createLine(points) {
         const material = new THREE.LineBasicMaterial({
             color: 0x99ccff,
             linewidth: 3
@@ -126,9 +143,9 @@ function main() {
         const geometry = new THREE.BufferGeometry().setFromPoints(points);
         return new THREE.Line(geometry, material);
     }
-    
-    function risingLines(x,y,z){
-        let obj = createLine([new THREE.Vector3(x,-128,z),new THREE.Vector3(x,-y,z)]);
+
+    function risingLines(x, y, z) {
+        let obj = createLine([new THREE.Vector3(x, -128, z), new THREE.Vector3(x, -y, z)]);
         renderLines.push(obj);
         scene.add(obj);
     }
@@ -142,14 +159,14 @@ function main() {
     camera.up.set(0, 1, 0);
     camera.position.set(-60, 42, 0);
     camera.lookAt(10, 36, 0);
-    
+
 
     const stageSys = new THREE.Object3D();
     stageSys.position.set(0, 0, 0);
     scene.add(stageSys);
     const stageRotate = new THREE.Object3D();
     stageSys.add(stageRotate);
-    stageRotate.rotation.x = Math.PI/6;
+    stageRotate.rotation.x = Math.PI / 6;
     stageRotate.position.y = 6;
 
     const ball = (() => {
@@ -164,13 +181,13 @@ function main() {
     ball.position.y = 13;
     ball.name = "ball";
 
-    
+
     const universe = (() => {
-        const model = new THREE.SphereGeometry(1024, 64,64);
+        const model = new THREE.SphereGeometry(1024, 64, 64);
         const bg = new THREE.TextureLoader().load("./assets/texture/city.jpg");
         bg.colorSpace = THREE.SRGBColorSpace;
         const material = new THREE.MeshBasicMaterial({
-            map: bg,side: THREE.BackSide
+            map: bg, side: THREE.BackSide
         })
         return new THREE.Mesh(model, material);
     })()
@@ -213,7 +230,7 @@ function main() {
     function darkenNonBloomed(obj) {
         //不需要辉光的转化为黑色材质，同时储存在tempMaterials内
         //判断Mesh和Layer层级
-        if( (obj.name=='groundPlane'|| obj.name == 'UN' )&& bloomLayer.test(obj.layers) == false ) {
+        if ((obj.name == 'groundPlane' || obj.name == 'UN') && bloomLayer.test(obj.layers) == false) {
             tempMaterials[obj.uuid] = obj.material;
             obj.material = darkMaterial;
         }
@@ -277,22 +294,22 @@ function main() {
         keys.push(obj);
         scene.add(obj);
     }
-    
-    function roundLines(){
+
+    function roundLines() {
         let n = 0;
-        setInterval(()=>{
-            let x = 64*Math.sin(2*Math.PI/25*n);
-            let z = 64*Math.cos(2*Math.PI/25*n);
-            let line = createLine([new THREE.Vector3(x,-256,z),new THREE.Vector3(x,512,z)])
+        setInterval(() => {
+            let x = 64 * Math.sin(2 * Math.PI / 25 * n);
+            let z = 64 * Math.cos(2 * Math.PI / 25 * n);
+            let line = createLine([new THREE.Vector3(x, -256, z), new THREE.Vector3(x, 512, z)])
             scene.add(line);
             ++n;
-            setTimeout(()=>{
+            setTimeout(() => {
                 scene.remove(line);
-            },550)
-        },200)
+            }, 550)
+        }, 200)
     }
 
-    function render(time) {   
+    function render(time) {
         time *= 0.001; // 将时间单位变为秒
 
         // 实现局部辉光
@@ -313,14 +330,14 @@ function main() {
         //universe.rotation.set(time * Math.PI / 300, time * Math.PI / 300, 0);
 
         controls.update();
-        
+
         if (locks[0]) {
             currentTime = currentTime == null ? time : currentTime;
             time = time - currentTime;
             if (locks[2]) {
                 if (stageRotate.position.y <= 25) {
                     camera.position.set(64 * Math.sin(time * 0.5), 12, 64 * Math.cos(time * 0.5));
-                    camera.lookAt(0,0,0);
+                    camera.lookAt(0, 0, 0);
                     //controls.rotation.x = Math.PI/5;
                     stageRotate.position.y += 0.05;
                     //console.log(stageRotate.position.y)
@@ -337,13 +354,13 @@ function main() {
                         setTimeout(() => {
                             camera.position.set(-32, 25, 16);
                             camera.lookAt(0, 9, 0);
-                            setTimeout(()=>{
+                            setTimeout(() => {
                                 camera.position.set(-256, 15, 0);
-                                setTimeout(()=>{
+                                setTimeout(() => {
                                     camera.position.set(-64, 18, -32);
                                     camera.lookAt(0, 36, 0);
-                                   // console.log(camera.position);
-                                },6000)
+                                    // console.log(camera.position);
+                                }, 6000)
                             })
                         }, 12000)
                     }, 6000)
@@ -356,12 +373,12 @@ function main() {
                     locks[2] = true;
                     camera.position.y = 0;
                     stageRotate.add(camera);
-                    camera.lookAt(0,36,0);
+                    camera.lookAt(0, 36, 0);
                     controls.autoRotateSpeed = 6.0;
-                  //  camera.rotation.z = Math.PI / 3;
+                    //  camera.rotation.z = Math.PI / 3;
                 }
             } else {
-                camera.position.x += time *0.01;
+                camera.position.x += time * 0.01;
                 camera.position.y -= time * 0.005;
                 if (camera.position.y <= 14) {
                     locks[1] = true;
@@ -380,7 +397,7 @@ function main() {
 setInterval(() => {
     document.getElementById("fps").innerHTML = "fps:" + fpsFrequency;
     fpsFrequency = 0;
-    
+
 }, 1000)
 
 
