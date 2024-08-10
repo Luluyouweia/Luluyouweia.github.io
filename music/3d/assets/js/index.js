@@ -13,6 +13,8 @@ import {
 } from 'three/addons/postprocessing/ShaderPass.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+console.log('ok')
+
 let fpsFrequency = 0;
 let renderLines = [];
 
