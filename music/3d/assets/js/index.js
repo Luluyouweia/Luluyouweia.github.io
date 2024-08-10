@@ -26,7 +26,7 @@ function main() {
     });
 
     const audio = document.getElementById("audio");
-    audio.src = "./assets/audio/gs.m4a";
+    audio.src = "/music/3d/assets/audio/gs.m4a";
     document.getElementById("content").onclick = () => {
         document.querySelector('HEADER').onclick = () => {
             if (document.documentElement.RequestFullScreen) {
@@ -184,7 +184,7 @@ function main() {
 
     const universe = (() => {
         const model = new THREE.SphereGeometry(1024, 64, 64);
-        const bg = new THREE.TextureLoader().load("./assets/texture/city.jpg");
+        const bg = new THREE.TextureLoader().load("/music/3d/assets/texture/city.jpg");
         bg.colorSpace = THREE.SRGBColorSpace;
         const material = new THREE.MeshBasicMaterial({
             map: bg, side: THREE.BackSide
