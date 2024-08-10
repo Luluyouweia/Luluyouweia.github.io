@@ -30,7 +30,6 @@ function main() {
     const audio = document.getElementById("audio");
     audio.src = "/music/3d/assets/audio/gs.m4a";
     document.getElementById("content").onclick = () => {
-        document.querySelector('HEADER').onclick = () => {
             if (document.documentElement.RequestFullScreen) {
                 document.documentElement.RequestFullScreen();
             }
@@ -46,7 +45,7 @@ function main() {
             if (document.documentElement.msRequestFullscreen) {
                 document.documentElement.msRequestFullscreen();
             }
-        }
+        
         init();
         document.getElementById("fps").innerHTML = "";
         document.getElementById("content").onclick = () => false;
