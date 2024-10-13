@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音符的悦动</title>
+      <script>
+          let source;
+      </script>
+      <script src='./config.js'></script>
+    <style>
+        * {
+            margin: 0;
+            padding: ;
+            box-sizing: border;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+        #content {
+            z-index: 5;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        #fps{
+            position: fixed;color: red;z-index: 9;
+            font-size: 50%;color: #fff;font-weight: 200;
+            top: 0;left: 0;
+        }
+        #audio{
+            position: fixed; z-index: 96;
+            top: 0;left: 0;
+        }
+        #video{
+            z-index: 19;display: none;
+            position: fixed;top: 0;left: 0;
+            height: 100vh;width: 100vw;
+        }
+        #choose{
+            position: fixed;
+            bottom: 5vh;left: 0;right: 0;margin: auto;padding: 25px;
+            font-size: 6vh;font-weight: 200;
+            color: #fff;width: 30vh;text-align: center;
+            border: 1px solid #fff;border-radius: 6px;
+            background-image: linear-gradient(to bottom right,#a5fecb, #20bdff, #5433ff);
+        }
+        #targetName{
+            z-index: 20;display: none;
+            position: fixed;top: 0;left: 0;
+            height: 100vh;width: 100vw;
+            background: #000;color: #fff;
+            background-image: linear-gradient(to bottom right,#a5fecb, #20bdff, #5433ff);
+        }
+        #name{
+            position: absolute;
+            top: 30%;width: 100vw;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13vh;
+            font-weight: 300;
+        }
+        #count{
+            position: absolute;
+            bottom: 30%;width: 100vw;
+            text-align: center;
+            font-size: 3vh;
+            font-weight: 100;
+        }
+        #back{
+            position: absolute;
+            bottom: 10%;width: 100vw;
+            text-align: center;
+            font-size: 7vh;
+            font-weight: 100;
+        }
+        #check{
+            color: #0088ff;font-size: 100%;
+            z-index: 9;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        #checkBoard{
+            z-index: 21;display: block;overflow: auto;
+            position: fixed;top: 110%;left: 0;transition: 0.6s;
+            height: 100vh;width: 100vw;
+            background: #000;color: #fff;
+            background-image: linear-gradient(to bottom right,#a5fecb, #20bdff, #5433ff);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="content" width="1920px" height="1080px"></canvas>
+    <video id="video" src="./assets/video.mp4"></video>
+    <div id="check">查看旋律值</div>
+    <audio id="audio"></audio>
+    <div id="fps">这里显示当前屏幕刷新率</div>
+    <div id="choose">祈愿</div>
+    <section id="targetName"><div id="name"></div><div id="count"></div><div id="back">返回</div></section>
+    <section id="checkBoard">测试</section>
+    
+        <script type="importmap">
+        {
+          "imports": {
+            "three": "/scripts/three.module.min.js",
+            "three/addons/": "/scripts/jsm/"
+          }
+        }
+      </script>
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+
+</html>
