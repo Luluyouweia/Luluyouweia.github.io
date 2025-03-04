@@ -151,7 +151,7 @@ data[36] = {
     title: "WATER(Feat.Miku)", text: "Phigros的神曲！</br>作词 : 沙包P & 作曲 : A-39", id: 1404469236, img: "https://pic.imgdb.cn/item/650fe977c458853aef63f27f.jpg"
 }
 data[37] = {
-    title: "MV:三千娑世御咏歌-演绎版", text: "微小虫孑，岂敢视神......", source: "https://player.bilibili.com/player.html?bvid=BV1Xh4y1H72Q", img: "https://pic1.zhimg.com/v2-3162af7701f2d18120accdc6224805a8_r.jpg"
+    title: "MV:三千娑世御咏歌-演绎版", text: "微小虫孑，岂敢视神......", source: "https://player.bilibili.com/player.html?bvid=BV1Xh4y1H72Q", img: "https://picx.zhimg.com/80/v2-c990fe941c967d338ce12fd9f9184b2b_1440w.webp"
 }
 data[38] = {
     title: "匈牙利狂想曲", text: "Hungarian Rhapsodies S.244 - No.2 in C sharp minor / F sharp major, with cadenza for ToniRaab:Rapsodie hongroise II  升c小调第2号匈牙利狂想曲  S.244   歌手：Franz Liszt / Leslie Howard",id: 29087744, img: "https://files.superbed.cn/proxy/726e6e6a692035356d716a72756e7534797e743478797f78756934797577357e2f297c222d232e7b2e79282d7e2b7f7f2c292d222a7b7c2a787e2f7b7e2c7f7e7e792e29222e2934706a7d"
