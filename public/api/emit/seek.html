@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMIT 招贤纳士 - 加入我们</title>
+    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- 招贤纳士专属导航 -->
+    <nav id="careerNav">
+        <div class="nav-container">
+            <a href="https://emit.rth1.xyz" class="logo" style="color: #FF1700;font-weight: 100;font-size: 180%;text-decoration: none;">
+                EMIT
+            </a>
+            <span class="nav-links" style="display: inline-block;right: 10px;position: absolute;">
+                <a href="#culture">文化理念</a>
+                <a href="#positions">开放职位</a>
+                <a href="#benefits">员工福利</a>
+                <a href="#process"></a>
+            </span>
+        </div>
+    </nav>
+
+    <section style="width: 100vw;height: 5vh;"></section>
+
+    <!-- 英雄区 -->
+    <section class="career-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <h1 class="hero-title">创造未来，从EMIT开始</h1>
+            <p class="hero-subtitle">与全市<span class="highlight">顶尖</span>学者共同成长</p>
+            <br><button class="cta-btn" onclick="contact()">
+                探索机会
+                <div class="hover-effect"></div>
+            </button>
+        </div>
+        <div class="scrolling-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- 文化理念 -->
+    <section class="culture-section" id="culture">
+        <div class="culture-container">
+            <div class="section-header">
+                <h2 class="section-title" style="text-align: center;">EMIT文化基因</h2>
+                <p class="section-subtitle" style="text-align: center;">驱动创新的核心DNA</p>
+                <br />
+            </div>
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <div class="card-icon">
+                        <svg class="icon-sparkle" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">创新实验田</h3>
+                    <div class="card-content">
+                        <p>99%自由创新时间 + 人才培养计划</p>
+                        <div class="card-hover">
+                            <span>查看项目 →</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多卡片... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 修改后的职位列表部分 -->
+    <section class="positions-section" id="positions">
+        <div class="section-header" style="padding: 32px;text-align: center;">
+            <h2>热招职位</h2>
+            <p class="section-subtitle">开启您的创作征程</p>
+        </div>
+        <div class="position-accordion" id="positionContainer">
+            <!-- 职位项由JavaScript动态生成 -->
+        </div>
+    </section>
+
+    <!-- 员工福利 -->
+    <section class="benefits-section" id="benefits">
+        <div class="parallax-bg"></div>
+        <div class="benefits-grid">
+            <!-- 福利卡片... -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" >
+                <h4>业务咨询</h4>
+                <a>投稿</a><br>
+                <a style="color: #08f;" href="#">招贤纳士</a>
+                <br><br>
+                <h4>联系我们</h4>
+
+                <p>邮箱: EMITsubmission@outlook.com</p>
+                <p>办公地点：新疆沙湾市第一中学高二(1)班</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-icons" >
+                    <a style="color: #fff;" href=""><i class="fab fa-weixin"></i></a>
+                    <a style="color: #fff;" href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" style="text-align: center;">
+            <p>&copy; 2025 EMIT Culture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script1.js"></script>
+</body>
+
+</html>
