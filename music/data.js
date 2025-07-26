@@ -281,7 +281,7 @@ data[72]={
     title:"Courage勇气",text:"作曲：Tony Ann",id:2098398095,img:""
 }
 data[73]={
-    title:"History Repeating",text:"作曲：Jo Blankenburg",id:1971315292,img:""
+    title:"TimeEntropy",text:"维词危机三主题曲@YouView-Mix",source:"local:./data/TimeEntropy.mp3",img:""
 }
 data[74]={
     title:"迷途",text:"作曲：悠为(Uview-Mix)",source:"local:./data/misstheway.mp3",img:"https://pic.imgdb.cn/item/66335afa0ea9cb1403ac748d.jpg"
