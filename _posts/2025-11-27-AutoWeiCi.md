@@ -6,9 +6,11 @@ img: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 background: "https://pic.imgdb.cn/item/656c3559c458853aef8a0f4b.jpg"
 ---
 
-#公告
+# 公告
 
-# 下载链接
+本软件仅供学习交流使用。
+
+## 下载链接
 
 暂无
 
