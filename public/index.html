@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <script src="script/vue_3.2.45.js"></script>
+    <title>SACC科技创新大赛比赛报名</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            background: #f1f0f5;
+        }
+
+        #header {
+            background-color: #0088ff;
+            background-image: linear-gradient(to bottom right, #0088ff, #17FFE8);
+            text-align: center;
+            color: #fff;
+            height: 75vw;
+            width: 100vw;
+            padding: 12vh;
+        }
+
+        #header .title {
+            padding-top: 3vh;
+            font-size: 5vw;
+            font-weight: 600;
+            transition: 1s;
+            position: relative;
+            left: -120%;
+        }
+
+        #header .description {
+            font-size: 2vw;
+            padding: 2vh;
+            font-weight: 300;
+            opacity: 0.28;
+            transition: 0.8s;
+        }
+
+        #signButton,
+        #moreButton {
+            font-size: 1.8vw;
+            margin: 5vw;
+            padding: 1.6vw;
+            border-radius: 16px;
+        }
+
+        #signButton {
+            display: inline-block;
+            color: #fff;
+            background: #08f;
+            transition: 0.4s;
+            border: 1px solid #fff;
+        }
+
+        #signButton:hover {
+            background: #fff;
+            color: #08f;
+            border: 1px solid #0088ff;
+            box-shadow: 5px 5px 3px 2px rgb(0, 0, 0, 0.75);
+        }
+
+        #moreButton {
+            display: inline-block;
+            color: #08f;
+            background: #fff;
+            transition: 0.4s;
+            border: 1px solid #08f;
+        }
+
+        #moreButton:hover {
+            background: #eee;
+            color: #08f;
+            border: 1px solid #fff;
+            box-shadow: 5px 5px 3px 2px rgb(0, 0, 0, 0.75);
+        }
+
+        #introduction {
+            position: relative;
+            top: -2vw;
+            background: #fff;
+            width: 86vw;
+            margin: 6px auto;
+            border-radius: 18px;
+            box-shadow: 0 0 12px 0 rgb(0, 0, 0, 0.3);
+            padding: 3vw;
+        }
+
+        #warningMessage {
+            font-size: 1.4vw;
+            background: #FFFFE8;
+            padding: 1vw;
+            text-align: center;
+            width: 86vw;
+            margin: 12px auto;
+            color: #FF6717;
+            border: 1px solid #FFC374;
+            border-radius: 12px;
+        }
+
+        #signTable {
+            background: #fff;
+            width: 86vw;
+            margin: 3vw auto;
+            border-radius: 18px;
+            box-shadow: 0 0 12px 0 rgb(0, 0, 0, 0.3);
+            padding: 3vw;
+        }
+
+        .style0 {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+        }
+
+        .style1 {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .style2 {
+            color: #999;
+        }
+
+        input[name="table"],
+        select[name="table"] {
+            width: 80%;
+            height: 4vw;
+            padding: 1vw 0.1vw;
+            margin: 1vw 0;
+            border: 2px solid #aaa;
+            border-radius: 16px;
+            font-size: 1vw;
+            background: #fff;
+        }
+
+        #whatCanISay {
+            font-size: 1.2vw;
+            display: block;
+            width: 100%;
+            height: 15vw;
+            border: 1px solid #aaa;
+            border-radius: 12px;
+        }
+
+        #submitButton {
+            font-size: 1.6vw;
+            margin: 1vw auto;
+            width: 100%;
+            border-radius: 12px;
+            padding: 1vw 0;
+            display: block;
+            color: #fff;
+            background: #08f;
+            border: 1px solid #08f;
+        }
+
+        #result {
+            position: fixed;
+            left: 150vw;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
+            transition: 0.8s;
+            padding: 10vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div id='saccTitle' class="title">
+            <div style="font-size: 8vw;font-weight: 200;">SACC</div>
+            科技创新大赛
+        </div>
+        <div id="littleTitle" class="description">南京邮电大学 计算机学院科学技术协会</div>
+        <div style="display: flex;justify-content: center;">
+            <button id="signButton" onclick="signFn()">立即报名</button>
+            <button id="moreButton" onclick="letMeSeeSee()">查看详情</button>
+        </div>
+    </div>
+    <section id="introduction">
+        <h1 style="color: #08f;padding: 6px 0px;font-size: 2vw;">比赛信息</h1>
+        <div style="font-size: 1.2vw;">
+            <div style="display:flex;justify-content: space-between;padding: 4px 0;">
+                <div style="display:inline-block;width: 50%;"><span style="color: #999;">比赛名称 </span>SACC科技创新大赛</div>
+                <div style="display:inline-block;width: 50%;"><span style="color: #999;">主办单位 </span>计算机学院科学技术协会</div>
+            </div>
+            <div style="display:flex;justify-content: space-between;padding: 4px 0;">
+                <div style="display:inline-block;width: 50%;"><span style="color: #999;">比赛时间 </span>2026年9月15日</div>
+                <div style="display:inline-block;width: 50%;"><span style="color: #999;">比赛地点 </span>南邮仙林校区 计算机学科楼</div>
+            </div>
+            <div style="display:flex;justify-content: space-between;padding: 4px 0;">
+                <div style="display:inline-block;width: 50%;"><span style="color: #999;">报名截止 </span>2026年9月10日23:59</div>
+                <div style="display:inline-block;width: 50%;"><span style="color: #999;">面向对象 </span>南京邮电大学全体在校生</div>
+            </div>
+            <div style="border-top: 1px solid #ddd;margin: 15px 0;padding: 12px 0;color: #555;">
+                本次大赛旨在激发同学们的创新思维和实践能力，设“创新设计”“算法竞赛”“创业实践”三条赛道，参赛者可以个人或团队（不超过3人）形式报名。获奖队伍将获得校级证书及丰厚奖品，优秀项目更有机会获得学院孵化支持。
+            </div>
+        </div>
+
+    </section>
+
+    <div id="warningMessage">测试</div>
+
+    <section id="signTable">
+        <h1 style="color: #08f;padding: 6px 0px;font-size: 2vw;">在线报名</h1>
+        <div style="font-size: 1.2vw;">
+            <div class="style0">
+                <div class="style1">姓名 <span style="color: red;">*</span><br /><input name="table" type='text' placeholder="请输入你的真实姓名" /></div>
+                <div class="style1">学号 <span style="color: red;">*</span> <br /><input name="table" type='text' placeholder="如HOME114514" /></div>
+            </div>
+            <div class="style0">
+                <div class="style1">手机号 <span style="color: red;">*</span> <br /><input name="table" type='text' placeholder="请输入11位手机号码" />
+                    <div id="telTip" style="color: red;font-size: 0.6vw;"></div>
+                </div>
+                <div class="style1">邮箱 <span style="color: red;"></span> <br /><input name="table" type='text' placeholder="example@njupt.edu.cn" /></div>
+            </div>
+            <div class="style0">
+                <div class="style1">学院/专业 <span style="color: red;">*</span> <br /><input name="table" type='text' placeholder="如：计算机学院 计算机科学与技术" /></div>
+                <div class="style1">参赛类别 <span style="color: red;">*</span> <br />
+                    <select name="table">
+                        <option value="0">请选择参赛类别</option>
+                        <option value="1">创新设计类</option>
+                        <option value="2">算法竞赛类</option>
+                        <option value="3">创业实践类</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            是否服从调剂 <br />
+            <input type="radio" style="width: 1.5vw;height: 1.5vw;" name="areYouOkey" checked />是 <input type="radio" style="width: 1.5vw;height: 1.5vw;" name="areYouOkey" />否
+            <br />
+            <br />
+            个人宣言/参赛宣言
+            <textarea id="whatCanISay" placeholder="请简单介绍一下自己，或者写下你的参赛宣言(选填)"></textarea>
+            <div style="color: #999;font-size: 0.9vw;">*不能超过200字。</div>
+        </div>
+        <br />
+        <button id="submitButton" onclick="submit()">提交报名</button>
+    </section>
+
+    <div id="result">测试</div>
+
+    <footer style="padding: 6vw 0;text-align: center;color: #999;">
+        NJUPT SACC © 2026 | 计算机学院科学技术协会
+    </footer>
+    <script>
+        //不太喜欢写注释
+        setTimeout(() => {
+            document.getElementById("saccTitle").style.left = "0%";
+            setTimeout(() => {
+                document.getElementById("littleTitle").style.opacity = "1";
+            }, 500)
+        }, 500)
+
+        document.getElementsByName("table")[2].addEventListener("input", function() {
+            let val = document.getElementsByName("table")[2].value;
+            if (val == "") {
+                document.getElementById("telTip").innerHTML = "*请输入文本";
+            } else if (!/^\d{11}$/.test(val)) {
+                document.getElementById("telTip").innerHTML = "*电话号码数目或格式有误";
+            } else {
+                document.getElementById("telTip").innerHTML = "";
+            }
+
+        });
+
+        let res = null;
+        let isSignUp = false;
+
+        function msgbox(text) {
+            let box = document.createElement("div");
+            box.style = `
+                font-size: 2vw;
+                position: fixed;
+                background: #fff;
+                top: 30vh;
+                width: 55vw;left: 0;right: 0;
+                margin: auto;
+                height: auto;
+                padding: 2vw;
+                color: #222;
+                box-shadow: 3px 3px 3px 3px rgb(0,0,0,0.3);
+            `
+            box.innerHTML = text;
+
+            let yes = document.createElement("button");
+            yes.style = `
+            display: block;
+            padding: 2vw;
+            margin: 1vw;
+            text-align: center;
+            font-size: 1.8vw;
+            border-radius: 12px;
+            padding: 0 2vw;
+            display: block;
+            color: #fff;
+            background: #08f;
+            border: 1px solid #08f;
+            `
+            yes.innerHTML = "确认";
+            yes.onclick = () => {
+                box.remove()
+            }
+            box.appendChild(yes);
+            document.body.appendChild(box)
+        }
+
+        function submit() {
+            res = {
+                name: document.getElementsByName("table")[0].value,
+                studentId: document.getElementsByName("table")[1].value,
+                tel: document.getElementsByName("table")[2].value,
+                email: document.getElementsByName("table")[3].value,
+                major: document.getElementsByName("table")[4].value,
+                category: document.getElementsByName("table")[5].value,
+                isOk: document.getElementsByName("areYouOkey")[0].checked ? true : false,
+                text: document.getElementById("whatCanISay").value
+            }
+
+            let areYouKidding = false;
+
+            for (let item in res) {
+
+                if (item == "category") {
+                    if (res[item] == 0) {
+                        msgbox("未选择参赛内容")
+                        return;
+                    }
+                }
+                if(item=="text"){
+                    if(res[item].length>200){
+                        msgbox("宣言字数不能过多！")
+                    }
+                }
+                if (res[item] == "" && item != "email" && item != "text" && item != "isOk") {
+                    console.log(item)
+                    areYouKidding = true;
+                }
+            }
+            if (areYouKidding == true) {
+                msgbox("必填项不能为空!")
+            } else {
+                msgbox("提交成功，信息已保存")
+                console.log("报名数据"+JSON.stringify(res))
+                localStorage.setItem("signData", JSON.stringify(res));
+                checkResult();
+            }
+
+        }
+
+        if (localStorage.getItem("signData")) {
+            const signData = JSON.parse(localStorage.getItem("signData"));
+
+            document.getElementsByName("table")[0].value = signData.name;
+            document.getElementsByName("table")[1].value = signData.studentId;
+            document.getElementsByName("table")[2].value = signData.tel;
+            document.getElementsByName("table")[3].value = signData.email;
+            document.getElementsByName("table")[4].value = signData.major;
+            document.getElementsByName("table")[5].value = signData.category;
+            if (signData.isOk == true) {
+                document.getElementsByName("areYouOkey")[0].checked = true;
+            } else {
+                document.getElementsByName("areYouOkey")[1].checked = true;
+            }
+            document.getElementById("whatCanISay").value = signData.text;
+        }
+
+        function signFn() {
+            document.getElementById("signTable").scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+
+        function letMeSeeSee() {
+            document.getElementById("introduction").scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+
+        function checkResult() {
+            document.getElementById("result").style.left = "0";
+            const signData = JSON.parse(localStorage.getItem("signData"));
+            resultDom = `
+            <div style="font-size: 1.6vw;">
+                <div>姓名：${signData.name}</div>
+                <div>学号：${signData.studentId}</div>
+                <div>手机号：${signData.tel}</div>
+                <div>邮箱：${signData.email==""?"无":signData.email}</div>
+                <div>学院/专业：${signData.major}</div>
+                <div>参赛类别：${signData.category}</div>
+                <div>是否服从调剂：${signData.isOk?"是":"否"}</div>
+                <div>个人简介/参赛宣言：${signData.text==""?"无":signData.text}</div>
+            </div>
+            `
+            document.getElementById("result").innerHTML = `
+            <h1 style="color: #08f;text-align: center;">报名成功</h1><br>
+            ${resultDom}
+            `
+            localStorage.setItem("checked", true)
+        }
+
+        let t = setInterval(() => {
+            if (isSignUp == true) {
+                clearInterval(t);
+            }
+            if (localStorage.getItem("checked")) {
+                if (localStorage.getItem("checked")==false){
+                localStorage.setItem("signData", JSON.stringify({
+                    name: document.getElementsByName("table")[0].value,
+                    studentId: document.getElementsByName("table")[1].value,
+                    tel: document.getElementsByName("table")[2].value,
+                    email: document.getElementsByName("table")[3].value,
+                    major: document.getElementsByName("table")[4].value,
+                    category: document.getElementsByName("table")[5].value,
+                    isOk: document.getElementsByName("areYouOkey")[0].checked,
+                    text: document.getElementById("whatCanISay").value
+                }));
+                }
+            } else {
+                //啥都不做
+            }
+        }, 1000)
+
+        if (localStorage.getItem("checked")) {
+
+            const signData = JSON.parse(localStorage.getItem("signData"));
+            let category = "<span style = 'color: red'>加载失败</span>";
+            switch (true){
+                case signData.category == 1:
+                    category = "创新设计类";
+                    break;
+                case signData.category == 2:
+                    category = "算法竞赛类";
+                    break;
+                case signData.category == 3: 
+                    category = "创业实践类";
+                    break;
+                default:
+                    category = "<b>数据错误</b>"
+            }
+            resultDom = `
+            <div style="font-size: 1.5vw;">
+                <div>姓名：${signData.name}</div>
+                <div>学号：${signData.studentId}</div>
+                <div>手机号：${signData.tel}</div>
+                <div>邮箱：${signData.email==""?"无":signData.email}</div>
+                <div>学院/专业：${signData.major}</div>
+                <div>参赛类别：${category}</div>
+                <div>是否服从调剂：${signData.isOk?"是":"否"}</div>
+                <div>个人简介/参赛宣言：${signData.text == ""?"无":signData.text}</div>
+            </div>
+            `
+            document.getElementById("signTable").innerHTML = `
+            <h1 style="color: green;text-align: center;font-size: 2vw;">报名成功</h1><br>
+            ${resultDom}
+            <br/>
+            
+            `
+        }
+        {
+            const d1 = new Date();
+            const d2 = new Date("Septemper 15, 2026 23:59:59");
+            let delta = d2 - d1;
+            delta = Math.round(delta/(1000*60*60*24));
+            document.getElementById("warningMessage").innerHTML = `距离报名截止还有<b style = "color: red">${delta}天</b>，请尽快提交报名`
+        }
+    </script>
+</body>
+
+</html>
